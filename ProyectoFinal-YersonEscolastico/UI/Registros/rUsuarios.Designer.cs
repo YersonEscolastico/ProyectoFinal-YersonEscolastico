@@ -70,7 +70,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 76);
+            this.label5.Location = new System.Drawing.Point(9, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 43;
@@ -181,7 +181,7 @@
             // 
             // NombresTextBox
             // 
-            this.NombresTextBox.Location = new System.Drawing.Point(130, 108);
+            this.NombresTextBox.Location = new System.Drawing.Point(130, 61);
             this.NombresTextBox.Name = "NombresTextBox";
             this.NombresTextBox.Size = new System.Drawing.Size(160, 20);
             this.NombresTextBox.TabIndex = 31;
@@ -189,7 +189,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 115);
+            this.label2.Location = new System.Drawing.Point(12, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 30;
@@ -217,10 +217,11 @@
             this.NivelAccesocomboBox.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.NivelAccesocomboBox.Location = new System.Drawing.Point(130, 68);
+            this.NivelAccesocomboBox.Location = new System.Drawing.Point(130, 102);
             this.NivelAccesocomboBox.Name = "NivelAccesocomboBox";
             this.NivelAccesocomboBox.Size = new System.Drawing.Size(121, 21);
             this.NivelAccesocomboBox.TabIndex = 46;
+            this.NivelAccesocomboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelAccesocomboBox_KeyPress);
             // 
             // rUsuarios
             // 

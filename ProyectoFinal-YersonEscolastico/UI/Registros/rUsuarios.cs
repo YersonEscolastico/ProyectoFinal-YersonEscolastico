@@ -23,6 +23,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             NombresTextBox.Text = string.Empty;
             UsuarioTextBox.Text = string.Empty;
+            NivelAccesocomboBox.Text = string.Empty;
             ContrasenaMaskedTextBox.Text = string.Empty;
             ConfirmarContrasenaMaskedTextBox.Text = string.Empty;
             FechaRegistroDateTimePicker.Value = DateTime.Now;
@@ -40,6 +41,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             usuarios.UsuarioId = (int)IdNumericUpDown.Value;
             usuarios.Nombre = NombresTextBox.Text;
+            usuarios.NivelAcceso = NivelAccesocomboBox.Text;
             usuarios.Usuario = UsuarioTextBox.Text;
             usuarios.Clave = ContrasenaMaskedTextBox.Text;
             usuarios.ConfirmarClave = ConfirmarContrasenaMaskedTextBox.Text;
@@ -52,6 +54,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             IdNumericUpDown.Value = usuarios.UsuarioId;
             NombresTextBox.Text = usuarios.Nombre;
+            NivelAccesocomboBox.Text = usuarios.NivelAcceso;
             UsuarioTextBox.Text = usuarios.Usuario;
             ContrasenaMaskedTextBox.Text = usuarios.Clave;
             ConfirmarContrasenaMaskedTextBox.Text = usuarios.ConfirmarClave;
@@ -147,6 +150,11 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 MessageBox.Show("NO se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void NivelAccesocomboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }

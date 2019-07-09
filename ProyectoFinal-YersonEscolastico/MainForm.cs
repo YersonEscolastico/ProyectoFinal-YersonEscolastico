@@ -1,4 +1,5 @@
-﻿using ProyectoFinal_YersonEscolastico.UI.Registros;
+﻿using ProyectoFinal_YersonEscolastico.UI.Consultas;
+using ProyectoFinal_YersonEscolastico.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +23,12 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rUsuarios us = new rUsuarios();
             us.StartPosition = FormStartPosition.CenterScreen;
+            us.Show();
+        }
+
+        private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cUsuarios us = new cUsuarios();
             us.Show();
         }
     }
