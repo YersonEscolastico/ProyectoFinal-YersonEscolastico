@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal-YersonEscolas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\Entidades\Entidades.csproj", "{1A183B1B-D6A8-4945-8216-939D22BC06E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{13FA533E-316B-4487-A397-42D08524D0FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13FA533E-316B-4487-A397-42D08524D0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FA533E-316B-4487-A397-42D08524D0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FA533E-316B-4487-A397-42D08524D0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FA533E-316B-4487-A397-42D08524D0FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
