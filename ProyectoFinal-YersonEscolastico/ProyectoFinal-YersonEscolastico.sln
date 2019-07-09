@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoFinal-YersonEscolastico", "ProyectoFinal-YersonEscolastico.csproj", "{0B95CA5B-7DA4-42ED-906E-7706F381A4CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\Entidades\Entidades.csproj", "{1A183B1B-D6A8-4945-8216-939D22BC06E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0B95CA5B-7DA4-42ED-906E-7706F381A4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B95CA5B-7DA4-42ED-906E-7706F381A4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B95CA5B-7DA4-42ED-906E-7706F381A4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A183B1B-D6A8-4945-8216-939D22BC06E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
