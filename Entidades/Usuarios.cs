@@ -13,9 +13,9 @@ namespace Entidades
 
         public int UsuarioId { get; set; }
         public string Nombre { get; set; }
-        public string NombreUser { get; set; }
+        public string Usuario { get; set; }
         public string Clave { get; set; }
-        public string ConfirmClave { get; set; }
+        public string ConfirmarClave { get; set; }
         public string NivelAcceso { get; set; }
         public DateTime Fecha { get; set; }
 
@@ -24,7 +24,7 @@ namespace Entidades
         {
             UsuarioId = 0;
             Nombre = string.Empty;
-            NombreUser = string.Empty;
+            Usuario = string.Empty;
             Clave = string.Empty;
             NivelAcceso = string.Empty;
             Fecha = DateTime.Now;
