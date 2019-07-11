@@ -9,11 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProyectoFinal_YersonEscolastico.UI.Reportes;
 
 namespace ProyectoFinal_YersonEscolastico.UI.Consultas
 {
     public partial class cUsuarios : Form
     {
+        public List<Usuarios> ListaUsuarios;
         public cUsuarios()
         {
             InitializeComponent();
@@ -76,8 +78,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
                         listado = db.GetList(p => true);
                         listado = listado.Where(c => c.Fecha.Date >= DesdedateTimePicker.Value.Date && c.Fecha.Date <= HastadateTimePicker.Value.Date).ToList();
                     }
-                    ConsultadataGridView.DataSource = null;
-                    ConsultadataGridView.DataSource = listado;
+
+                    ListaUsuarios = listado;
+                    ConsultadataGridView.DataSource = ListaUsuarios;
                 }
                 catch (Exception)
                 { }
@@ -142,12 +145,26 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
                         {
                             listado = db.GetList(p => true);
                         }
-                        ConsultadataGridView.DataSource = null;
-                        ConsultadataGridView.DataSource = listado;
+                        ListaUsuarios = listado;
+                        ConsultadataGridView.DataSource = ListaUsuarios;
                     }
                 }
                 catch (Exception)
                 { }
+            }
+        }
+
+        private void ImprimirButton_Click(object sender, EventArgs e)
+        {
+            if (ConsultadataGridView.RowCount == 0)
+            {
+                MessageBox.Show("No hay Datos Para Imprimir");
+                return;
+            }
+            else
+            {
+                UsuariosReport reporte = new UsuariosReport(ListaUsuarios);
+                reporte.ShowDialog();
             }
         }
     }

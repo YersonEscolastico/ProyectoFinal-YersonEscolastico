@@ -39,6 +39,7 @@
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ImprimirButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,7 +112,7 @@
             this.ConsultadataGridView.Location = new System.Drawing.Point(14, 55);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
             this.ConsultadataGridView.ReadOnly = true;
-            this.ConsultadataGridView.Size = new System.Drawing.Size(629, 337);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(629, 314);
             this.ConsultadataGridView.TabIndex = 49;
             // 
             // Consultarbutton
@@ -151,11 +152,24 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "Filtro";
             // 
+            // ImprimirButton
+            // 
+            this.ImprimirButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ImprimirButton.Location = new System.Drawing.Point(258, 375);
+            this.ImprimirButton.Name = "ImprimirButton";
+            this.ImprimirButton.Size = new System.Drawing.Size(85, 47);
+            this.ImprimirButton.TabIndex = 56;
+            this.ImprimirButton.Text = "Imprimir";
+            this.ImprimirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ImprimirButton.UseVisualStyleBackColor = true;
+            this.ImprimirButton.Click += new System.EventHandler(this.ImprimirButton_Click);
+            // 
             // cUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 404);
+            this.ClientSize = new System.Drawing.Size(654, 434);
+            this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.FiltroFechacheckBox);
             this.Controls.Add(this.FiltrocomboBox);
             this.Controls.Add(this.HastadateTimePicker);
@@ -188,5 +202,6 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ImprimirButton;
     }
 }
