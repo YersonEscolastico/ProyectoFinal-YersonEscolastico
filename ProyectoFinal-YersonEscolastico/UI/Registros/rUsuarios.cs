@@ -22,6 +22,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void Limpiar()
         {
             NombresTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
             UsuarioTextBox.Text = string.Empty;
             NivelAccesocomboBox.Text = string.Empty;
             ContrasenaMaskedTextBox.Text = string.Empty;
@@ -41,6 +42,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             usuarios.UsuarioId = (int)IdNumericUpDown.Value;
             usuarios.Nombre = NombresTextBox.Text;
+            usuarios.Email = EmailTextBox.Text;
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;
             usuarios.Usuario = UsuarioTextBox.Text;
             usuarios.Clave = ContrasenaMaskedTextBox.Text;
@@ -49,11 +51,11 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             return usuarios;
         }
 
-
         private void LlenarCampos(Usuarios usuarios)
         {
             IdNumericUpDown.Value = usuarios.UsuarioId;
             NombresTextBox.Text = usuarios.Nombre;
+            EmailTextBox.Text = usuarios.Email;
             NivelAccesocomboBox.Text = usuarios.NivelAcceso;
             UsuarioTextBox.Text = usuarios.Usuario;
             ContrasenaMaskedTextBox.Text = usuarios.Clave;
@@ -61,6 +63,60 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             FechaRegistroDateTimePicker.Value = usuarios.Fecha;
         }
 
+        private bool Validar()
+        {
+            string clave = ContrasenaMaskedTextBox.Text;
+            string confirmacion = ConfirmarContrasenaMaskedTextBox.Text;
+
+            int result = 0;
+            result = string.Compare(clave, confirmacion);
+
+            bool paso = false;
+
+            if (result != 0)
+            {
+                MyErrorProvider.SetError(ConfirmarContrasenaMaskedTextBox, "Las claves no coinciden");
+                ConfirmarContrasenaMaskedTextBox.Focus();
+                paso = true;
+            }
+            if (NombresTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombresTextBox, "Este campo no puede estar vacio");
+                NombresTextBox.Focus();
+                paso = true;
+            }
+            if (EmailTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(EmailTextBox, "Este campo no puede estar vacio");
+                EmailTextBox.Focus();
+                paso = true;
+            }
+            if (UsuarioTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(UsuarioTextBox, "Este campo no puede estar vacio");
+                UsuarioTextBox.Focus();
+                paso = true;
+            }
+            if (NivelAccesocomboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NivelAccesocomboBox, "No puede dejar este campo vacio");
+                NivelAccesocomboBox.Focus();
+                paso = true;
+            }
+            if (ContrasenaMaskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(ContrasenaMaskedTextBox, "Este campo no puede estar vacio");
+                ContrasenaMaskedTextBox.Focus();
+                paso = true;
+            }
+            if (ConfirmarContrasenaMaskedTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(ConfirmarContrasenaMaskedTextBox, "Este campo no puede estar vacio");
+                ConfirmarContrasenaMaskedTextBox.Focus();
+                paso = true;
+            }
+            return paso;
+        }
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
@@ -74,6 +130,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Usuarios usuarios;
             bool paso = false;
 
+            if (Validar())
+                return;
 
             usuarios = LlenarClase();
 

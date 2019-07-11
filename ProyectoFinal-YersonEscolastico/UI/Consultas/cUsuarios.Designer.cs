@@ -35,11 +35,11 @@
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
-            this.Consultarbutton = new System.Windows.Forms.Button();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ImprimirButton = new System.Windows.Forms.Button();
+            this.Consultarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,18 +115,6 @@
             this.ConsultadataGridView.Size = new System.Drawing.Size(629, 314);
             this.ConsultadataGridView.TabIndex = 49;
             // 
-            // Consultarbutton
-            // 
-            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Consultarbutton.Location = new System.Drawing.Point(558, 27);
-            this.Consultarbutton.Name = "Consultarbutton";
-            this.Consultarbutton.Size = new System.Drawing.Size(86, 23);
-            this.Consultarbutton.TabIndex = 48;
-            this.Consultarbutton.Text = "Consultar";
-            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Consultarbutton.UseVisualStyleBackColor = true;
-            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
-            // 
             // CriteriotextBox
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(418, 30);
@@ -154,21 +142,35 @@
             // 
             // ImprimirButton
             // 
+            this.ImprimirButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.imprimir;
             this.ImprimirButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ImprimirButton.Location = new System.Drawing.Point(258, 375);
+            this.ImprimirButton.Location = new System.Drawing.Point(285, 375);
             this.ImprimirButton.Name = "ImprimirButton";
-            this.ImprimirButton.Size = new System.Drawing.Size(85, 47);
+            this.ImprimirButton.Size = new System.Drawing.Size(85, 37);
             this.ImprimirButton.TabIndex = 56;
             this.ImprimirButton.Text = "Imprimir";
             this.ImprimirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ImprimirButton.UseVisualStyleBackColor = true;
             this.ImprimirButton.Click += new System.EventHandler(this.ImprimirButton_Click);
             // 
+            // Consultarbutton
+            // 
+            this.Consultarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
+            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.Consultarbutton.Location = new System.Drawing.Point(558, 27);
+            this.Consultarbutton.Name = "Consultarbutton";
+            this.Consultarbutton.Size = new System.Drawing.Size(86, 23);
+            this.Consultarbutton.TabIndex = 48;
+            this.Consultarbutton.Text = "Consultar";
+            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Consultarbutton.UseVisualStyleBackColor = true;
+            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
+            // 
             // cUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 434);
+            this.ClientSize = new System.Drawing.Size(654, 420);
             this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.FiltroFechacheckBox);
             this.Controls.Add(this.FiltrocomboBox);

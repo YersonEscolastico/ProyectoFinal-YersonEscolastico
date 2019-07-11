@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.FechaRegistroDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
             this.ConfirmarContrasenaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ContrasenaMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -46,14 +44,21 @@
             this.IdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.NivelAccesocomboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.EmailTextBox = new System.Windows.Forms.TextBox();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // FechaRegistroDateTimePicker
             // 
             this.FechaRegistroDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaRegistroDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaRegistroDateTimePicker.Location = new System.Drawing.Point(130, 245);
+            this.FechaRegistroDateTimePicker.Location = new System.Drawing.Point(130, 269);
             this.FechaRegistroDateTimePicker.Name = "FechaRegistroDateTimePicker";
             this.FechaRegistroDateTimePicker.Size = new System.Drawing.Size(160, 20);
             this.FechaRegistroDateTimePicker.TabIndex = 45;
@@ -61,7 +66,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 252);
+            this.label6.Location = new System.Drawing.Point(9, 275);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 13);
             this.label6.TabIndex = 44;
@@ -70,7 +75,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 110);
+            this.label5.Location = new System.Drawing.Point(9, 140);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
             this.label5.TabIndex = 43;
@@ -81,7 +86,8 @@
             this.BuscarButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BuscarButton.BackColor = System.Drawing.Color.White;
             this.BuscarButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BuscarButton.Location = new System.Drawing.Point(269, 11);
+            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
+            this.BuscarButton.Location = new System.Drawing.Point(271, 11);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(91, 35);
             this.BuscarButton.TabIndex = 42;
@@ -90,48 +96,9 @@
             this.BuscarButton.UseVisualStyleBackColor = false;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.EliminarButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.EliminarButton.Location = new System.Drawing.Point(269, 290);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(89, 52);
-            this.EliminarButton.TabIndex = 41;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.EliminarButton.UseVisualStyleBackColor = false;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
-            // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.NuevoButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NuevoButton.Location = new System.Drawing.Point(12, 290);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(89, 52);
-            this.NuevoButton.TabIndex = 40;
-            this.NuevoButton.Text = "Nuevo";
-            this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.NuevoButton.UseVisualStyleBackColor = false;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.GuardarButton.BackColor = System.Drawing.Color.White;
-            this.GuardarButton.Location = new System.Drawing.Point(141, 290);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(89, 52);
-            this.GuardarButton.TabIndex = 38;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.GuardarButton.UseVisualStyleBackColor = false;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
             // ConfirmarContrasenaMaskedTextBox
             // 
-            this.ConfirmarContrasenaMaskedTextBox.Location = new System.Drawing.Point(130, 210);
+            this.ConfirmarContrasenaMaskedTextBox.Location = new System.Drawing.Point(130, 236);
             this.ConfirmarContrasenaMaskedTextBox.Name = "ConfirmarContrasenaMaskedTextBox";
             this.ConfirmarContrasenaMaskedTextBox.PasswordChar = '*';
             this.ConfirmarContrasenaMaskedTextBox.Size = new System.Drawing.Size(160, 20);
@@ -140,7 +107,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 217);
+            this.label4.Location = new System.Drawing.Point(9, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 36;
@@ -148,7 +115,7 @@
             // 
             // ContrasenaMaskedTextBox
             // 
-            this.ContrasenaMaskedTextBox.Location = new System.Drawing.Point(130, 175);
+            this.ContrasenaMaskedTextBox.Location = new System.Drawing.Point(130, 201);
             this.ContrasenaMaskedTextBox.Name = "ContrasenaMaskedTextBox";
             this.ContrasenaMaskedTextBox.PasswordChar = '*';
             this.ContrasenaMaskedTextBox.Size = new System.Drawing.Size(160, 20);
@@ -157,7 +124,7 @@
             // Contraseña
             // 
             this.Contraseña.AutoSize = true;
-            this.Contraseña.Location = new System.Drawing.Point(9, 182);
+            this.Contraseña.Location = new System.Drawing.Point(9, 208);
             this.Contraseña.Name = "Contraseña";
             this.Contraseña.Size = new System.Drawing.Size(61, 13);
             this.Contraseña.TabIndex = 34;
@@ -166,7 +133,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 147);
+            this.label3.Location = new System.Drawing.Point(9, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 33;
@@ -174,7 +141,7 @@
             // 
             // UsuarioTextBox
             // 
-            this.UsuarioTextBox.Location = new System.Drawing.Point(130, 140);
+            this.UsuarioTextBox.Location = new System.Drawing.Point(130, 169);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(160, 20);
             this.UsuarioTextBox.TabIndex = 32;
@@ -217,17 +184,83 @@
             this.NivelAccesocomboBox.Items.AddRange(new object[] {
             "Administrador",
             "Usuario"});
-            this.NivelAccesocomboBox.Location = new System.Drawing.Point(130, 102);
+            this.NivelAccesocomboBox.Location = new System.Drawing.Point(130, 132);
             this.NivelAccesocomboBox.Name = "NivelAccesocomboBox";
-            this.NivelAccesocomboBox.Size = new System.Drawing.Size(121, 21);
+            this.NivelAccesocomboBox.Size = new System.Drawing.Size(100, 21);
             this.NivelAccesocomboBox.TabIndex = 46;
             this.NivelAccesocomboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NivelAccesocomboBox_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 102);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 47;
+            this.label7.Text = "Email";
+            // 
+            // EmailTextBox
+            // 
+            this.EmailTextBox.Location = new System.Drawing.Point(130, 95);
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.Size = new System.Drawing.Size(160, 20);
+            this.EmailTextBox.TabIndex = 48;
+            // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.EliminarButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
+            this.EliminarButton.Location = new System.Drawing.Point(271, 303);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(89, 57);
+            this.EliminarButton.TabIndex = 41;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.EliminarButton.UseVisualStyleBackColor = false;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.NuevoButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NuevoButton.Location = new System.Drawing.Point(12, 303);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(89, 57);
+            this.NuevoButton.TabIndex = 40;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NuevoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.NuevoButton.UseVisualStyleBackColor = false;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.GuardarButton.BackColor = System.Drawing.Color.White;
+            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
+            this.GuardarButton.Location = new System.Drawing.Point(141, 303);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(89, 57);
+            this.GuardarButton.TabIndex = 38;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.GuardarButton.UseVisualStyleBackColor = false;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
             // rUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 354);
+            this.ClientSize = new System.Drawing.Size(377, 372);
+            this.Controls.Add(this.EmailTextBox);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.NivelAccesocomboBox);
             this.Controls.Add(this.FechaRegistroDateTimePicker);
             this.Controls.Add(this.label6);
@@ -247,8 +280,11 @@
             this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.label1);
             this.Name = "rUsuarios";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "rUsuarios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,5 +309,8 @@
         private System.Windows.Forms.NumericUpDown IdNumericUpDown;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox NivelAccesocomboBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox EmailTextBox;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
