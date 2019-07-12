@@ -104,9 +104,9 @@ namespace BLL
                     throw;
                 }
                 return paso;
-            }
+            }    
 
-            public void Dispose()
+        public void Dispose()
             {
                 db.Dispose();
             }
