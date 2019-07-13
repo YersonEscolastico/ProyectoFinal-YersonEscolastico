@@ -82,11 +82,5 @@ namespace BLL.Tests
 
             Assert.IsTrue(db.Eliminar(1));
         }
-
-        [TestMethod()]
-        public void DuplicadoTest()
-        {
-            Assert.Fail();
-        }
     }
 }

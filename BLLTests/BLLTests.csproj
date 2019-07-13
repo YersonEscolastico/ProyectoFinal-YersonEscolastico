@@ -66,6 +66,7 @@
     <Compile Include="ClientesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsuariosTests.cs" />
+    <Compile Include="VehiculosTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
