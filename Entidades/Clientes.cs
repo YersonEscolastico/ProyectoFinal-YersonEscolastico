@@ -18,6 +18,7 @@ namespace Entidades
         public String Cedula { get; set; }
         public String Direccion { get; set; }
         public string Telefono { get; set; }
+        public string Celular { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaRegistro { get; set; }
 
@@ -30,7 +31,9 @@ namespace Entidades
             Cedula = string.Empty;
             Direccion = string.Empty;
             Telefono = string.Empty;
+            Celular = string.Empty;
             FechaNacimiento = DateTime.Now;
+            FechaRegistro = DateTime.Now;
         }
     }
 }

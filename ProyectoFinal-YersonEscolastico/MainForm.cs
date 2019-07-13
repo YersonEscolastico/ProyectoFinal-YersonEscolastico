@@ -31,5 +31,12 @@ namespace ProyectoFinal_YersonEscolastico
             cUsuarios us = new cUsuarios();
             us.Show();
         }
+
+        private void ClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rClientes  Cl = new rClientes();
+            Cl.StartPosition = FormStartPosition.CenterScreen;
+            Cl.Show();
+        }
     }
 }

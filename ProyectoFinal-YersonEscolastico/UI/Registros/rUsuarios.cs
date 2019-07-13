@@ -120,8 +120,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
-            Usuarios estudiante = db.Buscar((int)IdNumericUpDown.Value);
-            return (estudiante != null);
+            Usuarios usuarios = db.Buscar((int)IdNumericUpDown.Value);
+            return (usuarios != null);
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
