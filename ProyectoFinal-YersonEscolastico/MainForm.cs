@@ -38,5 +38,12 @@ namespace ProyectoFinal_YersonEscolastico
             Cl.StartPosition = FormStartPosition.CenterScreen;
             Cl.Show();
         }
+
+        private void VehiculosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rVehiculos vh = new rVehiculos();
+            vh.StartPosition = FormStartPosition.CenterScreen;
+            vh.Show();
+        }
     }
 }
