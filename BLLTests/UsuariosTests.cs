@@ -31,7 +31,8 @@ namespace BLL.Tests
             Email = "Juan@gmail.com",
             Usuario = "Juan123",
             Clave = "123",
-            NivelAcceso = "123",
+            ConfirmarClave ="123",
+            NivelAcceso = "Usuario",
             Fecha = DateTime.Now
         };
             Assert.IsTrue(db.Guardar(us));
@@ -49,7 +50,8 @@ namespace BLL.Tests
                 Email = "Juan@gmail.com",
                 Usuario = "Juan123",
                 Clave = "123",
-                NivelAcceso = "123",
+                ConfirmarClave = "123",
+                NivelAcceso = "Usuario",
                 Fecha = DateTime.Now
             };
 
