@@ -21,6 +21,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void Limpiar()
         {
+            IdNumericUpDown.Value = 0;
             NombresTextBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
             UsuarioTextBox.Text = string.Empty;
@@ -40,7 +41,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Usuarios usuarios = new Usuarios ();
 
-            usuarios.UsuarioId = (int)IdNumericUpDown.Value;
             usuarios.Nombre = NombresTextBox.Text;
             usuarios.Email = EmailTextBox.Text;
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;

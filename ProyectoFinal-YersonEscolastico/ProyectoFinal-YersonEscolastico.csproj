@@ -80,6 +80,12 @@
     <Compile Include="UI\Registros\rClientes.Designer.cs">
       <DependentUpon>rClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rProveedores.Designer.cs">
+      <DependentUpon>rProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rClientes.resx">
       <DependentUpon>rClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rProveedores.resx">
+      <DependentUpon>rProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>
