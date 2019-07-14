@@ -16,7 +16,6 @@ namespace Entidades
         public string Email { get; set; }
         public string Usuario { get; set; }
         public string Clave { get; set; }
-        public string ConfirmarClave { get; set; }
         public string NivelAcceso { get; set; }
         public DateTime Fecha { get; set; }
 

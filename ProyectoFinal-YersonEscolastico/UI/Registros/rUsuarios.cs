@@ -47,7 +47,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;
             usuarios.Usuario = UsuarioTextBox.Text;
             usuarios.Clave = ContrasenaMaskedTextBox.Text;
-            usuarios.ConfirmarClave = ConfirmarContrasenaMaskedTextBox.Text;
             usuarios.Fecha = FechaRegistroDateTimePicker.Value;
             return usuarios;
         }
@@ -60,7 +59,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             NivelAccesocomboBox.Text = usuarios.NivelAcceso;
             UsuarioTextBox.Text = usuarios.Usuario;
             ContrasenaMaskedTextBox.Text = usuarios.Clave;
-            ConfirmarContrasenaMaskedTextBox.Text = usuarios.ConfirmarClave;
             FechaRegistroDateTimePicker.Value = usuarios.Fecha;
         }
 
