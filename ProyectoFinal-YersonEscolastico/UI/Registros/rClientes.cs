@@ -21,6 +21,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void Limpiar()
         {
+            IdNumericUpDown.Value = 0;
             NombresTextBox.Text = string.Empty;
             SexoComboBox.Text = string.Empty;
             EmailTextBox.Text = string.Empty;
@@ -41,7 +42,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Clientes clientes = new Clientes();
 
-            clientes.ClienteId = (int)IdNumericUpDown.Value;
+            clientes.ClienteId = (int)(IdNumericUpDown.Value);
             clientes.Nombres = NombresTextBox.Text;
             clientes.Sexo = SexoComboBox.Text;
             clientes.Email = EmailTextBox.Text;
@@ -57,7 +58,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void LlenarCampos(Clientes clientes)
         {
             IdNumericUpDown.Value = clientes.ClienteId;
-
             NombresTextBox.Text = clientes.Nombres;
             SexoComboBox.Text = clientes.Sexo;
             EmailTextBox.Text = clientes.Email;

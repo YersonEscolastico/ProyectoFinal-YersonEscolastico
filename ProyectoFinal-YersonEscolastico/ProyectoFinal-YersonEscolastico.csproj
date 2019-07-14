@@ -86,6 +86,12 @@
     <Compile Include="UI\Registros\rProveedores.Designer.cs">
       <DependentUpon>rProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Registros\rOtros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rOtros.Designer.cs">
+      <DependentUpon>rOtros.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registros\rUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rProveedores.resx">
       <DependentUpon>rProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rOtros.resx">
+      <DependentUpon>rOtros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rUsuarios.resx">
       <DependentUpon>rUsuarios.cs</DependentUpon>

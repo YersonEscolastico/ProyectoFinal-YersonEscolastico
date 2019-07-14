@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
-    public partial class rProveedores : Form
+    public partial class rOtros : Form
     {
-        public rProveedores()
+        public rOtros()
         {
             InitializeComponent();
         }
@@ -22,12 +22,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
-            NombresTextBox.Text = string.Empty;
-            TelefonoMaskedTextBox.Text = string.Empty;
-            CelularMaskedTextBox.Text = string.Empty;
-            EmailTextBox.Text = string.Empty;
-            DireccionTextBox.Text = string.Empty;
-            FechaRegistroateTimePicker.Value = DateTime.Now;
+            DescripcionTextBox.Text = string.Empty;
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
@@ -35,54 +30,40 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Limpiar();
         }
 
-        private Proveedores LLenaCLase()
-        {
-            Proveedores proveedores = new Proveedores();
+        private Otros LlenarClase()
+        { 
+            Otros ubicaciones = new Otros();
 
-            proveedores.ProveedorId = (int)(IdNumericUpDown.Value);
-            proveedores.ProveedorId = (int)IdNumericUpDown.Value;
-            proveedores.Nombres = NombresTextBox.Text;
-            proveedores.Telefono = TelefonoMaskedTextBox.Text;
-            proveedores.Celular = CelularMaskedTextBox.Text;
-            proveedores.Email = EmailTextBox.Text;
-            proveedores.Direccion = DireccionTextBox.Text;
-            proveedores.FechaRegistro = FechaRegistroateTimePicker.Value;
-
-            return proveedores;
+            ubicaciones.UbicacionId = (int)(IdNumericUpDown.Value);
+            ubicaciones.Descripcion = DescripcionTextBox.Text;
+            return ubicaciones;
         }
 
-        private void LLenaCampos(Proveedores proveedores)
+        private void LlenarCampos(Otros ubicaciones)
         {
-            IdNumericUpDown.Value = proveedores.ProveedorId;
-            NombresTextBox.Text = proveedores.Nombres;
-            TelefonoMaskedTextBox.Text = proveedores.Telefono;
-            CelularMaskedTextBox.Text = proveedores.Celular;
-            EmailTextBox.Text = proveedores.Email;
-            DireccionTextBox.Text = proveedores.Direccion;
-            FechaRegistroateTimePicker.Value = proveedores.FechaRegistro;
+            IdNumericUpDown.Value = ubicaciones.UbicacionId;
+            DescripcionTextBox.Text = ubicaciones.Descripcion;
         }
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
-            Proveedores proveedores = db.Buscar((int)IdNumericUpDown.Value);
-            return (proveedores != null);
+            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
+            Otros ubicaciones = db.Buscar((int)IdNumericUpDown.Value);
+            return (ubicaciones != null);
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-
-            RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
-            Proveedores proveedores = new Proveedores();
+            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
+            Otros ubicaciones;
             bool paso = false;
 
-
-            proveedores = LLenaCLase();
+            ubicaciones = LlenarClase();
 
 
             if (IdNumericUpDown.Value == 0)
             {
-                paso = db.Guardar(proveedores);
+                paso = db.Guardar(ubicaciones);
             }
             else
             {
@@ -92,7 +73,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                     return;
                 }
                 MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                paso = db.Modificar(proveedores);
+                paso = db.Modificar(ubicaciones);
             }
 
             if (paso)
@@ -104,18 +85,17 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-
-            RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
+            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
             try
             {
 
                 if (IdNumericUpDown.Value > 0)
                 {
-                    Proveedores proveedores = new Proveedores();
-                    if ((proveedores = db.Buscar((int)IdNumericUpDown.Value)) != null)
+                    Otros ubicaciones = new Otros();
+                    if ((ubicaciones= db.Buscar((int)IdNumericUpDown.Value)) != null)
                     {
                         Limpiar();
-                        LLenaCampos(proveedores);
+                        LlenarCampos(ubicaciones);
                     }
                     else
                     {
@@ -131,7 +111,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
+            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
             try
             {
                 if (IdNumericUpDown.Value > 0)

@@ -17,6 +17,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         public rVehiculos()
         {
             InitializeComponent();
+            LlenarComboBox();
         }
 
         private void Limpiar()
@@ -46,7 +47,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Vehiculos vehiculos = new Vehiculos();
 
-            vehiculos.VehiculoId = (int)IdNumericUpDown.Value;
+            vehiculos.VehiculoId = (int)(IdNumericUpDown.Value);
             vehiculos.Vin = VinTextBox.Text;
             vehiculos.Marca = MarcaTextBox.Text;
             vehiculos.Placa = PlacaTextBox.Text;
@@ -176,5 +177,21 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             e.Handled = true;
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            rOtros ub = new rOtros();
+            ub.ShowDialog();
+        }
+
+        private void LlenarComboBox()
+        {
+            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
+            var listado = new List<Otros>();
+            listado = db.GetList(p => true);
+            ColorComboBox.DataSource = listado;
+            ColorComboBox.DisplayMember = "Descripcion";       
+        }
+
     }
 }

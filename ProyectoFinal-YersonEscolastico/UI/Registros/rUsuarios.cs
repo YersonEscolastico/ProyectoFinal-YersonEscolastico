@@ -41,6 +41,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Usuarios usuarios = new Usuarios ();
 
+            usuarios.UsuarioId = (int)(IdNumericUpDown.Value);
             usuarios.Nombre = NombresTextBox.Text;
             usuarios.Email = EmailTextBox.Text;
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;
