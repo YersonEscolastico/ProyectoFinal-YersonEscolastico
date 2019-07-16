@@ -18,6 +18,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             InitializeComponent();
             LlenarComboBox();
+            LlenarComboBox1();
         }
 
         private void Limpiar()
@@ -178,13 +179,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             e.Handled = true;
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            rOtrosColores ub = new rOtrosColores();
-            ub.ShowDialog();
-            this.Close();
-        }
-
         private void LlenarComboBox()
         {
             RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
@@ -192,6 +186,28 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             listado = db.GetList(p => true);
             ColorComboBox.DataSource = listado;
             ColorComboBox.DisplayMember = "Descripcion";       
+        }
+
+        private void LlenarComboBox1()
+        {
+            RepositorioBase<OtrasMarcas> db = new RepositorioBase<OtrasMarcas>();
+            var listado = new List<OtrasMarcas>();
+            listado = db.GetList(p => true);
+            MarcaComboBox.DataSource = listado;
+            MarcaComboBox.DisplayMember = "Descripcion";
+        }
+        private void OtroColorButton_Click(object sender, EventArgs e)
+        {
+            rOtrosColores ub = new rOtrosColores();
+            ub.ShowDialog();
+            this.Close();
+        }
+
+        private void OtraMarcaButton_Click(object sender, EventArgs e)
+        {
+            rOtrasMarcas ub = new rOtrasMarcas();
+            ub.ShowDialog();
+            this.Close();
         }
     }
 }

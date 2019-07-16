@@ -321,7 +321,7 @@
             this.OtroColorButton.Text = "  Otros";
             this.OtroColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtroColorButton.UseVisualStyleBackColor = true;
-            this.OtroColorButton.Click += new System.EventHandler(this.Button1_Click);
+            this.OtroColorButton.Click += new System.EventHandler(this.OtroColorButton_Click);
             // 
             // MarcaComboBox
             // 
@@ -376,6 +376,7 @@
             this.OtraMarcaButton.Text = "Otros";
             this.OtraMarcaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtraMarcaButton.UseVisualStyleBackColor = true;
+            this.OtraMarcaButton.Click += new System.EventHandler(this.OtraMarcaButton_Click);
             // 
             // rVehiculos
             // 

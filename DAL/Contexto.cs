@@ -15,6 +15,7 @@ namespace DAL
         public DbSet<Vehiculos> Vehiculos { get; set; }
         public DbSet<Proveedores> Proveedores { get; set; }
         public DbSet<OtrosColores> otros { get; set; }
+        public DbSet<OtrasMarcas> otrasmarcas { get; set; }
         public DbSet<Ventas> ventas { get; set; }
 
         public Contexto() : base("ConStr")
