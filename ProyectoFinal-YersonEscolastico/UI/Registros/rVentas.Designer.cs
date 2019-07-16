@@ -215,12 +215,12 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(191, 417);
+            this.Guardarbutton.Location = new System.Drawing.Point(173, 428);
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(60, 50);
+            this.Guardarbutton.Size = new System.Drawing.Size(60, 57);
             this.Guardarbutton.TabIndex = 57;
-            this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.Text = "  Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             // 
@@ -229,10 +229,10 @@
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(358, 417);
+            this.Eliminarbutton.Location = new System.Drawing.Point(352, 428);
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(60, 50);
+            this.Eliminarbutton.Size = new System.Drawing.Size(60, 57);
             this.Eliminarbutton.TabIndex = 56;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -243,10 +243,10 @@
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(20, 417);
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 428);
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(2);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(60, 50);
+            this.Nuevobutton.Size = new System.Drawing.Size(60, 57);
             this.Nuevobutton.TabIndex = 55;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -259,7 +259,7 @@
             this.Buscarbutton.Location = new System.Drawing.Point(336, 11);
             this.Buscarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(82, 34);
+            this.Buscarbutton.Size = new System.Drawing.Size(82, 40);
             this.Buscarbutton.TabIndex = 58;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 478);
+            this.ClientSize = new System.Drawing.Size(430, 492);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);

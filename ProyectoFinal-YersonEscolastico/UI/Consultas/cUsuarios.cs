@@ -64,10 +64,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
                                 listado = db.GetList(p => p.Clave.Contains(CriteriotextBox.Text));
                                 break;
 
-                            case 6:
-                                listado = db.GetList(p => p.ConfirmarClave.Contains(CriteriotextBox.Text));
-                                break;
-
                             default:
                                 break;
                         }
@@ -117,10 +113,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
 
                             case 5:
                                 listado = db.GetList(p => p.Clave.Contains(CriteriotextBox.Text));
-                                break;
-
-                            case 6:
-                                listado = db.GetList(p => p.ConfirmarClave.Contains(CriteriotextBox.Text));
                                 break;
 
                             default:

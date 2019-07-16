@@ -52,7 +52,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 26);
+            this.label1.Location = new System.Drawing.Point(12, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 200);
+            this.label2.Location = new System.Drawing.Point(12, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 1;
@@ -70,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 164);
+            this.label3.Location = new System.Drawing.Point(12, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
@@ -79,7 +79,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 129);
+            this.label4.Location = new System.Drawing.Point(12, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 3;
@@ -88,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 94);
+            this.label5.Location = new System.Drawing.Point(12, 105);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
@@ -97,7 +97,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 60);
+            this.label6.Location = new System.Drawing.Point(12, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 5;
@@ -106,7 +106,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 237);
+            this.label7.Location = new System.Drawing.Point(12, 247);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 6;
@@ -114,35 +114,35 @@
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(110, 19);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(110, 26);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(42, 20);
             this.IdNumericUpDown.TabIndex = 7;
             // 
             // NombresTextBox
             // 
-            this.NombresTextBox.Location = new System.Drawing.Point(110, 53);
+            this.NombresTextBox.Location = new System.Drawing.Point(110, 64);
             this.NombresTextBox.Name = "NombresTextBox";
-            this.NombresTextBox.Size = new System.Drawing.Size(161, 20);
+            this.NombresTextBox.Size = new System.Drawing.Size(215, 20);
             this.NombresTextBox.TabIndex = 8;
             // 
             // EmailTextBox
             // 
-            this.EmailTextBox.Location = new System.Drawing.Point(110, 157);
+            this.EmailTextBox.Location = new System.Drawing.Point(110, 169);
             this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.Size = new System.Drawing.Size(161, 20);
+            this.EmailTextBox.Size = new System.Drawing.Size(215, 20);
             this.EmailTextBox.TabIndex = 9;
             // 
             // DireccionTextBox
             // 
-            this.DireccionTextBox.Location = new System.Drawing.Point(110, 193);
+            this.DireccionTextBox.Location = new System.Drawing.Point(110, 205);
             this.DireccionTextBox.Name = "DireccionTextBox";
-            this.DireccionTextBox.Size = new System.Drawing.Size(161, 20);
+            this.DireccionTextBox.Size = new System.Drawing.Size(215, 20);
             this.DireccionTextBox.TabIndex = 10;
             // 
             // TelefonoMaskedTextBox
             // 
-            this.TelefonoMaskedTextBox.Location = new System.Drawing.Point(110, 87);
+            this.TelefonoMaskedTextBox.Location = new System.Drawing.Point(110, 98);
             this.TelefonoMaskedTextBox.Mask = "000-000-0000";
             this.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox";
             this.TelefonoMaskedTextBox.Size = new System.Drawing.Size(113, 20);
@@ -150,7 +150,7 @@
             // 
             // CelularMaskedTextBox
             // 
-            this.CelularMaskedTextBox.Location = new System.Drawing.Point(110, 122);
+            this.CelularMaskedTextBox.Location = new System.Drawing.Point(110, 134);
             this.CelularMaskedTextBox.Mask = "000-000-0000";
             this.CelularMaskedTextBox.Name = "CelularMaskedTextBox";
             this.CelularMaskedTextBox.Size = new System.Drawing.Size(113, 20);
@@ -159,7 +159,7 @@
             // FechaRegistroateTimePicker
             // 
             this.FechaRegistroateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaRegistroateTimePicker.Location = new System.Drawing.Point(110, 230);
+            this.FechaRegistroateTimePicker.Location = new System.Drawing.Point(110, 240);
             this.FechaRegistroateTimePicker.Name = "FechaRegistroateTimePicker";
             this.FechaRegistroateTimePicker.Size = new System.Drawing.Size(113, 20);
             this.FechaRegistroateTimePicker.TabIndex = 23;
@@ -181,7 +181,7 @@
             // 
             this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(126, 276);
+            this.GuardarButton.Location = new System.Drawing.Point(134, 276);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 55);
             this.GuardarButton.TabIndex = 28;
@@ -209,7 +209,7 @@
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.BuscarButton.Location = new System.Drawing.Point(238, 12);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(87, 34);
+            this.BuscarButton.Size = new System.Drawing.Size(87, 39);
             this.BuscarButton.TabIndex = 30;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -240,7 +240,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rProveedores";
-            this.Text = "rProveedores";
+            this.Text = "Registro Proveedores";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

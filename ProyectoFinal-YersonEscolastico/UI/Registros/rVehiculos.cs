@@ -182,6 +182,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             rOtros ub = new rOtros();
             ub.ShowDialog();
+            this.Close();
         }
 
         private void LlenarComboBox()
@@ -192,6 +193,5 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             ColorComboBox.DataSource = listado;
             ColorComboBox.DisplayMember = "Descripcion";       
         }
-
     }
 }
