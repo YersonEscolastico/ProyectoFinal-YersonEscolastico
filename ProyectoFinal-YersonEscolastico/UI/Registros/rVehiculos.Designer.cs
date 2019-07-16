@@ -364,6 +364,8 @@
             this.OtroModeloButton.Text = "Otros";
             this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtroModeloButton.UseVisualStyleBackColor = true;
+            this.OtroModeloButton.Click += new System.EventHandler(this.OtroModeloButton_Click);
+            this.OtroModeloButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OtroModeloButton_KeyPress);
             // 
             // OtraMarcaButton
             // 

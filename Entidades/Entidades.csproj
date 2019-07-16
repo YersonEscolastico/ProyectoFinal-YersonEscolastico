@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Clientes.cs" />
     <Compile Include="OtrasMarcas.cs" />
+    <Compile Include="OtrosModelos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedores.cs" />
     <Compile Include="OtrosColores.cs" />
