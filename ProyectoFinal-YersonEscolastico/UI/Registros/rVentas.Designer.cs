@@ -35,14 +35,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ClienteComboBox = new System.Windows.Forms.ComboBox();
             this.PrecioNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.MontoInscripciontextBox = new System.Windows.Forms.TextBox();
+            this.FechaVentaDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Removerbutton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.Agregarbutton = new System.Windows.Forms.Button();
-            this.AsignaturacomboBox = new System.Windows.Forms.ComboBox();
+            this.VehiculoComboBox = new System.Windows.Forms.ComboBox();
             this.detalleDataGridView = new System.Windows.Forms.DataGridView();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -112,22 +112,22 @@
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(161, 20);
             this.PrecioNumericUpDown.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // FechaVentaDateTimePicker
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 125);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(96, 20);
-            this.dateTimePicker1.TabIndex = 10;
+            this.FechaVentaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(102, 125);
+            this.FechaVentaDateTimePicker.Name = "FechaVentaDateTimePicker";
+            this.FechaVentaDateTimePicker.Size = new System.Drawing.Size(96, 20);
+            this.FechaVentaDateTimePicker.TabIndex = 10;
             // 
-            // MontoInscripciontextBox
+            // TotalTextBox
             // 
-            this.MontoInscripciontextBox.Location = new System.Drawing.Point(337, 182);
-            this.MontoInscripciontextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.MontoInscripciontextBox.Name = "MontoInscripciontextBox";
-            this.MontoInscripciontextBox.ReadOnly = true;
-            this.MontoInscripciontextBox.Size = new System.Drawing.Size(66, 20);
-            this.MontoInscripciontextBox.TabIndex = 56;
+            this.TotalTextBox.Location = new System.Drawing.Point(337, 182);
+            this.TotalTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.TotalTextBox.Name = "TotalTextBox";
+            this.TotalTextBox.ReadOnly = true;
+            this.TotalTextBox.Size = new System.Drawing.Size(66, 20);
+            this.TotalTextBox.TabIndex = 56;
             // 
             // label6
             // 
@@ -141,12 +141,12 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.MontoInscripciontextBox);
+            this.groupBox1.Controls.Add(this.TotalTextBox);
             this.groupBox1.Controls.Add(this.Removerbutton);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.Agregarbutton);
-            this.groupBox1.Controls.Add(this.AsignaturacomboBox);
+            this.groupBox1.Controls.Add(this.VehiculoComboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
             this.groupBox1.Location = new System.Drawing.Point(15, 176);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -190,15 +190,15 @@
             this.Agregarbutton.TabIndex = 35;
             this.Agregarbutton.UseVisualStyleBackColor = true;
             // 
-            // AsignaturacomboBox
+            // VehiculoComboBox
             // 
-            this.AsignaturacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AsignaturacomboBox.FormattingEnabled = true;
-            this.AsignaturacomboBox.Location = new System.Drawing.Point(87, 18);
-            this.AsignaturacomboBox.Margin = new System.Windows.Forms.Padding(2);
-            this.AsignaturacomboBox.Name = "AsignaturacomboBox";
-            this.AsignaturacomboBox.Size = new System.Drawing.Size(161, 21);
-            this.AsignaturacomboBox.TabIndex = 7;
+            this.VehiculoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VehiculoComboBox.FormattingEnabled = true;
+            this.VehiculoComboBox.Location = new System.Drawing.Point(87, 18);
+            this.VehiculoComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.VehiculoComboBox.Name = "VehiculoComboBox";
+            this.VehiculoComboBox.Size = new System.Drawing.Size(161, 21);
+            this.VehiculoComboBox.TabIndex = 7;
             // 
             // detalleDataGridView
             // 
@@ -251,6 +251,7 @@
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // Buscarbutton
             // 
@@ -275,7 +276,7 @@
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechaVentaDateTimePicker);
             this.Controls.Add(this.PrecioNumericUpDown);
             this.Controls.Add(this.ClienteComboBox);
             this.Controls.Add(this.label2);
@@ -304,14 +305,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ClienteComboBox;
         private System.Windows.Forms.NumericUpDown PrecioNumericUpDown;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox MontoInscripciontextBox;
+        private System.Windows.Forms.DateTimePicker FechaVentaDateTimePicker;
+        private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button Removerbutton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Agregarbutton;
-        private System.Windows.Forms.ComboBox AsignaturacomboBox;
+        private System.Windows.Forms.ComboBox VehiculoComboBox;
         private System.Windows.Forms.DataGridView detalleDataGridView;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
