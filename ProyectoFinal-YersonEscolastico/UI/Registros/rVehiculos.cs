@@ -24,9 +24,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             IdNumericUpDown.Value = 0;
             VinTextBox.Text = string.Empty;
-            MarcaTextBox.Text = string.Empty;
+            MarcaComboBox.Text = string.Empty;
             PlacaTextBox.Text = string.Empty;
-            ModeloTextBox.Text = string.Empty;
+            ModeloComboBox.Text = string.Empty;
             PrecioNumericUpDown.Value = 0;
             ColorComboBox.Text = string.Empty;
             AnioTextBox.Text = string.Empty;
@@ -49,9 +49,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             vehiculos.VehiculoId = (int)(IdNumericUpDown.Value);
             vehiculos.Vin = VinTextBox.Text;
-            vehiculos.Marca = MarcaTextBox.Text;
+            vehiculos.Marca = MarcaComboBox.Text;
             vehiculos.Placa = PlacaTextBox.Text;
-            vehiculos.Modelo = ModeloTextBox.Text;
+            vehiculos.Modelo = ModeloComboBox.Text;
             vehiculos.Color = ColorComboBox.Text;
             vehiculos.Anio = AnioTextBox.Text;
             vehiculos.Descripcion = DescripcionTextBox.Text;
@@ -68,9 +68,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             IdNumericUpDown.Value = vehiculos.VehiculoId;
             VinTextBox.Text = vehiculos.Vin;
-            MarcaTextBox.Text = vehiculos.Marca;
+            MarcaComboBox.Text = vehiculos.Marca;
             PlacaTextBox.Text = vehiculos.Placa;
-            ModeloTextBox.Text = vehiculos.Modelo;
+            ModeloComboBox.Text = vehiculos.Modelo;
             ColorComboBox.Text = vehiculos.Color;
             AnioTextBox.Text = vehiculos.Anio;
             DescripcionTextBox.Text = vehiculos.Descripcion;
@@ -180,15 +180,15 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            rOtros ub = new rOtros();
+            rOtrosColores ub = new rOtrosColores();
             ub.ShowDialog();
             this.Close();
         }
 
         private void LlenarComboBox()
         {
-            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
-            var listado = new List<Otros>();
+            RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
+            var listado = new List<OtrosColores>();
             listado = db.GetList(p => true);
             ColorComboBox.DataSource = listado;
             ColorComboBox.DisplayMember = "Descripcion";       

@@ -79,7 +79,7 @@
             // 
             // NombresTextBox
             // 
-            this.NombresTextBox.Location = new System.Drawing.Point(127, 64);
+            this.NombresTextBox.Location = new System.Drawing.Point(127, 59);
             this.NombresTextBox.Name = "NombresTextBox";
             this.NombresTextBox.Size = new System.Drawing.Size(188, 20);
             this.NombresTextBox.TabIndex = 2;
@@ -270,7 +270,7 @@
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.BuscarButton.Location = new System.Drawing.Point(274, 12);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(87, 34);
+            this.BuscarButton.Size = new System.Drawing.Size(87, 41);
             this.BuscarButton.TabIndex = 25;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -307,7 +307,7 @@
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.label1);
             this.Name = "rClientes";
-            this.Text = "rClientes";
+            this.Text = "Registro de clientes";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

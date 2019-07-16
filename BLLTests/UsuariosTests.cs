@@ -31,7 +31,6 @@ namespace BLL.Tests
             Email = "Juan@gmail.com",
             Usuario = "Juan123",
             Clave = "123",
-            ConfirmarClave ="123",
             NivelAcceso = "Usuario",
             Fecha = DateTime.Now
         };
@@ -50,7 +49,6 @@ namespace BLL.Tests
                 Email = "Juan@gmail.com",
                 Usuario = "Juan123",
                 Clave = "123",
-                ConfirmarClave = "123",
                 NivelAcceso = "Usuario",
                 Fecha = DateTime.Now
             };

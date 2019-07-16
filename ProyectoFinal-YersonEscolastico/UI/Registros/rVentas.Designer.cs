@@ -284,7 +284,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "rVentas";
-            this.Text = "rVentas";
+            this.Text = "Registro de ventas";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);

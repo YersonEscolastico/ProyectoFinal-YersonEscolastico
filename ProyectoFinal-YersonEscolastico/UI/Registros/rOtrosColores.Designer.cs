@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
-    partial class rOtros
+    partial class rOtrosColores
     {
         /// <summary>
         /// Required designer variable.
@@ -137,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.IdNumericUpDown);
             this.Name = "rOtros";
-            this.Text = "rOtros";
+            this.Text = "Otros";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

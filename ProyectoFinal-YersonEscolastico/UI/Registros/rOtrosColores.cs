@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
-    public partial class rOtros : Form
+    public partial class rOtrosColores : Form
     {
-        public rOtros()
+        public rOtrosColores()
         {
             InitializeComponent();
         }
@@ -30,16 +30,16 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Limpiar();
         }
 
-        private Otros LlenarClase()
+        private OtrosColores LlenarClase()
         { 
-            Otros ubicaciones = new Otros();
+            OtrosColores ubicaciones = new OtrosColores();
 
             ubicaciones.UbicacionId = (int)(IdNumericUpDown.Value);
             ubicaciones.Descripcion = DescripcionTextBox.Text;
             return ubicaciones;
         }
 
-        private void LlenarCampos(Otros ubicaciones)
+        private void LlenarCampos(OtrosColores ubicaciones)
         {
             IdNumericUpDown.Value = ubicaciones.UbicacionId;
             DescripcionTextBox.Text = ubicaciones.Descripcion;
@@ -47,15 +47,15 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
-            Otros ubicaciones = db.Buscar((int)IdNumericUpDown.Value);
+            RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
+            OtrosColores ubicaciones = db.Buscar((int)IdNumericUpDown.Value);
             return (ubicaciones != null);
         }
 
         private void GuardarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
-            Otros ubicaciones;
+            RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
+            OtrosColores ubicaciones;
             bool paso = false;
 
             ubicaciones = LlenarClase();
@@ -90,13 +90,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
+            RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
             try
             {
 
                 if (IdNumericUpDown.Value > 0)
                 {
-                    Otros ubicaciones = new Otros();
+                    OtrosColores ubicaciones = new OtrosColores();
                     if ((ubicaciones= db.Buscar((int)IdNumericUpDown.Value)) != null)
                     {
                         Limpiar();
@@ -116,7 +116,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void EliminarButton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Otros> db = new RepositorioBase<Otros>();
+            RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
             try
             {
                 if (IdNumericUpDown.Value > 0)

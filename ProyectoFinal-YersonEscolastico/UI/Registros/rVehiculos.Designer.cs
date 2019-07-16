@@ -54,9 +54,11 @@
             this.GuardarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.BuscarButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OtroColorButton = new System.Windows.Forms.Button();
             this.MarcaComboBox = new System.Windows.Forms.ComboBox();
             this.ModeloComboBox = new System.Windows.Forms.ComboBox();
+            this.OtroModeloButton = new System.Windows.Forms.Button();
+            this.OtraMarcaButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
@@ -308,18 +310,18 @@
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // button1
+            // OtroColorButton
             // 
-            this.button1.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(238, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 24);
-            this.button1.TabIndex = 66;
-            this.button1.Text = "    Otro";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.OtroColorButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.OtroColorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OtroColorButton.Location = new System.Drawing.Point(238, 194);
+            this.OtroColorButton.Name = "OtroColorButton";
+            this.OtroColorButton.Size = new System.Drawing.Size(75, 24);
+            this.OtroColorButton.TabIndex = 66;
+            this.OtroColorButton.Text = "  Otros";
+            this.OtroColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OtroColorButton.UseVisualStyleBackColor = true;
+            this.OtroColorButton.Click += new System.EventHandler(this.Button1_Click);
             // 
             // MarcaComboBox
             // 
@@ -351,14 +353,40 @@
             this.ModeloComboBox.Size = new System.Drawing.Size(122, 21);
             this.ModeloComboBox.TabIndex = 68;
             // 
+            // OtroModeloButton
+            // 
+            this.OtroModeloButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.OtroModeloButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OtroModeloButton.Location = new System.Drawing.Point(238, 155);
+            this.OtroModeloButton.Name = "OtroModeloButton";
+            this.OtroModeloButton.Size = new System.Drawing.Size(75, 24);
+            this.OtroModeloButton.TabIndex = 69;
+            this.OtroModeloButton.Text = "Otros";
+            this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OtroModeloButton.UseVisualStyleBackColor = true;
+            // 
+            // OtraMarcaButton
+            // 
+            this.OtraMarcaButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.OtraMarcaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 86);
+            this.OtraMarcaButton.Name = "OtraMarcaButton";
+            this.OtraMarcaButton.Size = new System.Drawing.Size(75, 24);
+            this.OtraMarcaButton.TabIndex = 70;
+            this.OtraMarcaButton.Text = "Otros";
+            this.OtraMarcaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OtraMarcaButton.UseVisualStyleBackColor = true;
+            // 
             // rVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 517);
+            this.ClientSize = new System.Drawing.Size(336, 511);
+            this.Controls.Add(this.OtraMarcaButton);
+            this.Controls.Add(this.OtroModeloButton);
             this.Controls.Add(this.ModeloComboBox);
             this.Controls.Add(this.MarcaComboBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.OtroColorButton);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -386,7 +414,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rVehiculos";
-            this.Text = "rVehiculos";
+            this.Text = "Registro de vehiculos";
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
@@ -423,8 +451,10 @@
         private System.Windows.Forms.Button GuardarButton;
         private System.Windows.Forms.Button EliminarButton;
         private System.Windows.Forms.Button BuscarButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OtroColorButton;
         private System.Windows.Forms.ComboBox MarcaComboBox;
         private System.Windows.Forms.ComboBox ModeloComboBox;
+        private System.Windows.Forms.Button OtroModeloButton;
+        private System.Windows.Forms.Button OtraMarcaButton;
     }
 }

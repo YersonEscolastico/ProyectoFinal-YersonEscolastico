@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class Otros
+    public class OtrasMarcas
     {
         [Key]
         public int UbicacionId { get; set; }
         public string Descripcion { get; set; }
 
-        public Otros()
+        public OtrasMarcas()
         {
             UbicacionId = 0;
             Descripcion = string.Empty;
