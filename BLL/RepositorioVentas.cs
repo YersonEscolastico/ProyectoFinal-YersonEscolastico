@@ -21,8 +21,13 @@ namespace BLL
 
                 if (db.ventas.Add(ventas) != null)
                 {
+                    string estado = "Vendido";
+                    foreach (var item in ventas.Vehiculos)
+                    {
+                        db.Vehiculos.Find(item.VehiculoId).Estado = estado;
+                    }
                     var cliente = cl.Buscar(ventas.ClienteId);
-
+                    db.Usuarios.Find(ventas.UsuarioId).TotalVentas += ventas.Total;
                     ventas.CalcularMonto();
                     paso = db.SaveChanges() > 0;
                 }
@@ -44,7 +49,7 @@ namespace BLL
             {
                 var cliente = cl.Buscar(ventas.ClienteId);
                 var anterior = new RepositorioBase<Ventas>().Buscar(ventas.VentaId);
-               
+
                 foreach (var item in anterior.Vehiculos)
                 {
                     if (!ventas.Vehiculos.Any(A => A.VentasDetalleID == item.VentasDetalleID))
@@ -108,6 +113,7 @@ namespace BLL
             {
                 var Ventas = db.ventas.Find(id);
                 var clientes = cl.Buscar(Ventas.VentaId);
+                db.Usuarios.Find(Ventas.UsuarioId).TotalVentas -= Ventas.Total;
                 db.Entry(Ventas).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
             }

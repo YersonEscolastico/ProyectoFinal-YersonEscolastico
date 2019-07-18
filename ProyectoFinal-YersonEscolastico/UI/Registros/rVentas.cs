@@ -20,6 +20,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             InitializeComponent();
             LlenarComboBox();
             LLenarComboBoxTwo();
+            CargarUsuario();
             VehiculoComboBox.Text = null;
             ClienteComboBox.Text = null;
             this.Detalle = new List<VentasDetalle>();
@@ -56,23 +57,48 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 ventas.ClienteId = Convert.ToInt32(ClienteComboBox.SelectedValue);
             }
+            ventas.UsuarioId = 1;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
-            ventas.Precio = PrecioNumericUpDown.Value;
+            ventas.Total = PrecioNumericUpDown.Value;
             ventas.CalcularMonto();
             ventas.FechaVenta = FechaVentaDateTimePicker.Value;
 
             return ventas;
         }
 
+        private void CargarUsuario()
+        {
+            RepositorioBase<Usuarios> repositorio = new RepositorioBase<Usuarios>();
+            UsuarioTextBox.DataBindings.Clear();
+            var Usuario = repositorio.GetList(c => true);
+            Binding doBinding = new Binding("Text", Usuario, "Nombre");
+            UsuarioTextBox.DataBindings.Add(doBinding);
+        }
+
         private void LlenaCampos(Ventas ventas)
         {
             IdNumericUpDown.Value = ventas.VentaId;
             ClienteComboBox.SelectedValue = ventas.VentaId;
-            PrecioNumericUpDown.Value = ventas.Precio;
-            TotalTextBox.Text = ventas.Precio.ToString();
+            PrecioNumericUpDown.Value = ventas.Total;
+            TotalTextBox.Text = ventas.Total.ToString();
             FechaVentaDateTimePicker.Value = ventas.FechaVenta;
             this.Detalle = ventas.Vehiculos;
             CargarGrid();
+        }
+
+        private bool Existencia()
+        {
+            bool paso = false;
+            string estado = "Vendido";
+            RepositorioBase<Vehiculos> repositorio = new RepositorioBase<Vehiculos>();
+            Vehiculos vehiculo = repositorio.Buscar(Convert.ToInt32(VehiculoComboBox.SelectedValue));
+            if (estado == vehiculo.Estado)
+            {
+                MessageBox.Show("Vehiculo Vendido!!", "Fallo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                paso = true;
+            }
+            return paso;
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -111,6 +137,22 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             LlenaClase();
             Limpiar();
+        }
+
+        private void CalTotal()
+        {
+            List<VentasDetalle> detalle = new List<VentasDetalle>();
+
+            if (detalleDataGridView.DataSource != null)
+            {
+                detalle = (List<VentasDetalle>)detalleDataGridView.DataSource;
+            }
+            decimal Total = 0;
+            foreach (var item in detalle)
+            {
+                Total += item.SubTotal;
+            }
+            TotalTextBox.Text = Total.ToString();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -159,6 +201,22 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 MessageBox.Show("NO se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void RebTotal()
+        {
+            List<VentasDetalle> detalle = new List<VentasDetalle>();
+
+            if (detalleDataGridView.DataSource != null)
+            {
+                detalle = (List<VentasDetalle>)detalleDataGridView.DataSource;
+            }
+            decimal Total = 0;
+            foreach (var item in detalle)
+            {
+                Total -= item.SubTotal;
+            }
+            Total *= (-1);
+            TotalTextBox.Text = Total.ToString();
+        }
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
@@ -169,6 +227,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 return;
             }
 
+            if (Existencia())
+                return;
             RepositorioBase<Vehiculos> db = new RepositorioBase<Vehiculos>();
             Vehiculos vehiculos = db.Buscar((int)VehiculoComboBox.SelectedValue);
             if (detalleDataGridView.DataSource != null)
@@ -184,6 +244,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 SubTotal = subtotal
             });
             CargarGrid();
+            CalTotal();
         }
 
 
@@ -193,6 +254,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 Detalle.RemoveAt(detalleDataGridView.CurrentRow.Index);
                 CargarGrid();
+                RebTotal();
             }
         }
 

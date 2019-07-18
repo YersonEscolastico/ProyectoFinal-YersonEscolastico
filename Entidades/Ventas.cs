@@ -11,23 +11,22 @@ namespace Entidades
     public class Ventas
     {
         [Key]
-        public int VentaId { get; set; }
-        public decimal Precio { get; set; }      
+        public int VentaId { get; set; }      
         public DateTime FechaVenta { get; set; }
         public int ClienteId { get; set; }
         public int UsuarioId { get; set; }
-        
+        public decimal Total { get; set; }
+
         public virtual List<VentasDetalle> Vehiculos { get; set; }
         public Ventas()
         {
             VentaId = 0;
-            Precio = 0;
+            Total = 0;
             FechaVenta = DateTime.Now;
             ClienteId = 0;
             UsuarioId = 0;
             Vehiculos = new List<VentasDetalle>();
         }
-
         public void CalcularMonto()
         {
             decimal total = 0;
@@ -36,7 +35,7 @@ namespace Entidades
             {
                 total += item.SubTotal;
             }
-            Precio = total;
+            Total = total;
         }
     }
 }

@@ -50,6 +50,8 @@
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.UsuarioTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(14, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
@@ -69,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 96);
+            this.label3.Location = new System.Drawing.Point(168, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -78,7 +80,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 61);
+            this.label5.Location = new System.Drawing.Point(12, 86);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 4;
@@ -86,7 +88,7 @@
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(102, 18);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(57, 23);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(46, 20);
             this.IdNumericUpDown.TabIndex = 5;
@@ -94,36 +96,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 132);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Fecha Venta";
+            this.label2.Text = "Fecha";
             // 
             // ClienteComboBox
             // 
+            this.ClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClienteComboBox.FormattingEnabled = true;
-            this.ClienteComboBox.Location = new System.Drawing.Point(102, 53);
+            this.ClienteComboBox.Location = new System.Drawing.Point(57, 83);
             this.ClienteComboBox.Name = "ClienteComboBox";
-            this.ClienteComboBox.Size = new System.Drawing.Size(161, 21);
+            this.ClienteComboBox.Size = new System.Drawing.Size(103, 21);
             this.ClienteComboBox.TabIndex = 7;
             // 
             // PrecioNumericUpDown
             // 
-            this.PrecioNumericUpDown.Location = new System.Drawing.Point(102, 89);
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(211, 86);
             this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
             0,
             0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
-            this.PrecioNumericUpDown.Size = new System.Drawing.Size(161, 20);
+            this.PrecioNumericUpDown.Size = new System.Drawing.Size(103, 20);
             this.PrecioNumericUpDown.TabIndex = 9;
             // 
             // FechaVentaDateTimePicker
             // 
             this.FechaVentaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(102, 125);
+            this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(57, 57);
             this.FechaVentaDateTimePicker.Name = "FechaVentaDateTimePicker";
             this.FechaVentaDateTimePicker.Size = new System.Drawing.Size(96, 20);
             this.FechaVentaDateTimePicker.TabIndex = 10;
@@ -156,7 +159,7 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.VehiculoComboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(15, 176);
+            this.groupBox1.Location = new System.Drawing.Point(15, 109);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -226,7 +229,7 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(173, 428);
+            this.Guardarbutton.Location = new System.Drawing.Point(173, 361);
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(60, 57);
@@ -241,7 +244,7 @@
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(352, 428);
+            this.Eliminarbutton.Location = new System.Drawing.Point(352, 361);
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(60, 57);
@@ -256,7 +259,7 @@
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 428);
+            this.Nuevobutton.Location = new System.Drawing.Point(15, 361);
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(2);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(60, 57);
@@ -270,10 +273,10 @@
             // 
             this.Buscarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(336, 11);
+            this.Buscarbutton.Location = new System.Drawing.Point(108, 18);
             this.Buscarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(82, 40);
+            this.Buscarbutton.Size = new System.Drawing.Size(82, 27);
             this.Buscarbutton.TabIndex = 58;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -284,11 +287,32 @@
             // 
             this.MyErrorProvider.ContainerControl = this;
             // 
+            // UsuarioTextBox
+            // 
+            this.UsuarioTextBox.Location = new System.Drawing.Point(343, 22);
+            this.UsuarioTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.UsuarioTextBox.Name = "UsuarioTextBox";
+            this.UsuarioTextBox.ReadOnly = true;
+            this.UsuarioTextBox.Size = new System.Drawing.Size(79, 20);
+            this.UsuarioTextBox.TabIndex = 58;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(340, 7);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Usuario";
+            // 
             // rVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 492);
+            this.ClientSize = new System.Drawing.Size(430, 434);
+            this.Controls.Add(this.UsuarioTextBox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
@@ -338,5 +362,7 @@
         private System.Windows.Forms.Button Nuevobutton;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.TextBox UsuarioTextBox;
+        private System.Windows.Forms.Label label4;
     }
 }

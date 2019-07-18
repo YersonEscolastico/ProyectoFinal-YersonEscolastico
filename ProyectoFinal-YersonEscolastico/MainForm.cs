@@ -29,6 +29,7 @@ namespace ProyectoFinal_YersonEscolastico
         private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             cUsuarios us = new cUsuarios();
+            us.MdiParent = this;
             us.Show();
         }
 
@@ -36,6 +37,7 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rClientes  Cl = new rClientes();
             Cl.StartPosition = FormStartPosition.CenterScreen;
+            Cl.MdiParent = this;
             Cl.Show();
         }
 
@@ -43,6 +45,7 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rVehiculos vh = new rVehiculos();
             vh.StartPosition = FormStartPosition.CenterScreen;
+            vh.MdiParent = this;
             vh.Show();
         }
 
@@ -50,6 +53,7 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rProveedores prov = new rProveedores();
             prov.StartPosition = FormStartPosition.CenterScreen;
+            prov.MdiParent = this;
             prov.Show();
         }
 
@@ -57,6 +61,7 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rVentas ve = new rVentas();
             ve.StartPosition = FormStartPosition.CenterScreen;
+            ve.MdiParent = this;
             ve.Show();
         }
     }
