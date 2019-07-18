@@ -15,7 +15,8 @@ namespace Entidades
         public decimal Precio { get; set; }      
         public DateTime FechaVenta { get; set; }
         public int ClienteId { get; set; }
-
+        public int UsuarioId { get; set; }
+        
         public virtual List<VentasDetalle> Vehiculos { get; set; }
         public Ventas()
         {
@@ -23,6 +24,7 @@ namespace Entidades
             Precio = 0;
             FechaVenta = DateTime.Now;
             ClienteId = 0;
+            UsuarioId = 0;
             Vehiculos = new List<VentasDetalle>();
         }
 

@@ -51,6 +51,8 @@
             this.EliminarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TotalVentasTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -184,11 +186,24 @@
             this.GuardarButton.UseVisualStyleBackColor = false;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
             // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // TotalVentasTextBox
+            // 
+            resources.ApplyResources(this.TotalVentasTextBox, "TotalVentasTextBox");
+            this.TotalVentasTextBox.Name = "TotalVentasTextBox";
+            this.TotalVentasTextBox.ReadOnly = true;
+            // 
             // rUsuarios
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.TotalVentasTextBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.EmailTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.NivelAccesocomboBox);
@@ -239,5 +254,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox EmailTextBox;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.TextBox TotalVentasTextBox;
+        private System.Windows.Forms.Label label8;
     }
 }

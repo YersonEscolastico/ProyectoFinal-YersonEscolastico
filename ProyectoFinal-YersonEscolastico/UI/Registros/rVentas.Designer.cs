@@ -111,6 +111,11 @@
             // PrecioNumericUpDown
             // 
             this.PrecioNumericUpDown.Location = new System.Drawing.Point(102, 89);
+            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(161, 20);
             this.PrecioNumericUpDown.TabIndex = 9;
@@ -163,6 +168,7 @@
             // Removerbutton
             // 
             this.Removerbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Removerbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Remover;
             this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Removerbutton.Location = new System.Drawing.Point(16, 183);
             this.Removerbutton.Margin = new System.Windows.Forms.Padding(2);

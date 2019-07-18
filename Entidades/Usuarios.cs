@@ -17,6 +17,7 @@ namespace Entidades
         public string Usuario { get; set; }
         public string Clave { get; set; }
         public string NivelAcceso { get; set; }
+        public decimal TotalVentas { get; set; }
         public DateTime Fecha { get; set; }
 
 
@@ -28,6 +29,7 @@ namespace Entidades
             Usuario = string.Empty;
             Clave = string.Empty;
             NivelAcceso = string.Empty;
+            TotalVentas = 0;
             Fecha = DateTime.Now;
         }
     }

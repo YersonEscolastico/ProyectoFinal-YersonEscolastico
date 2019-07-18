@@ -180,11 +180,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             e.Handled = true;
         }
 
-        private void OtroModeloButton_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
         private void LlenarComboBox()
         {
             RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();

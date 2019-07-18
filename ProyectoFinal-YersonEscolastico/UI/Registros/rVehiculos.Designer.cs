@@ -92,6 +92,11 @@
             // CostoNumericUpDown
             // 
             this.CostoNumericUpDown.Location = new System.Drawing.Point(109, 303);
+            this.CostoNumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
             this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.CostoNumericUpDown.TabIndex = 54;
@@ -233,6 +238,11 @@
             // PrecioNumericUpDown
             // 
             this.PrecioNumericUpDown.Location = new System.Drawing.Point(109, 339);
+            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.PrecioNumericUpDown.TabIndex = 59;
@@ -365,7 +375,6 @@
             this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtroModeloButton.UseVisualStyleBackColor = true;
             this.OtroModeloButton.Click += new System.EventHandler(this.OtroModeloButton_Click);
-            this.OtroModeloButton.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OtroModeloButton_KeyPress);
             // 
             // OtraMarcaButton
             // 
@@ -417,7 +426,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rVehiculos";
-            this.Text = "Registro de vehiculos";
+            this.Text = "5";
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();

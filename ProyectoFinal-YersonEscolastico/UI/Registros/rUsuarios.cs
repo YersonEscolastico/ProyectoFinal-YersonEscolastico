@@ -26,8 +26,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             EmailTextBox.Text = string.Empty;
             UsuarioTextBox.Text = string.Empty;
             NivelAccesocomboBox.Text = string.Empty;
+            TotalVentasTextBox.Text = string.Empty;
             ContrasenaMaskedTextBox.Text = string.Empty;
-            ConfirmarContrasenaMaskedTextBox.Text = string.Empty;
+            ConfirmarContrasenaMaskedTextBox.Text = string.Empty;           
             FechaRegistroDateTimePicker.Value = DateTime.Now;
         }
 
@@ -46,6 +47,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             usuarios.Email = EmailTextBox.Text;
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;
             usuarios.Usuario = UsuarioTextBox.Text;
+            usuarios.TotalVentas = 0;
             usuarios.Clave = ContrasenaMaskedTextBox.Text;
             usuarios.Fecha = FechaRegistroDateTimePicker.Value;
             return usuarios;
@@ -58,6 +60,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             EmailTextBox.Text = usuarios.Email;
             NivelAccesocomboBox.Text = usuarios.NivelAcceso;
             UsuarioTextBox.Text = usuarios.Usuario;
+            TotalVentasTextBox.Text = usuarios.TotalVentas.ToString();
             ContrasenaMaskedTextBox.Text = usuarios.Clave;
             FechaRegistroDateTimePicker.Value = usuarios.Fecha;
         }

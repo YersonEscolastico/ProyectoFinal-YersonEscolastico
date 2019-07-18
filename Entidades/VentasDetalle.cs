@@ -11,7 +11,6 @@ namespace Entidades
         public int VentasDetalleID { get; set; }
         public int VentaId { get; set; }
         public int VehiculoId{ get; set; }
-        public int Precio { get; set; }
         public decimal SubTotal { get; set; }
 
         public VentasDetalle()
@@ -19,7 +18,6 @@ namespace Entidades
             VentasDetalleID = 0;
             VentaId = 0;
             VehiculoId = 0;
-            Precio = 0;
             SubTotal = 0;
         }
 
@@ -28,7 +26,6 @@ namespace Entidades
             VentasDetalleID = ventasDetalleID;
             VentaId = ventaId;
             VehiculoId = vehiculoId;
-            Precio = precio;
             SubTotal = subtotal;
         }
     }

@@ -20,6 +20,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             InitializeComponent();
             LlenarComboBox();
             LLenarComboBoxTwo();
+            VehiculoComboBox.Text = null;
+            ClienteComboBox.Text = null;
             this.Detalle = new List<VentasDetalle>();
         }
 
@@ -129,7 +131,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
             else
             {
-                MessageBox.Show("Inscripcion no existe");
+                MessageBox.Show("Venta no existe");
             }
         }
 
