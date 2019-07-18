@@ -52,5 +52,12 @@ namespace ProyectoFinal_YersonEscolastico
             prov.StartPosition = FormStartPosition.CenterScreen;
             prov.Show();
         }
+
+        private void VentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rVentas ve = new rVentas();
+            ve.StartPosition = FormStartPosition.CenterScreen;
+            ve.Show();
+        }
     }
 }

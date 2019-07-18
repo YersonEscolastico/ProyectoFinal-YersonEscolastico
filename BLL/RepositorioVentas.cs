@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    public class VentasBLL
+    public class RepositorioVentas
     {
         public static bool Guardar(Ventas ventas)
         {
@@ -25,7 +25,6 @@ namespace BLL
 
                     ventas.CalcularMonto();
                     paso = db.SaveChanges() > 0;
-                    cl.Modificar(cliente);
                 }
             }
             catch (Exception)
@@ -39,12 +38,11 @@ namespace BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            RepositorioBase<Ventas> Est = new RepositorioBase<Ventas>();
-
+            RepositorioBase<Ventas> cl = new RepositorioBase<Ventas>();
 
             try
             {
-                var cliente = Est.Buscar(ventas.ClienteId);
+                var cliente = cl.Buscar(ventas.ClienteId);
                 var anterior = new RepositorioBase<Ventas>().Buscar(ventas.VentaId);
                
                 foreach (var item in anterior.Vehiculos)
@@ -68,7 +66,6 @@ namespace BLL
                 }
 
                 ventas.CalcularMonto();
-                Est.Modificar(cliente);
 
                 db.Entry(ventas).State = EntityState.Modified;
 
@@ -106,12 +103,11 @@ namespace BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            RepositorioBase<Clientes> Est = new RepositorioBase<Clientes>();
+            RepositorioBase<Clientes> cl = new RepositorioBase<Clientes>();
             try
             {
                 var Ventas = db.ventas.Find(id);
-                var clientes = Est.Buscar(Ventas.VentaId);
-                Est.Modificar(clientes);
+                var clientes = cl.Buscar(Ventas.VentaId);
                 db.Entry(Ventas).State = EntityState.Deleted;
                 paso = (db.SaveChanges() > 0);
             }
