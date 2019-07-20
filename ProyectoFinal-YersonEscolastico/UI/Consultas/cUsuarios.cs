@@ -137,9 +137,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
                         {
                             listado = db.GetList(p => true);
                         }
-                        ListaUsuarios = listado;
-                        ConsultadataGridView.DataSource = ListaUsuarios;
                     }
+                    ListaUsuarios = listado;
+                    ConsultadataGridView.DataSource = ListaUsuarios;
                 }
                 catch (Exception)
                 { }

@@ -72,8 +72,12 @@
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
             "Id",
-            "Nombre",
-            "Balance"});
+            "Nombres",
+            "Sexo",
+            "Email",
+            "Cedula",
+            "Direccion",
+            "Telefono"});
             this.FiltrocomboBox.Location = new System.Drawing.Point(306, 28);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(105, 21);
@@ -138,6 +142,7 @@
             this.Consultarbutton.Text = "Consultar";
             this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Consultarbutton.UseVisualStyleBackColor = true;
+            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
             // 
             // CriteriotextBox
             // 
