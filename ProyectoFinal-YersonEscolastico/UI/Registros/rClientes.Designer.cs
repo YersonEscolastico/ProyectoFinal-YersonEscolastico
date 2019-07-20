@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.NuevoButton = new System.Windows.Forms.Button();
             this.NombresTextBox = new System.Windows.Forms.TextBox();
             this.IdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,10 +49,11 @@
             this.CelularMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.FechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.FechaRegistroateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
@@ -66,19 +66,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(14, 397);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 55);
-            this.NuevoButton.TabIndex = 1;
-            this.NuevoButton.Text = "Nuevo";
-            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // NombresTextBox
             // 
@@ -132,6 +119,7 @@
             // 
             // SexoComboBox
             // 
+            this.SexoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SexoComboBox.FormattingEnabled = true;
             this.SexoComboBox.Items.AddRange(new object[] {
             "F",
@@ -241,53 +229,71 @@
             this.FechaRegistroateTimePicker.Size = new System.Drawing.Size(130, 20);
             this.FechaRegistroateTimePicker.TabIndex = 22;
             // 
-            // GuardarButton
+            // MyErrorProvider
             // 
-            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
-            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(152, 397);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 55);
-            this.GuardarButton.TabIndex = 23;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
-            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(286, 397);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 55);
-            this.EliminarButton.TabIndex = 24;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
+            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.BuscarButton.Location = new System.Drawing.Point(274, 12);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(87, 41);
+            this.BuscarButton.Size = new System.Drawing.Size(87, 27);
             this.BuscarButton.TabIndex = 25;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
             // 
-            // MyErrorProvider
+            // EliminarButton
             // 
-            this.MyErrorProvider.ContainerControl = this;
+            this.EliminarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.delete;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EliminarButton.Location = new System.Drawing.Point(286, 397);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(75, 73);
+            this.EliminarButton.TabIndex = 24;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Save;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.GuardarButton.Location = new System.Drawing.Point(147, 397);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(75, 73);
+            this.GuardarButton.TabIndex = 23;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.add;
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NuevoButton.Location = new System.Drawing.Point(12, 397);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(75, 73);
+            this.NuevoButton.TabIndex = 1;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // rClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(373, 488);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EliminarButton);
@@ -313,8 +319,15 @@
             this.Controls.Add(this.NombresTextBox);
             this.Controls.Add(this.NuevoButton);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rClientes";
+            this.RightToLeftLayout = true;
             this.Text = "Registro de clientes";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

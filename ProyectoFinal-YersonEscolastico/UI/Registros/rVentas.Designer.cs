@@ -40,7 +40,9 @@
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Removerbutton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.Agregarbutton = new System.Windows.Forms.Button();
             this.VehiculoComboBox = new System.Windows.Forms.ComboBox();
             this.detalleDataGridView = new System.Windows.Forms.DataGridView();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -50,8 +52,6 @@
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
-            this.Removerbutton = new System.Windows.Forms.Button();
-            this.Agregarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 88);
+            this.label3.Location = new System.Drawing.Point(170, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -80,7 +80,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 86);
+            this.label5.Location = new System.Drawing.Point(14, 67);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 4;
@@ -96,7 +96,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 57);
+            this.label2.Location = new System.Drawing.Point(14, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 6;
@@ -106,14 +106,14 @@
             // 
             this.ClienteComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ClienteComboBox.FormattingEnabled = true;
-            this.ClienteComboBox.Location = new System.Drawing.Point(57, 83);
+            this.ClienteComboBox.Location = new System.Drawing.Point(57, 62);
             this.ClienteComboBox.Name = "ClienteComboBox";
             this.ClienteComboBox.Size = new System.Drawing.Size(103, 21);
             this.ClienteComboBox.TabIndex = 7;
             // 
             // PrecioNumericUpDown
             // 
-            this.PrecioNumericUpDown.Location = new System.Drawing.Point(211, 86);
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(213, 62);
             this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -126,24 +126,24 @@
             // FechaVentaDateTimePicker
             // 
             this.FechaVentaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(57, 57);
+            this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(57, 106);
             this.FechaVentaDateTimePicker.Name = "FechaVentaDateTimePicker";
             this.FechaVentaDateTimePicker.Size = new System.Drawing.Size(96, 20);
             this.FechaVentaDateTimePicker.TabIndex = 10;
             // 
             // TotalTextBox
             // 
-            this.TotalTextBox.Location = new System.Drawing.Point(337, 182);
+            this.TotalTextBox.Location = new System.Drawing.Point(321, 163);
             this.TotalTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.TotalTextBox.Name = "TotalTextBox";
             this.TotalTextBox.ReadOnly = true;
-            this.TotalTextBox.Size = new System.Drawing.Size(66, 20);
+            this.TotalTextBox.Size = new System.Drawing.Size(83, 20);
             this.TotalTextBox.TabIndex = 56;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(302, 189);
+            this.label6.Location = new System.Drawing.Point(286, 170);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
@@ -159,14 +159,29 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.VehiculoComboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(15, 109);
+            this.groupBox1.Location = new System.Drawing.Point(15, 146);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(407, 222);
+            this.groupBox1.Size = new System.Drawing.Size(407, 189);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // Removerbutton
+            // 
+            this.Removerbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Removerbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.eli;
+            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Removerbutton.Location = new System.Drawing.Point(16, 163);
+            this.Removerbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.Removerbutton.Name = "Removerbutton";
+            this.Removerbutton.Size = new System.Drawing.Size(114, 19);
+            this.Removerbutton.TabIndex = 37;
+            this.Removerbutton.Text = "Remover fila";
+            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
             // 
             // label7
             // 
@@ -177,6 +192,17 @@
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 10;
             this.label7.Text = "Vehiculo";
+            // 
+            // Agregarbutton
+            // 
+            this.Agregarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.sss;
+            this.Agregarbutton.Location = new System.Drawing.Point(371, 17);
+            this.Agregarbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.Agregarbutton.Name = "Agregarbutton";
+            this.Agregarbutton.Size = new System.Drawing.Size(32, 31);
+            this.Agregarbutton.TabIndex = 35;
+            this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // VehiculoComboBox
             // 
@@ -195,7 +221,7 @@
             this.detalleDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.detalleDataGridView.Name = "detalleDataGridView";
             this.detalleDataGridView.RowTemplate.Height = 24;
-            this.detalleDataGridView.Size = new System.Drawing.Size(387, 122);
+            this.detalleDataGridView.Size = new System.Drawing.Size(387, 103);
             this.detalleDataGridView.TabIndex = 0;
             // 
             // MyErrorProvider
@@ -238,12 +264,12 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
+            this.Guardarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Save;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(173, 361);
+            this.Guardarbutton.Location = new System.Drawing.Point(173, 339);
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(60, 57);
+            this.Guardarbutton.Size = new System.Drawing.Size(78, 74);
             this.Guardarbutton.TabIndex = 57;
             this.Guardarbutton.Text = "  Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -253,12 +279,12 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
+            this.Eliminarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.delete;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(352, 361);
+            this.Eliminarbutton.Location = new System.Drawing.Point(326, 339);
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(60, 57);
+            this.Eliminarbutton.Size = new System.Drawing.Size(77, 74);
             this.Eliminarbutton.TabIndex = 56;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -268,49 +294,25 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevobutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.Nuevobutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.add;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(15, 361);
+            this.Nuevobutton.Location = new System.Drawing.Point(17, 339);
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(2);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(60, 57);
+            this.Nuevobutton.Size = new System.Drawing.Size(73, 74);
             this.Nuevobutton.TabIndex = 55;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
-            // Removerbutton
-            // 
-            this.Removerbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Removerbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.eli;
-            this.Removerbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Removerbutton.Location = new System.Drawing.Point(16, 189);
-            this.Removerbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.Removerbutton.Name = "Removerbutton";
-            this.Removerbutton.Size = new System.Drawing.Size(114, 19);
-            this.Removerbutton.TabIndex = 37;
-            this.Removerbutton.Text = "Remover fila";
-            this.Removerbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Removerbutton.UseVisualStyleBackColor = true;
-            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
-            // 
-            // Agregarbutton
-            // 
-            this.Agregarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.Agregarbutton.Location = new System.Drawing.Point(371, 17);
-            this.Agregarbutton.Margin = new System.Windows.Forms.Padding(2);
-            this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(32, 31);
-            this.Agregarbutton.TabIndex = 35;
-            this.Agregarbutton.UseVisualStyleBackColor = true;
-            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
-            // 
             // rVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 434);
+            this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(430, 419);
             this.Controls.Add(this.UsuarioTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Buscarbutton);
@@ -326,8 +328,14 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rVentas";
             this.Text = "Registro de ventas";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);

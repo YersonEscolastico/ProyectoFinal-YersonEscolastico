@@ -202,10 +202,10 @@
     <value>Top</value>
   </data>
   <data name="BuscarButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 11</value>
+    <value>267, 20</value>
   </data>
   <data name="BuscarButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 35</value>
+    <value>91, 26</value>
   </data>
   <data name="BuscarButton.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
@@ -552,8 +552,11 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>373, 438</value>
+    <value>373, 452</value>
   </data>
   <data name="TotalVentasTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 319</value>
@@ -610,10 +613,10 @@
     <value>Bottom</value>
   </data>
   <data name="EliminarButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 369</value>
+    <value>267, 365</value>
   </data>
   <data name="EliminarButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 57</value>
+    <value>89, 75</value>
   </data>
   <data name="EliminarButton.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -642,11 +645,14 @@
   <data name="NuevoButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>BottomCenter</value>
   </data>
+  <data name="NuevoButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="NuevoButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 369</value>
+    <value>12, 365</value>
   </data>
   <data name="NuevoButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 57</value>
+    <value>89, 75</value>
   </data>
   <data name="NuevoButton.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -676,10 +682,10 @@
     <value>Bottom</value>
   </data>
   <data name="GuardarButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 369</value>
+    <value>130, 365</value>
   </data>
   <data name="GuardarButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 57</value>
+    <value>89, 75</value>
   </data>
   <data name="GuardarButton.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>

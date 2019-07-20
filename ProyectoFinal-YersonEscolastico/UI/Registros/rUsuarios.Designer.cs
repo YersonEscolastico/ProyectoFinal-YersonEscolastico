@@ -78,7 +78,7 @@
             resources.ApplyResources(this.BuscarButton, "BuscarButton");
             this.BuscarButton.BackColor = System.Drawing.Color.White;
             this.BuscarButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
+            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.UseVisualStyleBackColor = false;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
@@ -137,6 +137,7 @@
             // 
             // NivelAccesocomboBox
             // 
+            this.NivelAccesocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.NivelAccesocomboBox.FormattingEnabled = true;
             this.NivelAccesocomboBox.Items.AddRange(new object[] {
             resources.GetString("NivelAccesocomboBox.Items"),
@@ -163,7 +164,7 @@
             // 
             resources.ApplyResources(this.EliminarButton, "EliminarButton");
             this.EliminarButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
+            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.delete;
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.UseVisualStyleBackColor = false;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
@@ -172,7 +173,7 @@
             // 
             resources.ApplyResources(this.NuevoButton, "NuevoButton");
             this.NuevoButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.add;
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.UseVisualStyleBackColor = false;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
@@ -181,7 +182,7 @@
             // 
             resources.ApplyResources(this.GuardarButton, "GuardarButton");
             this.GuardarButton.BackColor = System.Drawing.Color.White;
-            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
+            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Save;
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.UseVisualStyleBackColor = false;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click);
@@ -202,6 +203,7 @@
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
             this.Controls.Add(this.TotalVentasTextBox);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.EmailTextBox);
@@ -224,7 +226,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rUsuarios";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

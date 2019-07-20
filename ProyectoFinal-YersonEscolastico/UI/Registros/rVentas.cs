@@ -124,7 +124,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 PrecioNumericUpDown.Focus();
                 paso = false;
             }
-            if (VehiculoComboBox.Text == string.Empty)
+            if (Detalle.Count == 0)
             {
                 MyErrorProvider.SetError(VehiculoComboBox, "Este campo no puede estar vacio");
                 VehiculoComboBox.Focus();

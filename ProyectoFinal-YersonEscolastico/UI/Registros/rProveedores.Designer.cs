@@ -169,11 +169,11 @@
             // 
             // NuevoButton
             // 
-            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.sss;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(15, 276);
+            this.NuevoButton.Location = new System.Drawing.Point(15, 279);
             this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 55);
+            this.NuevoButton.Size = new System.Drawing.Size(59, 61);
             this.NuevoButton.TabIndex = 27;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -182,11 +182,11 @@
             // 
             // GuardarButton
             // 
-            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
+            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.ss;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(134, 276);
+            this.GuardarButton.Location = new System.Drawing.Point(135, 279);
             this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 55);
+            this.GuardarButton.Size = new System.Drawing.Size(59, 61);
             this.GuardarButton.TabIndex = 28;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -195,11 +195,11 @@
             // 
             // EliminarButton
             // 
-            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
+            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.ssss;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(250, 276);
+            this.EliminarButton.Location = new System.Drawing.Point(250, 279);
             this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 55);
+            this.EliminarButton.Size = new System.Drawing.Size(60, 61);
             this.EliminarButton.TabIndex = 29;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -208,11 +208,11 @@
             // 
             // BuscarButton
             // 
-            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
+            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(238, 12);
+            this.BuscarButton.Location = new System.Drawing.Point(238, 21);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(87, 39);
+            this.BuscarButton.Size = new System.Drawing.Size(87, 25);
             this.BuscarButton.TabIndex = 30;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -227,7 +227,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 340);
+            this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(337, 352);
             this.Controls.Add(this.BuscarButton);
             this.Controls.Add(this.EliminarButton);
             this.Controls.Add(this.GuardarButton);
@@ -246,8 +248,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rProveedores";
             this.Text = "Registro Proveedores";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

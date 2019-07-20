@@ -51,16 +51,16 @@
             this.PrecioNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.EstadoComboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.NuevoButton = new System.Windows.Forms.Button();
-            this.GuardarButton = new System.Windows.Forms.Button();
-            this.EliminarButton = new System.Windows.Forms.Button();
-            this.BuscarButton = new System.Windows.Forms.Button();
-            this.OtroColorButton = new System.Windows.Forms.Button();
             this.MarcaComboBox = new System.Windows.Forms.ComboBox();
             this.ModeloComboBox = new System.Windows.Forms.ComboBox();
-            this.OtroModeloButton = new System.Windows.Forms.Button();
-            this.OtraMarcaButton = new System.Windows.Forms.Button();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.OtraMarcaButton = new System.Windows.Forms.Button();
+            this.OtroModeloButton = new System.Windows.Forms.Button();
+            this.OtroColorButton = new System.Windows.Forms.Button();
+            this.BuscarButton = new System.Windows.Forms.Button();
+            this.EliminarButton = new System.Windows.Forms.Button();
+            this.GuardarButton = new System.Windows.Forms.Button();
+            this.NuevoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
@@ -69,6 +69,7 @@
             // 
             // ColorComboBox
             // 
+            this.ColorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ColorComboBox.FormattingEnabled = true;
             this.ColorComboBox.Items.AddRange(new object[] {
             "Blanco",
@@ -252,6 +253,7 @@
             // 
             // EstadoComboBox
             // 
+            this.EstadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstadoComboBox.FormattingEnabled = true;
             this.EstadoComboBox.Items.AddRange(new object[] {
             "Disponible",
@@ -271,73 +273,9 @@
             this.label12.TabIndex = 61;
             this.label12.Text = "Estado";
             // 
-            // NuevoButton
-            // 
-            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(12, 452);
-            this.NuevoButton.Name = "NuevoButton";
-            this.NuevoButton.Size = new System.Drawing.Size(75, 53);
-            this.NuevoButton.TabIndex = 62;
-            this.NuevoButton.Text = "Nuevo";
-            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
-            // 
-            // GuardarButton
-            // 
-            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Guardar;
-            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(129, 452);
-            this.GuardarButton.Name = "GuardarButton";
-            this.GuardarButton.Size = new System.Drawing.Size(75, 53);
-            this.GuardarButton.TabIndex = 63;
-            this.GuardarButton.Text = "Guardar";
-            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click_1);
-            // 
-            // EliminarButton
-            // 
-            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Eliminar;
-            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(252, 452);
-            this.EliminarButton.Name = "EliminarButton";
-            this.EliminarButton.Size = new System.Drawing.Size(75, 53);
-            this.EliminarButton.TabIndex = 64;
-            this.EliminarButton.Text = "Eliminar";
-            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
-            // 
-            // BuscarButton
-            // 
-            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Buscar;
-            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(238, 12);
-            this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(89, 37);
-            this.BuscarButton.TabIndex = 65;
-            this.BuscarButton.Text = "Buscar";
-            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BuscarButton.UseVisualStyleBackColor = true;
-            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
-            // 
-            // OtroColorButton
-            // 
-            this.OtroColorButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.OtroColorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtroColorButton.Location = new System.Drawing.Point(238, 194);
-            this.OtroColorButton.Name = "OtroColorButton";
-            this.OtroColorButton.Size = new System.Drawing.Size(75, 24);
-            this.OtroColorButton.TabIndex = 66;
-            this.OtroColorButton.Text = "  Otros";
-            this.OtroColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.OtroColorButton.UseVisualStyleBackColor = true;
-            this.OtroColorButton.Click += new System.EventHandler(this.OtroColorButton_Click);
-            // 
             // MarcaComboBox
             // 
+            this.MarcaComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MarcaComboBox.FormattingEnabled = true;
             this.MarcaComboBox.Items.AddRange(new object[] {
             "Blanco",
@@ -353,6 +291,7 @@
             // 
             // ModeloComboBox
             // 
+            this.ModeloComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ModeloComboBox.FormattingEnabled = true;
             this.ModeloComboBox.Items.AddRange(new object[] {
             "Blanco",
@@ -366,41 +305,108 @@
             this.ModeloComboBox.Size = new System.Drawing.Size(122, 21);
             this.ModeloComboBox.TabIndex = 68;
             // 
-            // OtroModeloButton
+            // MyErrorProvider
             // 
-            this.OtroModeloButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
-            this.OtroModeloButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtroModeloButton.Location = new System.Drawing.Point(238, 155);
-            this.OtroModeloButton.Name = "OtroModeloButton";
-            this.OtroModeloButton.Size = new System.Drawing.Size(75, 24);
-            this.OtroModeloButton.TabIndex = 69;
-            this.OtroModeloButton.Text = "Otros";
-            this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.OtroModeloButton.UseVisualStyleBackColor = true;
-            this.OtroModeloButton.Click += new System.EventHandler(this.OtroModeloButton_Click);
+            this.MyErrorProvider.ContainerControl = this;
             // 
             // OtraMarcaButton
             // 
-            this.OtraMarcaButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Nuevo;
+            this.OtraMarcaButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
             this.OtraMarcaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 86);
+            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 80);
             this.OtraMarcaButton.Name = "OtraMarcaButton";
-            this.OtraMarcaButton.Size = new System.Drawing.Size(75, 24);
+            this.OtraMarcaButton.Size = new System.Drawing.Size(64, 27);
             this.OtraMarcaButton.TabIndex = 70;
-            this.OtraMarcaButton.Text = "Otros";
+            this.OtraMarcaButton.Text = "Otro";
             this.OtraMarcaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtraMarcaButton.UseVisualStyleBackColor = true;
             this.OtraMarcaButton.Click += new System.EventHandler(this.OtraMarcaButton_Click);
             // 
-            // MyErrorProvider
+            // OtroModeloButton
             // 
-            this.MyErrorProvider.ContainerControl = this;
+            this.OtroModeloButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
+            this.OtroModeloButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OtroModeloButton.Location = new System.Drawing.Point(238, 155);
+            this.OtroModeloButton.Name = "OtroModeloButton";
+            this.OtroModeloButton.Size = new System.Drawing.Size(64, 24);
+            this.OtroModeloButton.TabIndex = 69;
+            this.OtroModeloButton.Text = "Otro";
+            this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OtroModeloButton.UseVisualStyleBackColor = true;
+            this.OtroModeloButton.Click += new System.EventHandler(this.OtroModeloButton_Click);
+            // 
+            // OtroColorButton
+            // 
+            this.OtroColorButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
+            this.OtroColorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OtroColorButton.Location = new System.Drawing.Point(238, 194);
+            this.OtroColorButton.Name = "OtroColorButton";
+            this.OtroColorButton.Size = new System.Drawing.Size(64, 24);
+            this.OtroColorButton.TabIndex = 66;
+            this.OtroColorButton.Text = "  Otro";
+            this.OtroColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.OtroColorButton.UseVisualStyleBackColor = true;
+            this.OtroColorButton.Click += new System.EventHandler(this.OtroColorButton_Click);
+            // 
+            // BuscarButton
+            // 
+            this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
+            this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BuscarButton.Location = new System.Drawing.Point(213, 12);
+            this.BuscarButton.Name = "BuscarButton";
+            this.BuscarButton.Size = new System.Drawing.Size(89, 26);
+            this.BuscarButton.TabIndex = 65;
+            this.BuscarButton.Text = "Buscar";
+            this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BuscarButton.UseVisualStyleBackColor = true;
+            this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click);
+            // 
+            // EliminarButton
+            // 
+            this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.delete;
+            this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.EliminarButton.Location = new System.Drawing.Point(227, 452);
+            this.EliminarButton.Name = "EliminarButton";
+            this.EliminarButton.Size = new System.Drawing.Size(75, 71);
+            this.EliminarButton.TabIndex = 64;
+            this.EliminarButton.Text = "Eliminar";
+            this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.EliminarButton.UseVisualStyleBackColor = true;
+            this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click);
+            // 
+            // GuardarButton
+            // 
+            this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Save;
+            this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.GuardarButton.Location = new System.Drawing.Point(121, 452);
+            this.GuardarButton.Name = "GuardarButton";
+            this.GuardarButton.Size = new System.Drawing.Size(75, 71);
+            this.GuardarButton.TabIndex = 63;
+            this.GuardarButton.Text = "Guardar";
+            this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.GuardarButton.UseVisualStyleBackColor = true;
+            this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click_1);
+            // 
+            // NuevoButton
+            // 
+            this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.add;
+            this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.NuevoButton.Location = new System.Drawing.Point(12, 452);
+            this.NuevoButton.Name = "NuevoButton";
+            this.NuevoButton.Size = new System.Drawing.Size(75, 71);
+            this.NuevoButton.TabIndex = 62;
+            this.NuevoButton.Text = "Nuevo";
+            this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.NuevoButton.UseVisualStyleBackColor = true;
+            this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
             // rVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 511);
+            this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(313, 530);
             this.Controls.Add(this.OtraMarcaButton);
             this.Controls.Add(this.OtroModeloButton);
             this.Controls.Add(this.ModeloComboBox);
@@ -432,8 +438,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rVehiculos";
             this.Text = "Registro de vehiculos";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();

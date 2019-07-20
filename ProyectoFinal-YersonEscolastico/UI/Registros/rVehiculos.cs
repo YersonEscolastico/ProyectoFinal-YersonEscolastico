@@ -136,9 +136,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 CostoNumericUpDown.Focus();
                 paso = false;
             }
-            if (PrecioNumericUpDown.Value ==0)
+            if (PrecioNumericUpDown.Value <=CostoNumericUpDown.Value)
             {
-                MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que 0");
+                MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que el costo");
                 PrecioNumericUpDown.Focus();
                 paso = false;
             }

@@ -23,7 +23,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rUsuarios us = new rUsuarios();
             us.StartPosition = FormStartPosition.CenterScreen;
-            us.MdiParent = this;
             us.Show();
         }
 
@@ -31,7 +30,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rClientes  Cl = new rClientes();
             Cl.StartPosition = FormStartPosition.CenterScreen;
-            Cl.MdiParent = this;
             Cl.Show();
         }
 
@@ -39,7 +37,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rVehiculos vh = new rVehiculos();
             vh.StartPosition = FormStartPosition.CenterScreen;
-            vh.MdiParent = this;
             vh.Show();
         }
 
@@ -47,7 +44,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rProveedores prov = new rProveedores();
             prov.StartPosition = FormStartPosition.CenterScreen;
-            prov.MdiParent = this;
             prov.Show();
         }
 
@@ -55,7 +51,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rVentas ve = new rVentas();
             ve.StartPosition = FormStartPosition.CenterScreen;
-            ve.MdiParent = this;
             ve.Show();
         }
 
@@ -63,7 +58,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             cUsuarios us = new cUsuarios();
             us.StartPosition = FormStartPosition.CenterScreen;
-            us.MdiParent = this;
             us.Show();
         }
 
@@ -71,7 +65,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             cClientes cl= new cClientes();
             cl.StartPosition = FormStartPosition.CenterScreen;
-            cl.MdiParent = this;
             cl.Show();
         }
 
@@ -79,7 +72,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             cVehiculos vh = new cVehiculos();
             vh.StartPosition = FormStartPosition.CenterScreen;
-            vh.MdiParent = this;
             vh.Show();
         }
 
@@ -87,7 +79,6 @@ namespace ProyectoFinal_YersonEscolastico
         {
             cVentas v = new cVentas();
             v.StartPosition = FormStartPosition.CenterScreen;
-            v.MdiParent = this;
             v.Show();
         }
     }
