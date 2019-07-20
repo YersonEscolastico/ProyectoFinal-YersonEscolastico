@@ -47,7 +47,7 @@
             // 
             this.ImprimirButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.imprimir;
             this.ImprimirButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ImprimirButton.Location = new System.Drawing.Point(284, 373);
+            this.ImprimirButton.Location = new System.Drawing.Point(317, 373);
             this.ImprimirButton.Name = "ImprimirButton";
             this.ImprimirButton.Size = new System.Drawing.Size(85, 37);
             this.ImprimirButton.TabIndex = 68;
@@ -128,16 +128,16 @@
             this.ConsultadataGridView.Location = new System.Drawing.Point(13, 53);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
             this.ConsultadataGridView.ReadOnly = true;
-            this.ConsultadataGridView.Size = new System.Drawing.Size(629, 314);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(665, 314);
             this.ConsultadataGridView.TabIndex = 61;
             // 
             // Consultarbutton
             // 
             this.Consultarbutton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
             this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Consultarbutton.Location = new System.Drawing.Point(557, 25);
+            this.Consultarbutton.Location = new System.Drawing.Point(584, 25);
             this.Consultarbutton.Name = "Consultarbutton";
-            this.Consultarbutton.Size = new System.Drawing.Size(86, 23);
+            this.Consultarbutton.Size = new System.Drawing.Size(94, 23);
             this.Consultarbutton.TabIndex = 60;
             this.Consultarbutton.Text = "Consultar";
             this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,7 +148,7 @@
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(417, 28);
             this.CriteriotextBox.Name = "CriteriotextBox";
-            this.CriteriotextBox.Size = new System.Drawing.Size(134, 20);
+            this.CriteriotextBox.Size = new System.Drawing.Size(161, 20);
             this.CriteriotextBox.TabIndex = 59;
             // 
             // label2
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 420);
+            this.ClientSize = new System.Drawing.Size(690, 420);
             this.Controls.Add(this.ImprimirButton);
             this.Controls.Add(this.FiltroFechacheckBox);
             this.Controls.Add(this.FiltrocomboBox);

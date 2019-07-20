@@ -74,5 +74,13 @@ namespace ProyectoFinal_YersonEscolastico
             cl.MdiParent = this;
             cl.Show();
         }
+
+        private void VehiculosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cVehiculos vh = new cVehiculos();
+            vh.StartPosition = FormStartPosition.CenterScreen;
+            vh.MdiParent = this;
+            vh.Show();
+        }
     }
 }
