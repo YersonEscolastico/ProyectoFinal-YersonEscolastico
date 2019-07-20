@@ -82,6 +82,75 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             FechaRegistroDateTimePicker.Value = vehiculos.FechaRegistro;
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (VinTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(VinTextBox, "Este campo no puede estar vacio");
+                VinTextBox.Focus();
+                paso = false;
+            }
+            if (MarcaComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(MarcaComboBox, "Este campo no puede estar vacio");
+                MarcaComboBox.Focus();
+                paso = false;
+            }
+            if (PlacaTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(PlacaTextBox, "Este campo no puede estar vacio");
+                PlacaTextBox.Focus();
+                paso = false;
+            }
+            if (ModeloComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(ModeloComboBox, "No puede dejar este campo vacio");
+                ModeloComboBox.Focus();
+                paso = false;
+            }
+            if (ColorComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(ColorComboBox, "No puede dejar este campo vacio");
+                ColorComboBox.Focus();
+                paso = false;
+            }
+            if (AnioTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(AnioTextBox, "No puede dejar este campo vacio");
+                AnioTextBox.Focus();
+                paso = false;
+            }
+
+            if (DescripcionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "No puede dejar este campo vacio");
+                DescripcionTextBox.Focus();
+                paso = false;
+            }
+            if (CostoNumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(CostoNumericUpDown, "Debe ser mayor que 0");
+                CostoNumericUpDown.Focus();
+                paso = false;
+            }
+            if (PrecioNumericUpDown.Value ==0)
+            {
+                MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que 0");
+                PrecioNumericUpDown.Focus();
+                paso = false;
+            }
+            if (EstadoComboBox.Text ==string.Empty)
+            {
+                MyErrorProvider.SetError(EstadoComboBox, "Este campo no puede estar vacio");
+                EstadoComboBox.Focus();
+                paso = false;
+            }
+            return paso;
+        }
+
         public bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Vehiculos> repositorio = new RepositorioBase<Vehiculos>();
@@ -96,6 +165,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Vehiculos vehiculos;
             bool paso = false;
 
+            if (!Validar())
+                return;
 
             vehiculos = LlenaClase();
 
@@ -227,5 +298,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             ub.ShowDialog();
             this.Close();
         }
+
+
     }
 }

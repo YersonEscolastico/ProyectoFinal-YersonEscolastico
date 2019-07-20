@@ -23,12 +23,14 @@ namespace ProyectoFinal_YersonEscolastico
         {
             rUsuarios us = new rUsuarios();
             us.StartPosition = FormStartPosition.CenterScreen;
+            us.MdiParent = this;
             us.Show();
         }
 
         private void UsuariosToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             cUsuarios us = new cUsuarios();
+            us.StartPosition = FormStartPosition.CenterScreen;
             us.MdiParent = this;
             us.Show();
         }

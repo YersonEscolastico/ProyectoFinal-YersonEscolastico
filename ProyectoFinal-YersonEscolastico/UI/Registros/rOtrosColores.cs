@@ -45,6 +45,21 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             DescripcionTextBox.Text = ubicaciones.Descripcion;
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (DescripcionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "Este campo no puede estar vacio");
+                DescripcionTextBox.Focus();
+                paso = false;
+            }
+
+            return paso;
+        }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<OtrosColores> db = new RepositorioBase<OtrosColores>();
@@ -58,8 +73,10 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             OtrosColores ubicaciones;
             bool paso = false;
 
-            ubicaciones = LlenarClase();
+            if (!Validar())
+                return;
 
+            ubicaciones = LlenarClase();
 
             if (IdNumericUpDown.Value == 0)
             {

@@ -62,6 +62,48 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             FechaRegistroateTimePicker.Value = proveedores.FechaRegistro;
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (NombresTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombresTextBox, "Este campo no puede estar vacio");
+                NombresTextBox.Focus();
+                paso = false;
+            }
+            if (String.IsNullOrWhiteSpace(TelefonoMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
+            {
+                MyErrorProvider.SetError(TelefonoMaskedTextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+            if (String.IsNullOrWhiteSpace(CelularMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
+            {
+                MyErrorProvider.SetError(CelularMaskedTextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+            if (EmailTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(EmailTextBox, "Este campo no puede estar vacio");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+            if (DireccionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DireccionTextBox, "Este campo no puede estar vacio");
+                DireccionTextBox.Focus();
+                paso = false;
+            }
+            if (FechaRegistroateTimePicker.Value > DateTime.Now)
+            {
+                MyErrorProvider.SetError(FechaRegistroateTimePicker, "Fecha de registro no puede ser mayor a hoy");
+                FechaRegistroateTimePicker.Focus();
+                paso = false;
+            }
+            return paso;
+        }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Proveedores> db = new RepositorioBase<Proveedores>();
@@ -76,6 +118,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Proveedores proveedores = new Proveedores();
             bool paso = false;
 
+            if (!Validar())
+                return;
 
             proveedores = LLenaCLase();
 

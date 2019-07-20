@@ -44,7 +44,20 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             IdNumericUpDown.Value = ubicaciones.UbicacionId;
             DescripcionTextBox.Text = ubicaciones.Descripcion;
         }
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
 
+            if (DescripcionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DescripcionTextBox, "Este campo no puede estar vacio");
+                DescripcionTextBox.Focus();
+                paso = false;
+            }
+
+            return paso;
+        }
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<OtrosModelos> db = new RepositorioBase<OtrosModelos>();
@@ -57,6 +70,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             RepositorioBase<OtrosModelos> db = new RepositorioBase<OtrosModelos>();
             OtrosModelos ubicaciones;
             bool paso = false;
+
+            if (!Validar())
+                return;
 
             ubicaciones = LlenarClase();
 

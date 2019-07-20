@@ -69,6 +69,67 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             FechaRegistroateTimePicker.Value = clientes.FechaRegistro;
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (NombresTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(NombresTextBox, "Este campo no puede estar vacio");
+                NombresTextBox.Focus();
+                paso = false;
+            }
+            if (SexoComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(SexoComboBox, "Este campo no puede estar vacio");
+                SexoComboBox.Focus();
+                paso = false;
+            }
+            if (EmailTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(EmailTextBox, "Este campo no puede estar vacio");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+            if (String.IsNullOrWhiteSpace(CedulaMaskedTextBox.Text.Replace("-", "")) || CedulaMaskedTextBox.TextLength != 13)
+            {
+                MyErrorProvider.SetError(CedulaMaskedTextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+            if (DireccionTextBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(DireccionTextBox, "No puede dejar este campo vacio");
+                DireccionTextBox.Focus();
+                paso = false;
+            }
+            if (String.IsNullOrWhiteSpace(TelefonoMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
+            {
+                MyErrorProvider.SetError(TelefonoMaskedTextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+            if (String.IsNullOrWhiteSpace(CelularMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
+            {
+                MyErrorProvider.SetError(CelularMaskedTextBox, "Este Campo No puede Estar Vacio!!");
+                paso = false;
+            }
+            if (FechaNacimientoDateTimePicker.Value >= DateTime.Now)
+            {
+                MyErrorProvider.SetError(FechaNacimientoDateTimePicker, "Fecha de nacimiento debe ser menor que hoy");
+                FechaNacimientoDateTimePicker.Focus();
+                paso = false;
+            }
+            if (FechaRegistroateTimePicker.Value > DateTime.Now)
+            {
+                MyErrorProvider.SetError(FechaRegistroateTimePicker, "Fecha de registro no puede ser mayor a hoy");
+                FechaRegistroateTimePicker.Focus();
+                paso = false;
+            }
+     
+
+            return paso;
+        }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Clientes> db = new RepositorioBase<Clientes>();
@@ -82,6 +143,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Clientes clientes;
             bool paso = false;
 
+            if (!Validar())
+                return;
+
             clientes = LlenarClase();
 
 
@@ -93,7 +157,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar un Usuario que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar un Estudiante que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);

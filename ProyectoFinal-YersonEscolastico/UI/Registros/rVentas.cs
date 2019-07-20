@@ -101,6 +101,38 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             return paso;
         }
 
+        private bool Validar()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
+            if (FechaVentaDateTimePicker.Value > DateTime.Now)
+            {
+                MyErrorProvider.SetError(FechaVentaDateTimePicker, "Fecha de registro no puede ser mayor a hoy");
+                FechaVentaDateTimePicker.Focus();
+                paso = false;
+            }
+            if (ClienteComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(ClienteComboBox, "Este campo no puede estar vacio");
+                ClienteComboBox.Focus();
+                paso = false;
+            }
+            if (PrecioNumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que 0");
+                PrecioNumericUpDown.Focus();
+                paso = false;
+            }
+            if (VehiculoComboBox.Text == string.Empty)
+            {
+                MyErrorProvider.SetError(VehiculoComboBox, "Este campo no puede estar vacio");
+                VehiculoComboBox.Focus();
+                paso = false;
+            }
+            return paso;
+        }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Ventas> db = new RepositorioBase<Ventas>();
@@ -113,6 +145,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Ventas ventas;
             bool paso = false;
 
+            if (!Validar())
+                return;
 
             ventas = LlenaClase();
             ventas.CalcularMonto();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ColorComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.CostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -59,9 +60,11 @@
             this.ModeloComboBox = new System.Windows.Forms.ComboBox();
             this.OtroModeloButton = new System.Windows.Forms.Button();
             this.OtraMarcaButton = new System.Windows.Forms.Button();
+            this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // ColorComboBox
@@ -389,6 +392,10 @@
             this.OtraMarcaButton.UseVisualStyleBackColor = true;
             this.OtraMarcaButton.Click += new System.EventHandler(this.OtraMarcaButton_Click);
             // 
+            // MyErrorProvider
+            // 
+            this.MyErrorProvider.ContainerControl = this;
+            // 
             // rVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,10 +433,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "rVehiculos";
-            this.Text = "5";
+            this.Text = "Registro de vehiculos";
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,5 +476,6 @@
         private System.Windows.Forms.ComboBox ModeloComboBox;
         private System.Windows.Forms.Button OtroModeloButton;
         private System.Windows.Forms.Button OtraMarcaButton;
+        private System.Windows.Forms.ErrorProvider MyErrorProvider;
     }
 }
