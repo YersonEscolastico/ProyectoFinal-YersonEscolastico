@@ -56,6 +56,12 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
                             case 4:
                                 listado = db.GetList(p => p.Anio.Contains(CriteriotextBox.Text));
                                 break;
+
+                            case 5:
+                                decimal id2 = Convert.ToDecimal(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.Precio == id2);
+                                break;
+
                             default:
                                 break;
                         }

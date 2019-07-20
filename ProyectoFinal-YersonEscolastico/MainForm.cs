@@ -82,5 +82,13 @@ namespace ProyectoFinal_YersonEscolastico
             vh.MdiParent = this;
             vh.Show();
         }
+
+        private void VentasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cVentas v = new cVentas();
+            v.StartPosition = FormStartPosition.CenterScreen;
+            v.MdiParent = this;
+            v.Show();
+        }
     }
 }
