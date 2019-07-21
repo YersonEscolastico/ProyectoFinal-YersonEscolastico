@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 70);
+            this.label3.Location = new System.Drawing.Point(199, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -113,7 +113,7 @@
             // 
             // PrecioNumericUpDown
             // 
-            this.PrecioNumericUpDown.Location = new System.Drawing.Point(213, 62);
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(242, 28);
             this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -159,6 +159,8 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.VehiculoComboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.PrecioNumericUpDown);
             this.groupBox1.Location = new System.Drawing.Point(15, 146);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -208,10 +210,10 @@
             // 
             this.VehiculoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.VehiculoComboBox.FormattingEnabled = true;
-            this.VehiculoComboBox.Location = new System.Drawing.Point(87, 18);
+            this.VehiculoComboBox.Location = new System.Drawing.Point(65, 23);
             this.VehiculoComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.VehiculoComboBox.Name = "VehiculoComboBox";
-            this.VehiculoComboBox.Size = new System.Drawing.Size(161, 21);
+            this.VehiculoComboBox.Size = new System.Drawing.Size(117, 21);
             this.VehiculoComboBox.TabIndex = 7;
             // 
             // detalleDataGridView
@@ -321,12 +323,10 @@
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.FechaVentaDateTimePicker);
-            this.Controls.Add(this.PrecioNumericUpDown);
             this.Controls.Add(this.ClienteComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.IdNumericUpDown);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
