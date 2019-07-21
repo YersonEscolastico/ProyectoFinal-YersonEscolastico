@@ -57,6 +57,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 ventas.ClienteId = Convert.ToInt32(ClienteComboBox.SelectedValue);
             }
+
             ventas.UsuarioId = 1;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;
@@ -79,6 +80,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             IdNumericUpDown.Value = ventas.VentaId;
             ClienteComboBox.SelectedValue = ventas.VentaId;
+            VehiculoComboBox.SelectedValue = ventas.VentaId;
             PrecioNumericUpDown.Value = ventas.Total;
             TotalTextBox.Text = ventas.Total.ToString();
             FechaVentaDateTimePicker.Value = ventas.FechaVenta;
@@ -90,11 +92,18 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             bool paso = false;
             string estado = "Vendido";
+            string estado2 = "En reparacion";
             RepositorioBase<Vehiculos> repositorio = new RepositorioBase<Vehiculos>();
             Vehiculos vehiculo = repositorio.Buscar(Convert.ToInt32(VehiculoComboBox.SelectedValue));
             if (estado == vehiculo.Estado)
             {
                 MessageBox.Show("Vehiculo Vendido!!", "Fallo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                paso = true;
+            }
+            if (estado2 == vehiculo.Estado)
+            {
+                MessageBox.Show("Vehiculo en reparacion!!", "Fallo",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 paso = true;
             }
@@ -158,7 +167,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
-                    MessageBox.Show("No se puede modificar un Estudiante que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se puede modificar una Venta que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                     MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -302,9 +311,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void LlenarComboBox()
         {
             RepositorioBase<Vehiculos> db = new RepositorioBase<Vehiculos>();
-            var listado2 = new List<Vehiculos>();
-            listado2 = db.GetList(p => true);
-            VehiculoComboBox.DataSource = listado2;
+            var listado = new List<Vehiculos>();
+            listado = db.GetList(l => true);
+            VehiculoComboBox.DataSource = listado;
             VehiculoComboBox.DisplayMember = "Descripcion";
             VehiculoComboBox.ValueMember = "VehiculoId";
         }
@@ -317,6 +326,11 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             ClienteComboBox.DataSource = listado;
             ClienteComboBox.DisplayMember = "Nombres";
             ClienteComboBox.ValueMember = "ClienteId";
+        }
+
+        private void VehiculoComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 }
