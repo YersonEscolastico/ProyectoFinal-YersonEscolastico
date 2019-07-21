@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rOtrosModelos));
             this.BuscarButton = new System.Windows.Forms.Button();
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.BuscarButton.Text = "         Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
-            this.BuscarButton.UseWaitCursor = true;
             this.BuscarButton.Click += new System.EventHandler(this.BuscarButton_Click_1);
             // 
             // EliminarButton
@@ -67,7 +67,6 @@
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
-            this.EliminarButton.UseWaitCursor = true;
             this.EliminarButton.Click += new System.EventHandler(this.EliminarButton_Click_1);
             // 
             // GuardarButton
@@ -81,7 +80,6 @@
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
-            this.GuardarButton.UseWaitCursor = true;
             this.GuardarButton.Click += new System.EventHandler(this.GuardarButton_Click_1);
             // 
             // NuevoButton
@@ -95,7 +93,6 @@
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
-            this.NuevoButton.UseWaitCursor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click_1);
             // 
             // DescripcionTextBox
@@ -104,7 +101,6 @@
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(141, 20);
             this.DescripcionTextBox.TabIndex = 19;
-            this.DescripcionTextBox.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -114,7 +110,6 @@
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Descripcion";
-            this.label2.UseWaitCursor = true;
             // 
             // label1
             // 
@@ -124,7 +119,6 @@
             this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "ID";
-            this.label1.UseWaitCursor = true;
             // 
             // IdNumericUpDown
             // 
@@ -132,7 +126,6 @@
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(47, 20);
             this.IdNumericUpDown.TabIndex = 16;
-            this.IdNumericUpDown.UseWaitCursor = true;
             // 
             // MyErrorProvider
             // 
@@ -155,12 +148,13 @@
             this.Controls.Add(this.IdNumericUpDown);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "rOtrosModelos";
             this.Text = "rOtrosModelos";
-            this.UseWaitCursor = true;
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

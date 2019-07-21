@@ -99,10 +99,10 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Limpiar();
 
+            Close();
             rVehiculos rVehiculos = new rVehiculos();
             rVehiculos.Show();
            
-            Close();
         }
 
         private void BuscarButton_Click(object sender, EventArgs e)

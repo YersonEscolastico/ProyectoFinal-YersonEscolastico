@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cVehiculos));
             this.ImprimirButton = new System.Windows.Forms.Button();
             this.FiltroFechacheckBox = new System.Windows.Forms.CheckBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
@@ -186,6 +187,7 @@
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cVehiculos";
             this.Text = "Consulta de Vehiculos";
             this.TopMost = true;

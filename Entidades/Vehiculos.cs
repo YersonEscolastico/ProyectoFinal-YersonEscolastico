@@ -21,6 +21,7 @@ namespace Entidades
         public string Descripcion { get; set; }
         public decimal Costo { get; set; }
         public decimal Precio { get; set; }
+        public int UsuarioId { get; set; }
         public string Estado { get; set; }
         public DateTime FechaRegistro { get; set; }
 
@@ -36,6 +37,7 @@ namespace Entidades
             Descripcion = string.Empty;
             Costo = 0;
             Precio = 0;
+            UsuarioId = 0;
             Estado = string.Empty;
             FechaRegistro = DateTime.Now;
         }

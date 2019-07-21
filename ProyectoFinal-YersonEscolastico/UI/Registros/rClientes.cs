@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -50,6 +51,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             clientes.Direccion = DireccionTextBox.Text;
             clientes.Telefono = TelefonoMaskedTextBox.Text;
             clientes.Celular = CelularMaskedTextBox.Text;
+            clientes.UsuarioId = 0;
             clientes.FechaNacimiento = FechaNacimientoDateTimePicker.Value;
             clientes.FechaRegistro = FechaNacimientoDateTimePicker.Value;
             return clientes;
@@ -125,7 +127,31 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 FechaRegistroateTimePicker.Focus();
                 paso = false;
             }
-     
+            if (RepetidosNo(EmailTextBox.Text))
+            {
+                MessageBox.Show("Ya existe este email, cree otro");
+                EmailTextBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(CedulaMaskedTextBox.Text))
+            {
+                MessageBox.Show("Ya existe esta cedula, intente de nuevo");
+                CedulaMaskedTextBox.Focus();
+                paso = false;
+            }
+
+            if (RepetidosNo(TelefonoMaskedTextBox.Text))
+            {
+                MessageBox.Show("Ya existe este telefono, intente de nuevo");
+                TelefonoMaskedTextBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(CelularMaskedTextBox.Text))
+            {
+                MessageBox.Show("Ya existe este celular, intente de nuevo");
+                CelularMaskedTextBox.Focus();
+                paso = false;
+            }
 
             return paso;
         }
@@ -228,6 +254,38 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void SexoComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
+        }
+
+
+        public static bool RepetidosNo(string cliente)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            try
+            {
+                if (db.Clientes.Any(p => p.Email.Equals(cliente)))
+                {
+                    paso = true;
+                }
+
+                if (db.Clientes.Any(p => p.Cedula.Equals(cliente)))
+                {
+                    paso = true;
+                }
+                if (db.Clientes.Any(p => p.Telefono.Equals(cliente)))
+                {
+                    paso = true;
+                }
+                if (db.Clientes.Any(p => p.Celular.Equals(cliente)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
         }
     }
 }

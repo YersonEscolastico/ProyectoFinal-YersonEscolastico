@@ -40,13 +40,6 @@ namespace ProyectoFinal_YersonEscolastico
             vh.Show();
         }
 
-        private void ProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            rProveedores prov = new rProveedores();
-            prov.StartPosition = FormStartPosition.CenterScreen;
-            prov.Show();
-        }
-
         private void VentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rVentas ve = new rVentas();

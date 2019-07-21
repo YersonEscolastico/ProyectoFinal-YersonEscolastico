@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -59,6 +60,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             vehiculos.Descripcion = DescripcionTextBox.Text;
             vehiculos.Costo = (decimal)CostoNumericUpDown.Value;
             vehiculos.Precio = (decimal)PrecioNumericUpDown.Value;
+            vehiculos.UsuarioId = 0;
             vehiculos.Estado = EstadoComboBox.Text;
             vehiculos.FechaRegistro = FechaRegistroDateTimePicker.Value;
 
@@ -146,6 +148,18 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 MyErrorProvider.SetError(EstadoComboBox, "Este campo no puede estar vacio");
                 EstadoComboBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(VinTextBox.Text))
+            {
+                MessageBox.Show("Ya se ha registrado un vehiculo con este vin, intente de nuevo");
+                VinTextBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(PlacaTextBox.Text))
+            {
+                MessageBox.Show("Ya se ha registrado un vehiculo con este vin,intente de nuevo");
+                PlacaTextBox.Focus();
                 paso = false;
             }
             return paso;
@@ -281,24 +295,46 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void OtroColorButton_Click(object sender, EventArgs e)
         {
             rOtrosColores ub = new rOtrosColores();
-            ub.ShowDialog();
             this.Close();
+            ub.ShowDialog();
         }
 
         private void OtraMarcaButton_Click(object sender, EventArgs e)
         {
             rOtrasMarcas ub = new rOtrasMarcas();
-            ub.ShowDialog();
             this.Close();
+            ub.ShowDialog();
+           
         }
 
         private void OtroModeloButton_Click(object sender, EventArgs e)
         {
             rOtrosModelos ub = new rOtrosModelos();
-            ub.ShowDialog();
             this.Close();
+            ub.ShowDialog();
         }
 
+        public static bool RepetidosNo(string vehiculo)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            try
+            {
+                if (db.Vehiculos.Any(p => p.Vin.Equals(vehiculo)))
+                {
+                    paso = true;
+                }
 
+                if (db.Vehiculos.Any(p => p.Placa.Equals(vehiculo)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
     }
 }

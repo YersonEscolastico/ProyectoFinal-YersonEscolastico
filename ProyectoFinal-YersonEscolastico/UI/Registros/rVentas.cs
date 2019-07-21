@@ -16,14 +16,15 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
     {
         public List<VentasDetalle> Detalle { get; set; }
         public rVentas()
-        {
+        {        
             InitializeComponent();
+ 
             LlenarComboBox();
             LLenarComboBoxTwo();
-            CargarUsuario();
             VehiculoComboBox.Text = null;
             ClienteComboBox.Text = null;
             this.Detalle = new List<VentasDetalle>();
+            CargarUsuario();
         }
 
         private void Limpiar()
@@ -48,16 +49,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Ventas ventas = new Ventas();
             ventas.Vehiculos = this.Detalle;
-
-            if (IdNumericUpDown.Value == 0)
-            {
-                ventas.ClienteId = Convert.ToInt32(ClienteComboBox.SelectedValue);
-            }
-            else
-            {
-                ventas.ClienteId = Convert.ToInt32(ClienteComboBox.SelectedValue);
-            }
-
             ventas.UsuarioId = 1;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;

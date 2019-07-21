@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rVehiculos));
             this.ColorComboBox = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.CostoNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -39,7 +40,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.DescripcionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.AnioTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.PlacaTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,6 +61,7 @@
             this.EliminarButton = new System.Windows.Forms.Button();
             this.GuardarButton = new System.Windows.Forms.Button();
             this.NuevoButton = new System.Windows.Forms.Button();
+            this.AnioTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.CostoNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
@@ -164,13 +165,6 @@
             this.label6.TabIndex = 42;
             this.label6.Text = "Descripcion";
             // 
-            // AnioTextBox
-            // 
-            this.AnioTextBox.Location = new System.Drawing.Point(109, 231);
-            this.AnioTextBox.Name = "AnioTextBox";
-            this.AnioTextBox.Size = new System.Drawing.Size(119, 20);
-            this.AnioTextBox.TabIndex = 41;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -182,7 +176,7 @@
             // 
             // PlacaTextBox
             // 
-            this.PlacaTextBox.Location = new System.Drawing.Point(109, 124);
+            this.PlacaTextBox.Location = new System.Drawing.Point(109, 85);
             this.PlacaTextBox.Name = "PlacaTextBox";
             this.PlacaTextBox.Size = new System.Drawing.Size(119, 20);
             this.PlacaTextBox.TabIndex = 39;
@@ -190,7 +184,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 131);
+            this.label4.Location = new System.Drawing.Point(12, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(34, 13);
             this.label4.TabIndex = 36;
@@ -208,7 +202,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 94);
+            this.label2.Location = new System.Drawing.Point(9, 129);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 34;
@@ -284,7 +278,7 @@
             "Azul",
             "Gris",
             "Verde"});
-            this.MarcaComboBox.Location = new System.Drawing.Point(109, 86);
+            this.MarcaComboBox.Location = new System.Drawing.Point(109, 121);
             this.MarcaComboBox.Name = "MarcaComboBox";
             this.MarcaComboBox.Size = new System.Drawing.Size(122, 21);
             this.MarcaComboBox.TabIndex = 67;
@@ -313,7 +307,7 @@
             // 
             this.OtraMarcaButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
             this.OtraMarcaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 80);
+            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 117);
             this.OtraMarcaButton.Name = "OtraMarcaButton";
             this.OtraMarcaButton.Size = new System.Drawing.Size(64, 27);
             this.OtraMarcaButton.TabIndex = 70;
@@ -400,6 +394,13 @@
             this.NuevoButton.UseVisualStyleBackColor = true;
             this.NuevoButton.Click += new System.EventHandler(this.NuevoButton_Click);
             // 
+            // AnioTextBox
+            // 
+            this.AnioTextBox.Location = new System.Drawing.Point(109, 231);
+            this.AnioTextBox.Name = "AnioTextBox";
+            this.AnioTextBox.Size = new System.Drawing.Size(122, 20);
+            this.AnioTextBox.TabIndex = 74;
+            // 
             // rVehiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,6 +408,7 @@
             this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(313, 530);
+            this.Controls.Add(this.AnioTextBox);
             this.Controls.Add(this.OtraMarcaButton);
             this.Controls.Add(this.OtroModeloButton);
             this.Controls.Add(this.ModeloComboBox);
@@ -431,7 +433,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.DescripcionTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.AnioTextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.PlacaTextBox);
             this.Controls.Add(this.label4);
@@ -440,6 +441,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -467,7 +469,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox DescripcionTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox AnioTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox PlacaTextBox;
         private System.Windows.Forms.Label label4;
@@ -489,5 +490,6 @@
         private System.Windows.Forms.Button OtroModeloButton;
         private System.Windows.Forms.Button OtraMarcaButton;
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
+        private System.Windows.Forms.TextBox AnioTextBox;
     }
 }

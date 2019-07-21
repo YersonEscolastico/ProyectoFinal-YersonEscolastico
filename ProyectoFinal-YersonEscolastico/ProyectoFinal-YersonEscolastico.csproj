@@ -242,6 +242,10 @@
       <Project>{549EB2F3-3F3F-4CBA-9F53-C5809635C794}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{13FA533E-316B-4487-A397-42D08524D0FE}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entidades\Entidades.csproj">
       <Project>{1A183B1B-D6A8-4945-8216-939D22BC06E2}</Project>
       <Name>Entidades</Name>
@@ -312,6 +316,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Consulta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Entidades;
 using System;
 using System.Collections.Generic;
@@ -68,55 +69,68 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private bool Validar()
         {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
             string clave = ContrasenaMaskedTextBox.Text;
             string confirmacion = ConfirmarContrasenaMaskedTextBox.Text;
 
             int result = 0;
             result = string.Compare(clave, confirmacion);
 
-            bool paso = false;
-
             if (result != 0)
             {
                 MyErrorProvider.SetError(ConfirmarContrasenaMaskedTextBox, "Las claves no coinciden");
                 ConfirmarContrasenaMaskedTextBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (NombresTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(NombresTextBox, "Este campo no puede estar vacio");
                 NombresTextBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (EmailTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(EmailTextBox, "Este campo no puede estar vacio");
                 EmailTextBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (UsuarioTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(UsuarioTextBox, "Este campo no puede estar vacio");
                 UsuarioTextBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (NivelAccesocomboBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(NivelAccesocomboBox, "No puede dejar este campo vacio");
                 NivelAccesocomboBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (ContrasenaMaskedTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(ContrasenaMaskedTextBox, "Este campo no puede estar vacio");
                 ContrasenaMaskedTextBox.Focus();
-                paso = true;
+                paso = false;
             }
             if (ConfirmarContrasenaMaskedTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(ConfirmarContrasenaMaskedTextBox, "Este campo no puede estar vacio");
                 ConfirmarContrasenaMaskedTextBox.Focus();
-                paso = true;
+                paso = false;
+            }
+            if (RepetidosNo(UsuarioTextBox.Text))
+            {
+                MessageBox.Show("Ya existe un usuario con este nombre");
+                UsuarioTextBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(EmailTextBox.Text))
+            {
+                MessageBox.Show("Ya existe este email, cree otro");
+                EmailTextBox.Focus();
+                paso = false;
             }
             return paso;
         }
@@ -133,7 +147,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Usuarios usuarios;
             bool paso = false;
 
-            if (Validar())
+            if (!Validar())
                 return;
 
             usuarios = LlenarClase();
@@ -217,5 +231,28 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             e.Handled = true;
         }
+
+        public static bool RepetidosNo(string usuarios)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            try
+            {
+                if (db.Usuarios.Any(p => p.Usuario.Equals(usuarios)))
+                {
+                    paso = true;
+                }
+                if (db.Usuarios.Any(p => p.Email.Equals(usuarios)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
+
     }
 }

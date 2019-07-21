@@ -160,6 +160,7 @@
             this.Controls.Add(this.ContrasenaTextBox);
             this.Controls.Add(this.UsuarioTextBox);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
