@@ -160,6 +160,7 @@
             this.MinimizeBox = false;
             this.Name = "rOtrosColores";
             this.Text = "Otros";
+            this.TopMost = true;
             this.UseWaitCursor = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();

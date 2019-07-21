@@ -48,7 +48,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             usuarios.NivelAcceso = NivelAccesocomboBox.Text;
             usuarios.Usuario = UsuarioTextBox.Text;
             usuarios.TotalVentas = 0;
-            usuarios.Clave = ContrasenaMaskedTextBox.Text;
+            usuarios.Clave = Eramake.eCryptography.Encrypt(ContrasenaMaskedTextBox.Text);
             usuarios.Fecha = FechaRegistroDateTimePicker.Value;
             return usuarios;
         }
@@ -61,7 +61,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             NivelAccesocomboBox.Text = usuarios.NivelAcceso;
             UsuarioTextBox.Text = usuarios.Usuario;
             TotalVentasTextBox.Text = usuarios.TotalVentas.ToString();
-            ContrasenaMaskedTextBox.Text = usuarios.Clave;
+            ContrasenaMaskedTextBox.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
+            ContrasenaMaskedTextBox.Text = Eramake.eCryptography.Decrypt(usuarios.Clave);
             FechaRegistroDateTimePicker.Value = usuarios.Fecha;
         }
 
