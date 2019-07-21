@@ -28,7 +28,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             CedulaMaskedTextBox.Text = string.Empty;
             DireccionTextBox.Text = string.Empty;
             TelefonoMaskedTextBox.Text = string.Empty;
-            CedulaMaskedTextBox.Text = string.Empty;
+            CelularMaskedTextBox.Text = string.Empty;
             FechaNacimientoDateTimePicker.Value = DateTime.Now;
             FechaRegistroateTimePicker.Value = DateTime.Now;
         }
@@ -64,7 +64,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             CedulaMaskedTextBox.Text = clientes.Cedula;
             DireccionTextBox.Text = clientes.Direccion;
             TelefonoMaskedTextBox.Text = clientes.Telefono;
-            CedulaMaskedTextBox.Text = clientes.Celular;
+            CelularMaskedTextBox.Text = clientes.Celular;
             FechaNacimientoDateTimePicker.Value = clientes.FechaNacimiento;
             FechaRegistroateTimePicker.Value = clientes.FechaRegistro;
         }

@@ -70,7 +70,7 @@ namespace ProyectoFinal_YersonEscolastico
                             TotalVentas=0,
                             Fecha = DateTime.Now
                         });
-                        MessageBox.Show("Al no existir usuario se ha creado uno." + Environment.NewLine + "Usuario = admin" + Environment.NewLine + "Clave = admin");
+                        MessageBox.Show("Nombre de usuarios o contraseña incorrectos");
                         return;
                     }
                 }

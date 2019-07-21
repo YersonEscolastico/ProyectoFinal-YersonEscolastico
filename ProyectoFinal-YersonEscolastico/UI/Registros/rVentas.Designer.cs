@@ -230,7 +230,7 @@
             // 
             // UsuarioTextBox
             // 
-            this.UsuarioTextBox.Location = new System.Drawing.Point(343, 22);
+            this.UsuarioTextBox.Location = new System.Drawing.Point(343, 23);
             this.UsuarioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.ReadOnly = true;
@@ -240,7 +240,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(340, 7);
+            this.label4.Location = new System.Drawing.Point(360, 7);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
