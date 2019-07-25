@@ -15,13 +15,14 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
     public partial class rVehiculos : Form
     {
-        public rVehiculos()
+        private int id;
+        public rVehiculos(int id)
         {
+            this.id = id;
             InitializeComponent();
             LlenarComboBox();
             LlenarComboBox1();
             LlenarComboBox2();
-
         }
         private void Limpiar()
         {
@@ -60,7 +61,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             vehiculos.Descripcion = DescripcionTextBox.Text;
             vehiculos.Costo = (decimal)CostoNumericUpDown.Value;
             vehiculos.Precio = (decimal)PrecioNumericUpDown.Value;
-            vehiculos.UsuarioId = 1;
+            vehiculos.UsuarioId = id;
             vehiculos.Estado = EstadoComboBox.Text;
             vehiculos.FechaRegistro = FechaRegistroDateTimePicker.Value;
 

@@ -41,7 +41,9 @@ namespace ProyectoFinal_YersonEscolastico
                 {
                     if (usuario.Exists(x => x.Clave.Equals(Eramake.eCryptography.Encrypt(password))))
                     {
-                        MainForm f = new MainForm();
+
+                        List<Usuarios> id = Repositorio.GetList(U => U.Usuario == UsuarioTextBox.Text);
+                        MainForm f = new MainForm(id[0].UsuarioId);
                         f.Show();
                         this.Hide();
                     }

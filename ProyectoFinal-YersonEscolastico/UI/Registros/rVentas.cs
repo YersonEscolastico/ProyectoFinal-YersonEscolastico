@@ -16,17 +16,18 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
     {
         public List<VentasDetalle> Detalle;
 
-        public rVentas()
-        {        
+        private int id;
+        public rVentas(int id)
+        {
+            this.id = id;
             InitializeComponent();
- 
             LlenarComboBox();
             LLenarComboBoxTwo();
             this.Detalle = new List<VentasDetalle>();
             CargarUsuario();
         }
 
-            private void Limpiar()
+        private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
             TotalTextBox.Text = string.Empty;
@@ -48,7 +49,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             Ventas ventas = new Ventas();
             ventas.Detalle = this.Detalle;
-            ventas.UsuarioId = 1;
+            ventas.UsuarioId = id;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;
             ventas.CalcularMonto();

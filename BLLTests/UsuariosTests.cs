@@ -12,11 +12,6 @@ namespace BLL.Tests
     [TestClass()]
     public class UsuarioTest
     {
-        [TestMethod()]
-        public void RepositorioBaseTest()
-        {
-            Assert.Fail();
-        }
 
         [TestMethod()]
         public void GuardarTest()

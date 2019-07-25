@@ -12,12 +12,6 @@ namespace BLL.Tests
     public class VehiculoTest
     {
         [TestMethod()]
-        public void RepositorioBaseTest()
-        {
-            Assert.Fail();
-        }
-
-        [TestMethod()]
         public void GuardarTest()
         {
             RepositorioBase<Vehiculos> db = new RepositorioBase<Vehiculos>();

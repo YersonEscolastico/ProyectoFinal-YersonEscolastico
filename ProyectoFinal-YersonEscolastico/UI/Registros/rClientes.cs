@@ -15,8 +15,10 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
     public partial class rClientes : Form
     {
-        public rClientes()
+        private int id;
+        public rClientes(int id)
         {
+            this.id = id;
             InitializeComponent();
         }
 
@@ -51,7 +53,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             clientes.Direccion = DireccionTextBox.Text;
             clientes.Telefono = TelefonoMaskedTextBox.Text;
             clientes.Celular = CelularMaskedTextBox.Text;
-            clientes.UsuarioId = 1;
+            clientes.UsuarioId = id;
             clientes.FechaNacimiento = FechaNacimientoDateTimePicker.Value;
             clientes.FechaRegistro = FechaNacimientoDateTimePicker.Value;
             return clientes;
