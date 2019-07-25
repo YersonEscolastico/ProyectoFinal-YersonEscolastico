@@ -14,20 +14,19 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 {
     public partial class rVentas : Form
     {
-        public List<VentasDetalle> Detalle { get; set; }
+        public List<VentasDetalle> Detalle;
+
         public rVentas()
         {        
             InitializeComponent();
  
             LlenarComboBox();
             LLenarComboBoxTwo();
-            VehiculoComboBox.Text = null;
-            ClienteComboBox.Text = null;
             this.Detalle = new List<VentasDetalle>();
             CargarUsuario();
         }
 
-        private void Limpiar()
+            private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
             TotalTextBox.Text = string.Empty;
@@ -48,7 +47,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private Ventas LlenaClase()
         {
             Ventas ventas = new Ventas();
-            ventas.Vehiculos = this.Detalle;
+            ventas.Detalle = this.Detalle;
             ventas.UsuarioId = 1;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;
@@ -69,13 +68,16 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
         private void LlenaCampos(Ventas ventas)
         {
+            decimal precio = ventas.Total;
+            if (precio < 0)
+                precio = precio * (-1);
             IdNumericUpDown.Value = ventas.VentaId;
             ClienteComboBox.SelectedValue = ventas.VentaId;
             VehiculoComboBox.SelectedValue = ventas.VentaId;
-            PrecioNumericUpDown.Value = ventas.Total;
+            PrecioNumericUpDown.Value = precio;
             TotalTextBox.Text = ventas.Total.ToString();
             FechaVentaDateTimePicker.Value = ventas.FechaVenta;
-            this.Detalle = ventas.Vehiculos;
+            this.Detalle = ventas.Detalle;
             CargarGrid();
         }
 
@@ -118,18 +120,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 ClienteComboBox.Focus();
                 paso = false;
             }
-            if (PrecioNumericUpDown.Value == 0)
-            {
-                MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que 0");
-                PrecioNumericUpDown.Focus();
-                paso = false;
-            }
             if (Detalle.Count == 0)
             {
                 MyErrorProvider.SetError(VehiculoComboBox, "Este campo no puede estar vacio");
                 VehiculoComboBox.Focus();
                 paso = false;
             }
+         
             return paso;
         }
 
@@ -189,14 +186,21 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             TotalTextBox.Text = Total.ToString();
         }
 
+        private int ToInt(object valor)
+        {
+            int retorno = 0;
+            int.TryParse(valor.ToString(), out retorno);
+
+            return retorno;
+        }
+
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
 
             RepositorioBase<Ventas> db = new RepositorioBase<Ventas>();
             int id;
             Ventas ventas = new Ventas();
-
-            int.TryParse(IdNumericUpDown.Text, out id);
+            id = ToInt(IdNumericUpDown.Value);
             Limpiar();
 
             ventas = RepositorioVentas.Buscar(id);
@@ -207,6 +211,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
             else
             {
+                Limpiar();
                 MessageBox.Show("Venta no existe");
             }
         }
@@ -220,8 +225,10 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 {
                     if (db.Eliminar((int)IdNumericUpDown.Value))
                     {
+                       
                         MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpiar();
+                        
                     }
                     else
                     {
@@ -260,6 +267,12 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 VehiculoComboBox.Focus();
                 return;
             }
+            if (PrecioNumericUpDown.Value == 0)
+            {
+                MyErrorProvider.SetError(PrecioNumericUpDown, "El precio no debe ser cero");
+                PrecioNumericUpDown.Focus();
+                return;
+            }
 
             if (Existencia())
                 return;
@@ -269,23 +282,35 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 this.Detalle = (List<VentasDetalle>)detalleDataGridView.DataSource;
 
             var subtotal = vehiculos.Precio = PrecioNumericUpDown.Value;
+            var descripcion = vehiculos.Descripcion = VehiculoComboBox.Text;
 
-            this.Detalle.Add(new VentasDetalle()
+            foreach (var item in Detalle)
             {
-                VentaId = (int)IdNumericUpDown.Value,
-                VehiculoId = (int)VehiculoComboBox.SelectedValue,
-                VentasDetalleID = 0,
-                SubTotal = subtotal
-            });
-            CargarGrid();
-            CalTotal();
-        }
+                if (descripcion == item.Descripcion)
+                {
+                    MessageBox.Show("Ya se ha agregado este vehiculo" + Environment.NewLine + "Fallo!!");
+                    return;
+                }
+            }
+                this.Detalle.Add(new VentasDetalle()
+                {
+                    VentaId = (int)IdNumericUpDown.Value,
+                    VehiculoId = (int)VehiculoComboBox.SelectedValue,
+                    VentasDetalleID = 0,
+                    SubTotal = subtotal,
+                    Descripcion = descripcion
+                });
 
+                CargarGrid();
+                CalTotal();
+            }
+        
 
         private void Removerbutton_Click(object sender, EventArgs e)
         {
             if (detalleDataGridView.Rows.Count > 0 && detalleDataGridView.CurrentRow != null)
             {
+
                 Detalle.RemoveAt(detalleDataGridView.CurrentRow.Index);
                 CargarGrid();
                 RebTotal();

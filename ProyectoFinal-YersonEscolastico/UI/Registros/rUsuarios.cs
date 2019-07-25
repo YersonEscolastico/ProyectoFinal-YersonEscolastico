@@ -191,6 +191,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                     }
                     else
                     {
+                        Limpiar();
                         MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }

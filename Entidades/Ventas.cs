@@ -17,7 +17,7 @@ namespace Entidades
         public int UsuarioId { get; set; }
         public decimal Total { get; set; }
 
-        public virtual List<VentasDetalle> Vehiculos { get; set; }
+        public virtual List<VentasDetalle> Detalle { get; set; }
         public Ventas()
         {
             VentaId = 0;
@@ -25,13 +25,13 @@ namespace Entidades
             FechaVenta = DateTime.Now;
             ClienteId = 0;
             UsuarioId = 0;
-            Vehiculos = new List<VentasDetalle>();
+            Detalle = new List<VentasDetalle>();
         }
         public void CalcularMonto()
         {
             decimal total = 0;
 
-            foreach (var item in Vehiculos)
+            foreach (var item in Detalle)
             {
                 total += item.SubTotal;
             }

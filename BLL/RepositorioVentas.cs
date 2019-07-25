@@ -22,7 +22,7 @@ namespace BLL
                 if (db.ventas.Add(ventas) != null)
                 {
                     string estado = "Vendido";
-                    foreach (var item in ventas.Vehiculos)
+                    foreach (var item in ventas.Detalle)
                     {
                         db.Vehiculos.Find(item.VehiculoId).Estado = estado;
                     }
@@ -47,33 +47,41 @@ namespace BLL
 
             try
             {
-                var cliente = cl.Buscar(ventas.ClienteId);
-                var anterior = new RepositorioBase<Ventas>().Buscar(ventas.VentaId);
+                var anterior = cl.Buscar(ventas.VentaId);
 
-                foreach (var item in anterior.Vehiculos)
+                foreach (var item in anterior.Detalle)
                 {
-                    if (!ventas.Vehiculos.Any(A => A.VentasDetalleID == item.VentasDetalleID))
+                    if (!ventas.Detalle.Any(A => A.VentasDetalleID == item.VentasDetalleID))
                     {
+                        db.ventas.Find(item.VentaId).Total += item.SubTotal;
                         db.Entry(item).State = EntityState.Deleted;
 
                     }
                 }
-                foreach (var item in ventas.Vehiculos)
+                foreach (var item in ventas.Detalle)
                 {
                     if (item.VentasDetalleID == 0)
                     {
+                        db.ventas.Find(item.VentaId).Total -= item.SubTotal;
                         db.Entry(item).State = EntityState.Added;
                     }
                     else
                     {
                         db.Entry(item).State = EntityState.Modified;
                     }
+               
+                    paso = db.SaveChanges() > 0;
                 }
-
+  
+                db = new Contexto();
+                decimal modificado = ventas.Total - anterior.Total;
+                RepositorioBase<Usuarios> repositorioBase = new RepositorioBase<Usuarios>();
+                var Usuario = db.Usuarios.Find(ventas.UsuarioId);
+                Usuario.TotalVentas += modificado;
+                repositorioBase.Modificar(Usuario);
+              
                 ventas.CalcularMonto();
-
                 db.Entry(ventas).State = EntityState.Modified;
-
                 paso = db.SaveChanges() > 0;
             }
             catch (Exception)
@@ -94,7 +102,7 @@ namespace BLL
 
                 if (entity != null)
                 {
-                    entity.Vehiculos.Count();
+                    entity.Detalle.Count();
                 }
             }
             catch (Exception)
@@ -108,7 +116,7 @@ namespace BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-            RepositorioBase<Clientes> cl = new RepositorioBase<Clientes>();
+            RepositorioBase<Usuarios> cl = new RepositorioBase<Usuarios>();
             try
             {
                 var Ventas = db.ventas.Find(id);

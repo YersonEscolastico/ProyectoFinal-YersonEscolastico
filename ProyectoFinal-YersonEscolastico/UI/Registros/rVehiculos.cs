@@ -21,8 +21,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             LlenarComboBox();
             LlenarComboBox1();
             LlenarComboBox2();
-        }
 
+        }
         private void Limpiar()
         {
             IdNumericUpDown.Value = 0;
@@ -60,7 +60,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             vehiculos.Descripcion = DescripcionTextBox.Text;
             vehiculos.Costo = (decimal)CostoNumericUpDown.Value;
             vehiculos.Precio = (decimal)PrecioNumericUpDown.Value;
-            vehiculos.UsuarioId = 0;
+            vehiculos.UsuarioId = 1;
             vehiculos.Estado = EstadoComboBox.Text;
             vehiculos.FechaRegistro = FechaRegistroDateTimePicker.Value;
 
@@ -82,6 +82,25 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             PrecioNumericUpDown.Value = vehiculos.Precio;
             EstadoComboBox.Text = vehiculos.Estado;
             FechaRegistroDateTimePicker.Value = vehiculos.FechaRegistro;
+        }
+
+        public  bool Repetidos()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+            if (RepetidosNo(VinTextBox.Text))
+            {
+                MessageBox.Show("Ya se ha registrado un vehiculo con este vin, intente de nuevo");
+                VinTextBox.Focus();
+                paso = false;
+            }
+            if (RepetidosNo(PlacaTextBox.Text))
+            {
+                MessageBox.Show("Ya se ha registrado un vehiculo con este vin,intente de nuevo");
+                PlacaTextBox.Focus();
+                paso = false;
+            }
+            return paso;
         }
 
         private bool Validar()
@@ -150,18 +169,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 EstadoComboBox.Focus();
                 paso = false;
             }
-            if (RepetidosNo(VinTextBox.Text))
-            {
-                MessageBox.Show("Ya se ha registrado un vehiculo con este vin, intente de nuevo");
-                VinTextBox.Focus();
-                paso = false;
-            }
-            if (RepetidosNo(PlacaTextBox.Text))
-            {
-                MessageBox.Show("Ya se ha registrado un vehiculo con este vin,intente de nuevo");
-                PlacaTextBox.Focus();
-                paso = false;
-            }
             return paso;
         }
 
@@ -188,6 +195,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             if (IdNumericUpDown.Value == 0)
             {
                 paso = db.Guardar(vehiculos);
+
             }
             else
             {
@@ -224,6 +232,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                     }
                     else
                     {
+                        Limpiar();
                         MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }

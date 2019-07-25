@@ -51,7 +51,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             clientes.Direccion = DireccionTextBox.Text;
             clientes.Telefono = TelefonoMaskedTextBox.Text;
             clientes.Celular = CelularMaskedTextBox.Text;
-            clientes.UsuarioId = 0;
+            clientes.UsuarioId = 1;
             clientes.FechaNacimiento = FechaNacimientoDateTimePicker.Value;
             clientes.FechaRegistro = FechaNacimientoDateTimePicker.Value;
             return clientes;
@@ -214,6 +214,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                     }
                     else
                     {
+                        Limpiar();
                         MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }

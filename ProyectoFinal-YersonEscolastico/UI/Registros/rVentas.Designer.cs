@@ -36,7 +36,6 @@
             this.IdNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.ClienteComboBox = new System.Windows.Forms.ComboBox();
-            this.PrecioNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.FechaVentaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.TotalTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.Agregarbutton = new System.Windows.Forms.Button();
             this.VehiculoComboBox = new System.Windows.Forms.ComboBox();
             this.detalleDataGridView = new System.Windows.Forms.DataGridView();
+            this.PrecioNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.MyErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.UsuarioTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,9 +54,9 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,18 +111,6 @@
             this.ClienteComboBox.Name = "ClienteComboBox";
             this.ClienteComboBox.Size = new System.Drawing.Size(103, 21);
             this.ClienteComboBox.TabIndex = 7;
-            // 
-            // PrecioNumericUpDown
-            // 
-            this.PrecioNumericUpDown.Location = new System.Drawing.Point(242, 28);
-            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
-            this.PrecioNumericUpDown.Size = new System.Drawing.Size(103, 20);
-            this.PrecioNumericUpDown.TabIndex = 9;
             // 
             // FechaVentaDateTimePicker
             // 
@@ -226,6 +214,18 @@
             this.detalleDataGridView.RowTemplate.Height = 24;
             this.detalleDataGridView.Size = new System.Drawing.Size(387, 103);
             this.detalleDataGridView.TabIndex = 0;
+            // 
+            // PrecioNumericUpDown
+            // 
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(242, 28);
+            this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
+            this.PrecioNumericUpDown.Size = new System.Drawing.Size(103, 20);
+            this.PrecioNumericUpDown.TabIndex = 9;
             // 
             // MyErrorProvider
             // 
@@ -332,17 +332,15 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "rVentas";
             this.Text = "Registro de ventas";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -357,7 +355,6 @@
         private System.Windows.Forms.NumericUpDown IdNumericUpDown;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox ClienteComboBox;
-        private System.Windows.Forms.NumericUpDown PrecioNumericUpDown;
         private System.Windows.Forms.DateTimePicker FechaVentaDateTimePicker;
         private System.Windows.Forms.TextBox TotalTextBox;
         private System.Windows.Forms.Label label6;
@@ -374,5 +371,6 @@
         private System.Windows.Forms.ErrorProvider MyErrorProvider;
         private System.Windows.Forms.TextBox UsuarioTextBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.NumericUpDown PrecioNumericUpDown;
     }
 }
