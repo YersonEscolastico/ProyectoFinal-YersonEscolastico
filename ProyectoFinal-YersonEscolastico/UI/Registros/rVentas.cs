@@ -224,7 +224,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 if (IdNumericUpDown.Value > 0)
                 {
-                    if (db.Eliminar((int)IdNumericUpDown.Value))
+                    if (RepositorioVentas.Eliminar((int)IdNumericUpDown.Value))
                     {
                        
                         MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
