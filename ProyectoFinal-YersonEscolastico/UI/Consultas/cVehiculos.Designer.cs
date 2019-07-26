@@ -55,6 +55,7 @@
             this.ImprimirButton.Text = "Imprimir";
             this.ImprimirButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ImprimirButton.UseVisualStyleBackColor = true;
+            this.ImprimirButton.Click += new System.EventHandler(this.ImprimirButton_Click);
             // 
             // FiltroFechacheckBox
             // 
@@ -124,7 +125,7 @@
             // 
             this.ConsultadataGridView.AllowUserToAddRows = false;
             this.ConsultadataGridView.AllowUserToDeleteRows = false;
-            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(14, 53);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
@@ -190,7 +191,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "cVehiculos";
             this.Text = "Consulta de Vehiculos";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

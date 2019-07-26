@@ -193,7 +193,6 @@
             this.MinimizeBox = false;
             this.Name = "cVentas";
             this.Text = "Consulta de Ventas";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

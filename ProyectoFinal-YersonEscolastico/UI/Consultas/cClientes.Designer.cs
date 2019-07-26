@@ -124,7 +124,7 @@
             // 
             this.ConsultadataGridView.AllowUserToAddRows = false;
             this.ConsultadataGridView.AllowUserToDeleteRows = false;
-            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(13, 53);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
@@ -193,7 +193,6 @@
             this.MinimizeBox = false;
             this.Name = "cClientes";
             this.Text = "Consulta de clientes";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

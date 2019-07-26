@@ -120,6 +120,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 ConfirmarContrasenaMaskedTextBox.Focus();
                 paso = false;
             }
+            return paso;
+        }
+
+        public bool repetido()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
             if (RepetidosNo(UsuarioTextBox.Text))
             {
                 MessageBox.Show("Ya existe un usuario con este nombre");
@@ -134,6 +141,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
             return paso;
         }
+
         private bool ExisteEnLaBaseDeDatos()
         {
             RepositorioBase<Usuarios> db = new RepositorioBase<Usuarios>();
@@ -254,6 +262,5 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
             return paso;
         }
-
     }
 }

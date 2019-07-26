@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Entidades
         [Key]
 
         public int VehiculoId { get; set; }
+        [Browsable(false)]
         public string Vin { get; set; }
         public string Marca { get; set; }
         public string Placa { get; set; }
@@ -19,9 +21,12 @@ namespace Entidades
         public string Color { get; set; }
         public string Anio { get; set; }
         public string Descripcion { get; set; }
+        [Browsable(false)]
         public decimal Costo { get; set; }
         public decimal Precio { get; set; }
+        [Browsable(false)]
         public int UsuarioId { get; set; }
+        [Browsable(false)]
         public string Estado { get; set; }
         public DateTime FechaRegistro { get; set; }
 

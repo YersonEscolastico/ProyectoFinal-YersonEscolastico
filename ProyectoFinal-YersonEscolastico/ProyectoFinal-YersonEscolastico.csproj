@@ -155,11 +155,23 @@
       <DependentUpon>ListadoUsuario.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Reportes\ListadoVehiculos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoVehiculos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Reportes\UsuariosReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Reportes\UsuariosReport.Designer.cs">
       <DependentUpon>UsuariosReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\VehiculosReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\VehiculosReport.Designer.cs">
+      <DependentUpon>VehiculosReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -217,8 +229,15 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ListadoUsuario.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ListadoVehiculos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListadoVehiculos.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\UsuariosReport.resx">
       <DependentUpon>UsuariosReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\VehiculosReport.resx">
+      <DependentUpon>VehiculosReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

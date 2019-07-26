@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Entidades
         public string Nombre { get; set; }
         public string Email { get; set; }
         public string Usuario { get; set; }
+        [Browsable(false)]
         public string Clave { get; set; }
         public string NivelAcceso { get; set; }
         public decimal TotalVentas { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,9 @@ namespace Entidades
         public String Direccion { get; set; }
         public string Telefono { get; set; }
         public string Celular { get; set; }
+        [Browsable(false)]
         public int UsuarioId { get; set; }
+        [Browsable(false)]
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaRegistro { get; set; }
 

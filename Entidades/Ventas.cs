@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -12,19 +13,20 @@ namespace Entidades
     {
         [Key]
         public int VentaId { get; set; }      
-        public DateTime FechaVenta { get; set; }
         public int ClienteId { get; set; }
+        [Browsable(false)]
         public int UsuarioId { get; set; }
         public decimal Total { get; set; }
+        public DateTime FechaVenta { get; set; }
 
         public virtual List<VentasDetalle> Detalle { get; set; }
         public Ventas()
         {
             VentaId = 0;
             Total = 0;
-            FechaVenta = DateTime.Now;
             ClienteId = 0;
             UsuarioId = 0;
+            FechaVenta = DateTime.Now;
             Detalle = new List<VentasDetalle>();
         }
         public void CalcularMonto()

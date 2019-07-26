@@ -50,6 +50,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Ventas ventas = new Ventas();
             ventas.Detalle = this.Detalle;
             ventas.UsuarioId = id;
+            ventas.ClienteId = (int)ClienteComboBox.SelectedValue;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;
             ventas.CalcularMonto();
@@ -73,7 +74,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             if (precio < 0)
                 precio = precio * (-1);
             IdNumericUpDown.Value = ventas.VentaId;
-            ClienteComboBox.SelectedValue = ventas.VentaId;
+            ClienteComboBox.SelectedValue = ventas.ClienteId;
             VehiculoComboBox.SelectedValue = ventas.VentaId;
             PrecioNumericUpDown.Value = precio;
             TotalTextBox.Text = ventas.Total.ToString();
@@ -164,10 +165,12 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
 
             if (paso)
+            {
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Limpiar();
+            }
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            LlenaClase();
             Limpiar();
         }
 

@@ -129,6 +129,14 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 FechaRegistroateTimePicker.Focus();
                 paso = false;
             }
+            return paso;
+        }
+
+        public bool repetidos()
+        {
+            bool paso = true;
+            MyErrorProvider.Clear();
+
             if (RepetidosNo(EmailTextBox.Text))
             {
                 MessageBox.Show("Ya existe este email, cree otro");
@@ -154,7 +162,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 CelularMaskedTextBox.Focus();
                 paso = false;
             }
-
             return paso;
         }
 
@@ -290,5 +297,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             }
             return paso;
         }
+
     }
 }
