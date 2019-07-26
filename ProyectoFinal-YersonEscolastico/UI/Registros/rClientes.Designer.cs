@@ -184,7 +184,7 @@
             // CedulaMaskedTextBox
             // 
             this.CedulaMaskedTextBox.Location = new System.Drawing.Point(127, 169);
-            this.CedulaMaskedTextBox.Mask = "999-9999999-9";
+            this.CedulaMaskedTextBox.Mask = "000-00000000-0";
             this.CedulaMaskedTextBox.Name = "CedulaMaskedTextBox";
             this.CedulaMaskedTextBox.Size = new System.Drawing.Size(130, 20);
             this.CedulaMaskedTextBox.TabIndex = 17;

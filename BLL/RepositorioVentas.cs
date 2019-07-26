@@ -117,13 +117,23 @@ namespace BLL
             bool paso = false;
             Contexto db = new Contexto();
             RepositorioBase<Usuarios> cl = new RepositorioBase<Usuarios>();
+            Ventas ventas = new Ventas();
+
             try
             {
-                var Ventas = db.ventas.Find(id);
-                var clientes = cl.Buscar(Ventas.VentaId);
-                db.Usuarios.Find(Ventas.UsuarioId).TotalVentas -= Ventas.Total;
-                db.Entry(Ventas).State = EntityState.Deleted;
-                paso = (db.SaveChanges() > 0);
+                if (ventas.VehiculoId == 0)
+                {
+                    string estado = "Disponible";
+                    foreach (var item in ventas.Detalle)
+                    {
+                        db.Vehiculos.Find(item.VehiculoId).Estado = estado;
+                    }
+                }
+                    var Ventas = db.ventas.Find(id);
+                    var clientes = cl.Buscar(Ventas.VentaId);
+                    db.Usuarios.Find(Ventas.UsuarioId).TotalVentas -= Ventas.Total;
+                    db.Entry(Ventas).State = EntityState.Deleted;
+                    paso = (db.SaveChanges() > 0);
             }
             catch (Exception)
             {

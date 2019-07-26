@@ -17,6 +17,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
         public cVentas()
         {
             InitializeComponent();
+            FiltrocomboBox.Text = "Todo";
         }
 
 

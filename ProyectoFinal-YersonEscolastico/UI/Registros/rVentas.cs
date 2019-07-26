@@ -51,6 +51,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             ventas.Detalle = this.Detalle;
             ventas.UsuarioId = id;
             ventas.ClienteId = (int)ClienteComboBox.SelectedValue;
+            ventas.VehiculoId = (int)VehiculoComboBox.SelectedValue;
             ventas.VentaId = Convert.ToInt32(IdNumericUpDown.Value);
             ventas.Total = PrecioNumericUpDown.Value;
             ventas.CalcularMonto();
@@ -75,34 +76,12 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 precio = precio * (-1);
             IdNumericUpDown.Value = ventas.VentaId;
             ClienteComboBox.SelectedValue = ventas.ClienteId;
-            VehiculoComboBox.SelectedValue = ventas.VentaId;
+            VehiculoComboBox.SelectedValue = ventas.VehiculoId;
             PrecioNumericUpDown.Value = precio;
             TotalTextBox.Text = ventas.Total.ToString();
             FechaVentaDateTimePicker.Value = ventas.FechaVenta;
             this.Detalle = ventas.Detalle;
             CargarGrid();
-        }
-
-        private bool Existencia()
-        {
-            bool paso = false;
-            string estado = "Vendido";
-            string estado2 = "En reparacion";
-            RepositorioBase<Vehiculos> repositorio = new RepositorioBase<Vehiculos>();
-            Vehiculos vehiculo = repositorio.Buscar(Convert.ToInt32(VehiculoComboBox.SelectedValue));
-            if (estado == vehiculo.Estado)
-            {
-                MessageBox.Show("Vehiculo Vendido!!", "Fallo", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                paso = true;
-            }
-            if (estado2 == vehiculo.Estado)
-            {
-                MessageBox.Show("Vehiculo en reparacion!!", "Fallo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                paso = true;
-            }
-            return paso;
         }
 
         private bool Validar()
@@ -352,5 +331,29 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         {
             e.Handled = true;
         }
+
+
+        private bool Existencia()
+        {
+            bool paso = false;
+            string estado = "Vendido";
+            string estado2 = "En reparacion";
+            RepositorioBase<Vehiculos> repositorio = new RepositorioBase<Vehiculos>();
+            Vehiculos vehiculo = repositorio.Buscar(Convert.ToInt32(VehiculoComboBox.SelectedValue));
+            if (estado == vehiculo.Estado)
+            {
+                MessageBox.Show("Vehiculo Vendido!!", "Fallo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                paso = true;
+            }
+            if (estado2 == vehiculo.Estado)
+            {
+                MessageBox.Show("Vehiculo en reparacion!!", "Fallo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                paso = true;
+            }
+            return paso;
+        }
+
     }
 }

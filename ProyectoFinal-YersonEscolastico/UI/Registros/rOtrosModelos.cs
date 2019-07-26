@@ -100,30 +100,32 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Limpiar();
         }
 
+        private int ToInt(object valor)
+        {
+            int retorno = 0;
+            int.TryParse(valor.ToString(), out retorno);
+
+            return retorno;
+        }
+
         private void BuscarButton_Click_1(object sender, EventArgs e)
         {
             RepositorioBase<OtrosModelos> db = new RepositorioBase<OtrosModelos>();
-            try
-            {
+            int id;
+            OtrosModelos o = new OtrosModelos();
+            id = ToInt(IdNumericUpDown.Value);
+            Limpiar();
 
-                if (IdNumericUpDown.Value > 0)
-                {
-                    OtrosModelos ubicaciones = new OtrosModelos();
-                    if ((ubicaciones = db.Buscar((int)IdNumericUpDown.Value)) != null)
-                    {
-                        Limpiar();
-                        LlenarCampos(ubicaciones);
-                    }
-                    else
-                    {
-                        Limpiar();
-                        MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception)
+            o = db.Buscar(id);
+
+            if (o != null)
             {
-                MessageBox.Show("No se pudo buscar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LlenarCampos(o);
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("No existe");
             }
         }
 

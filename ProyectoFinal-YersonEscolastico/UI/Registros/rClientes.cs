@@ -96,25 +96,10 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 EmailTextBox.Focus();
                 paso = false;
             }
-            if (String.IsNullOrWhiteSpace(CedulaMaskedTextBox.Text.Replace("-", "")) || CedulaMaskedTextBox.TextLength != 13)
-            {
-                MyErrorProvider.SetError(CedulaMaskedTextBox, "Este Campo No puede Estar Vacio!!");
-                paso = false;
-            }
             if (DireccionTextBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(DireccionTextBox, "No puede dejar este campo vacio");
                 DireccionTextBox.Focus();
-                paso = false;
-            }
-            if (String.IsNullOrWhiteSpace(TelefonoMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
-            {
-                MyErrorProvider.SetError(TelefonoMaskedTextBox, "Este Campo No puede Estar Vacio!!");
-                paso = false;
-            }
-            if (String.IsNullOrWhiteSpace(CelularMaskedTextBox.Text.Replace("-", "")) || TelefonoMaskedTextBox.TextLength != 12)
-            {
-                MyErrorProvider.SetError(CelularMaskedTextBox, "Este Campo No puede Estar Vacio!!");
                 paso = false;
             }
             if (FechaNacimientoDateTimePicker.Value >= DateTime.Now)
@@ -127,6 +112,21 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             {
                 MyErrorProvider.SetError(FechaRegistroateTimePicker, "Fecha de registro no puede ser mayor a hoy");
                 FechaRegistroateTimePicker.Focus();
+                paso = false;
+            }
+            if (!TelefonoMaskedTextBox.MaskCompleted)
+            {
+                MyErrorProvider.SetError(TelefonoMaskedTextBox, "Ingrese un telefono correcto!!");
+                paso = false;
+            }
+            if (!CelularMaskedTextBox.MaskCompleted)
+            {
+                MyErrorProvider.SetError(CelularMaskedTextBox, "Ingrese un celular correcto!!");
+                paso = false;
+            }
+            if (!CedulaMaskedTextBox.MaskCompleted)
+            {
+                MyErrorProvider.SetError(CedulaMaskedTextBox, "Ingrese una cedula correcto!!");
                 paso = false;
             }
             return paso;
@@ -206,31 +206,32 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Limpiar();
         }
 
+        private int ToInt(object valor)
+        {
+            int retorno = 0;
+            int.TryParse(valor.ToString(), out retorno);
+
+            return retorno;
+        }
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Clientes> db = new RepositorioBase<Clientes>();
-            try
-            {
+            int id;
+            Clientes clientes = new Clientes();
+            id = ToInt(IdNumericUpDown.Value);
+            Limpiar();
 
-                if (IdNumericUpDown.Value > 0)
-                {
-                    Clientes clientes = new Clientes();
-                    if ((clientes = db.Buscar((int)IdNumericUpDown.Value)) != null)
-                    {
-                        Limpiar();
-                        LlenarCampos(clientes);
-                    }
-                    else
-                    {
-                        Limpiar();
-                        MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception)
+            clientes = db.Buscar(id);
+
+            if (clientes != null)
             {
-                MessageBox.Show("No se pudo buscar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LlenarCampos(clientes);
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("cliente no existe");
             }
         }
 

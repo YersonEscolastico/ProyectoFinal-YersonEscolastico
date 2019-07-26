@@ -216,31 +216,32 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             Limpiar();
         }
 
+        private int ToInt(object valor)
+        {
+            int retorno = 0;
+            int.TryParse(valor.ToString(), out retorno);
+
+            return retorno;
+        }
 
         private void BuscarButton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Vehiculos> db = new RepositorioBase<Vehiculos>();
-            try
-            {
+            int id;
+            Vehiculos vehiculos = new Vehiculos();
+            id = ToInt(IdNumericUpDown.Value);
+            Limpiar();
 
-                if (IdNumericUpDown.Value > 0)
-                {
-                    Vehiculos vehiculos = new Vehiculos();
-                    if ((vehiculos = db.Buscar((int)IdNumericUpDown.Value)) != null)
-                    {
-                        Limpiar();
-                        LlenaCampos(vehiculos);
-                    }
-                    else
-                    {
-                        Limpiar();
-                        MessageBox.Show("No se pudo encontrar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
-            catch (Exception)
+            vehiculos = db.Buscar(id);
+
+            if (vehiculos != null)
             {
-                MessageBox.Show("No se pudo buscar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LlenaCampos(vehiculos);
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("Vehiculo no existe");
             }
         }
 

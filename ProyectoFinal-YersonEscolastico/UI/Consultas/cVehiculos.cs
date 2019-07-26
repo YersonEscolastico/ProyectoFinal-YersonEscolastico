@@ -19,6 +19,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
         public cVehiculos()
         {
             InitializeComponent();
+            FiltrocomboBox.Text = "Todo";
         }
 
         private void Consultarbutton_Click(object sender, EventArgs e)
