@@ -19,15 +19,8 @@ namespace ProyectoFinal_YersonEscolastico
         {
             InitializeComponent();
         }
-
-
-        private void LoginButton_Click(object sender, EventArgs e)
+        public void InciarSesion()
         {
-            IniciarSesion();
-        }
-        public void IniciarSesion()
-        {
-
             RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
             Expression<Func<Usuarios, bool>> filtro = x => true;
             List<Usuarios> usuario = new List<Usuarios>();
@@ -35,54 +28,53 @@ namespace ProyectoFinal_YersonEscolastico
             var password = ContrasenaTextBox.Text;
             filtro = x => x.Usuario.Equals(username);
             usuario = Repositorio.GetList(filtro);
-            if (usuario.Count > 0)
-            {
-                if (usuario.Exists(x => x.Usuario.Equals(username)))
-                {
-                    if (usuario.Exists(x => x.Clave.Equals(Eramake.eCryptography.Encrypt(password))))
-                    {
 
-                        List<Usuarios> id = Repositorio.GetList(U => U.Usuario == UsuarioTextBox.Text);
-                        MainForm f = new MainForm(id[0].UsuarioId);
-                        f.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Clave incorrecta.");
-                        return;
-                    }
+            if (usuario.Exists(x => x.Usuario.Equals(username)))
+            {
+                if (usuario.Exists(x => x.Clave.Equals(Eramake.eCryptography.Encrypt(password))))
+                {
+                    List<Usuarios> id = Repositorio.GetList(U => U.Usuario == UsuarioTextBox.Text);
+                    MainForm f = new MainForm(id[0].UsuarioId);
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Clave incorrecta.", "Supermarket Software", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
             }
             else
             {
-                if (UsuarioTextBox.Text == string.Empty)
-                    MessageBox.Show("Ingrese un usuario.");
-                else
-                {
-                    if (usuario.Count == 0)
-                    {
-                        Repositorio.Guardar(new Usuarios()
-                        {
-                            Nombre = "Yerson",
-                            Usuario = "admin",
-                            Email = "yerson@gmail.com",
-                            Clave = Eramake.eCryptography.Encrypt("admin"), 
-                            NivelAcceso="Administrador",
-                            TotalVentas=0,
-                            Fecha = DateTime.Now
-                        });
-                        MessageBox.Show("Nombre de usuarios o contraseña incorrectos");
-                        return;
-                    }
-                }
+                if (UsuarioTextBox.Text == string.Empty || ContrasenaTextBox.Text == string.Empty)
+                    MessageBox.Show("Ingrese en todos los campos");
+                else if (!usuario.Exists(x => x.Usuario.Equals(username)))
+                    MessageBox.Show("Usuario no existe");
             }
         }
 
-        private void SalirButton_Click(object sender, EventArgs e)
+        private void LoginButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            InciarSesion();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            RepositorioBase<Usuarios> Repositorio = new RepositorioBase<Usuarios>();
+            List<Usuarios> user = new List<Usuarios>();
+            user = Repositorio.GetList(p => true);
+            if (user.Count == 0)
+            {
+                Repositorio.Guardar(new Usuarios()
+                {
+                    Usuario = "admin",
+                    Clave = Eramake.eCryptography.Encrypt("admin"),
+                    Nombre = "Yerson",
+                    Email = "yerson@gmail.com",
+                    Fecha = DateTime.Now
+                });
+                return;
+            }
+        }
     }
 }

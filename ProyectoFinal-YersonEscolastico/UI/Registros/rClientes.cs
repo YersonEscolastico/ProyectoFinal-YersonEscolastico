@@ -102,7 +102,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 DireccionTextBox.Focus();
                 paso = false;
             }
-            if (FechaNacimientoDateTimePicker.Value >= DateTime.Now)
+            if (FechaNacimientoDateTimePicker.Value > DateTime.Now || FechaNacimientoDateTimePicker.Value == DateTime.Now)
             {
                 MyErrorProvider.SetError(FechaNacimientoDateTimePicker, "Fecha de nacimiento debe ser menor que hoy");
                 FechaNacimientoDateTimePicker.Focus();
@@ -139,26 +139,26 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             if (RepetidosNo(EmailTextBox.Text))
             {
-                MessageBox.Show("Ya existe este email, cree otro");
+                MyErrorProvider.SetError(EmailTextBox, "Ya existe este email, cree otro");
                 EmailTextBox.Focus();
                 paso = false;
             }
             if (RepetidosNo(CedulaMaskedTextBox.Text))
             {
-                MessageBox.Show("Ya existe esta cedula, intente de nuevo");
+                MyErrorProvider.SetError(CedulaMaskedTextBox, "Ya existe esta cedula, intente de nuevo");
                 CedulaMaskedTextBox.Focus();
                 paso = false;
             }
 
             if (RepetidosNo(TelefonoMaskedTextBox.Text))
             {
-                MessageBox.Show("Ya existe este telefono, intente de nuevo");
+                MyErrorProvider.SetError(TelefonoMaskedTextBox, "Ya existe este telefono, intente de nuevo");
                 TelefonoMaskedTextBox.Focus();
                 paso = false;
             }
             if (RepetidosNo(CelularMaskedTextBox.Text))
             {
-                MessageBox.Show("Ya existe este celular, intente de nuevo");
+                MyErrorProvider.SetError(CelularMaskedTextBox, "Ya existe este celular, intente de nuevo");
                 CelularMaskedTextBox.Focus();
                 paso = false;
             }
@@ -186,6 +186,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             if (IdNumericUpDown.Value == 0)
             {
+                if (!repetidos())
+                    return;
                 paso = db.Guardar(clientes);
             }
             else

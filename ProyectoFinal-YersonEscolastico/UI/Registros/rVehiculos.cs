@@ -91,13 +91,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             MyErrorProvider.Clear();
             if (RepetidosNo(VinTextBox.Text))
             {
-                MessageBox.Show("Ya se ha registrado un vehiculo con este vin, intente de nuevo");
+                MyErrorProvider.SetError(VinTextBox, "Ya se ha registrado un vehiculo con este vin, intente de nuevo");
                 VinTextBox.Focus();
                 paso = false;
             }
             if (RepetidosNo(PlacaTextBox.Text))
             {
-                MessageBox.Show("Ya se ha registrado un vehiculo con este vin,intente de nuevo");
+                MyErrorProvider.SetError(PlacaTextBox, "Ya se ha registrado un vehiculo con esta placa, intente de nuevo");
                 PlacaTextBox.Focus();
                 paso = false;
             }
@@ -195,6 +195,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             if (IdNumericUpDown.Value == 0)
             {
+                if (!Repetidos())
+                    return;
                 paso = db.Guardar(vehiculos);
 
             }

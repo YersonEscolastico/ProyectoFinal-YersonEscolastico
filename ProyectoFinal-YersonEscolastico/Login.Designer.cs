@@ -129,7 +129,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(612, 62);
             this.panel1.TabIndex = 17;
-     
             // 
             // SalirButton
             // 
@@ -144,7 +143,6 @@
             this.SalirButton.Text = "Salir";
             this.SalirButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SalirButton.UseVisualStyleBackColor = false;
-            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
             // Login
             // 
@@ -168,6 +166,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -129,13 +129,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             MyErrorProvider.Clear();
             if (RepetidosNo(UsuarioTextBox.Text))
             {
-                MessageBox.Show("Ya existe un usuario con este nombre");
+                MyErrorProvider.SetError(UsuarioTextBox, "Ya se ha registrado este usuario, intente de nuevo");
                 UsuarioTextBox.Focus();
                 paso = false;
             }
             if (RepetidosNo(EmailTextBox.Text))
             {
-                MessageBox.Show("Ya existe este email, cree otro");
+                MyErrorProvider.SetError(EmailTextBox, "Ya se ha registrado este email, intente de nuevo");
                 EmailTextBox.Focus();
                 paso = false;
             }
@@ -157,12 +157,14 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
 
             if (!Validar())
                 return;
-
+       
             usuarios = LlenarClase();
-
 
             if (IdNumericUpDown.Value == 0)
             {
+                if (!repetido())
+                    return;
+
                 paso = db.Guardar(usuarios);
             }
             else
