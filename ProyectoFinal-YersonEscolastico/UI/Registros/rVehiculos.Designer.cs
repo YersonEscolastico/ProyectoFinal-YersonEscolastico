@@ -79,10 +79,10 @@
             "Azul",
             "Gris",
             "Verde"});
-            this.ColorComboBox.Location = new System.Drawing.Point(109, 194);
+            this.ColorComboBox.Location = new System.Drawing.Point(72, 194);
             this.ColorComboBox.Name = "ColorComboBox";
             this.ColorComboBox.Size = new System.Drawing.Size(122, 21);
-            this.ColorComboBox.TabIndex = 56;
+            this.ColorComboBox.TabIndex = 8;
             this.ColorComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ColorComboBox_KeyPress);
             // 
             // label10
@@ -96,7 +96,7 @@
             // 
             // CostoNumericUpDown
             // 
-            this.CostoNumericUpDown.Location = new System.Drawing.Point(109, 303);
+            this.CostoNumericUpDown.Location = new System.Drawing.Point(397, 90);
             this.CostoNumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -104,7 +104,7 @@
             0});
             this.CostoNumericUpDown.Name = "CostoNumericUpDown";
             this.CostoNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.CostoNumericUpDown.TabIndex = 54;
+            this.CostoNumericUpDown.TabIndex = 12;
             // 
             // label9
             // 
@@ -117,10 +117,10 @@
             // 
             // IdNumericUpDown
             // 
-            this.IdNumericUpDown.Location = new System.Drawing.Point(109, 18);
+            this.IdNumericUpDown.Location = new System.Drawing.Point(72, 17);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(64, 20);
-            this.IdNumericUpDown.TabIndex = 47;
+            this.IdNumericUpDown.TabIndex = 1;
             // 
             // label8
             // 
@@ -135,15 +135,15 @@
             // 
             this.FechaRegistroDateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaRegistroDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaRegistroDateTimePicker.Location = new System.Drawing.Point(109, 411);
+            this.FechaRegistroDateTimePicker.Location = new System.Drawing.Point(397, 196);
             this.FechaRegistroDateTimePicker.Name = "FechaRegistroDateTimePicker";
             this.FechaRegistroDateTimePicker.Size = new System.Drawing.Size(118, 20);
-            this.FechaRegistroDateTimePicker.TabIndex = 45;
+            this.FechaRegistroDateTimePicker.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 418);
+            this.label7.Location = new System.Drawing.Point(296, 203);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 13);
             this.label7.TabIndex = 44;
@@ -151,15 +151,15 @@
             // 
             // DescripcionTextBox
             // 
-            this.DescripcionTextBox.Location = new System.Drawing.Point(109, 266);
+            this.DescripcionTextBox.Location = new System.Drawing.Point(397, 55);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
-            this.DescripcionTextBox.Size = new System.Drawing.Size(193, 20);
-            this.DescripcionTextBox.TabIndex = 43;
+            this.DescripcionTextBox.Size = new System.Drawing.Size(161, 20);
+            this.DescripcionTextBox.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 273);
+            this.label6.Location = new System.Drawing.Point(296, 62);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 42;
@@ -168,7 +168,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 238);
+            this.label5.Location = new System.Drawing.Point(296, 24);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(26, 13);
             this.label5.TabIndex = 40;
@@ -176,10 +176,10 @@
             // 
             // PlacaTextBox
             // 
-            this.PlacaTextBox.Location = new System.Drawing.Point(109, 85);
+            this.PlacaTextBox.Location = new System.Drawing.Point(72, 85);
             this.PlacaTextBox.Name = "PlacaTextBox";
             this.PlacaTextBox.Size = new System.Drawing.Size(119, 20);
-            this.PlacaTextBox.TabIndex = 39;
+            this.PlacaTextBox.TabIndex = 3;
             // 
             // label4
             // 
@@ -193,7 +193,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 310);
+            this.label3.Location = new System.Drawing.Point(296, 97);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 35;
@@ -219,15 +219,15 @@
             // 
             // VinTextBox
             // 
-            this.VinTextBox.Location = new System.Drawing.Point(109, 55);
+            this.VinTextBox.Location = new System.Drawing.Point(72, 55);
             this.VinTextBox.Name = "VinTextBox";
             this.VinTextBox.Size = new System.Drawing.Size(122, 20);
-            this.VinTextBox.TabIndex = 57;
+            this.VinTextBox.TabIndex = 2;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 346);
+            this.label11.Location = new System.Drawing.Point(296, 134);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(37, 13);
             this.label11.TabIndex = 58;
@@ -235,7 +235,7 @@
             // 
             // PrecioNumericUpDown
             // 
-            this.PrecioNumericUpDown.Location = new System.Drawing.Point(109, 339);
+            this.PrecioNumericUpDown.Location = new System.Drawing.Point(397, 127);
             this.PrecioNumericUpDown.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -243,7 +243,7 @@
             0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(120, 20);
-            this.PrecioNumericUpDown.TabIndex = 59;
+            this.PrecioNumericUpDown.TabIndex = 13;
             // 
             // EstadoComboBox
             // 
@@ -253,15 +253,15 @@
             "Disponible",
             "Vendido",
             "En reparacion"});
-            this.EstadoComboBox.Location = new System.Drawing.Point(109, 375);
+            this.EstadoComboBox.Location = new System.Drawing.Point(397, 163);
             this.EstadoComboBox.Name = "EstadoComboBox";
             this.EstadoComboBox.Size = new System.Drawing.Size(122, 21);
-            this.EstadoComboBox.TabIndex = 60;
+            this.EstadoComboBox.TabIndex = 14;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(9, 383);
+            this.label12.Location = new System.Drawing.Point(296, 171);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 61;
@@ -278,10 +278,10 @@
             "Azul",
             "Gris",
             "Verde"});
-            this.MarcaComboBox.Location = new System.Drawing.Point(109, 121);
+            this.MarcaComboBox.Location = new System.Drawing.Point(72, 121);
             this.MarcaComboBox.Name = "MarcaComboBox";
             this.MarcaComboBox.Size = new System.Drawing.Size(122, 21);
-            this.MarcaComboBox.TabIndex = 67;
+            this.MarcaComboBox.TabIndex = 4;
             // 
             // ModeloComboBox
             // 
@@ -294,10 +294,10 @@
             "Azul",
             "Gris",
             "Verde"});
-            this.ModeloComboBox.Location = new System.Drawing.Point(109, 158);
+            this.ModeloComboBox.Location = new System.Drawing.Point(72, 158);
             this.ModeloComboBox.Name = "ModeloComboBox";
             this.ModeloComboBox.Size = new System.Drawing.Size(122, 21);
-            this.ModeloComboBox.TabIndex = 68;
+            this.ModeloComboBox.TabIndex = 6;
             // 
             // MyErrorProvider
             // 
@@ -307,10 +307,10 @@
             // 
             this.OtraMarcaButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
             this.OtraMarcaButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtraMarcaButton.Location = new System.Drawing.Point(238, 117);
+            this.OtraMarcaButton.Location = new System.Drawing.Point(200, 117);
             this.OtraMarcaButton.Name = "OtraMarcaButton";
             this.OtraMarcaButton.Size = new System.Drawing.Size(64, 27);
-            this.OtraMarcaButton.TabIndex = 70;
+            this.OtraMarcaButton.TabIndex = 5;
             this.OtraMarcaButton.Text = "Otro";
             this.OtraMarcaButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtraMarcaButton.UseVisualStyleBackColor = true;
@@ -320,10 +320,10 @@
             // 
             this.OtroModeloButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
             this.OtroModeloButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtroModeloButton.Location = new System.Drawing.Point(238, 155);
+            this.OtroModeloButton.Location = new System.Drawing.Point(200, 155);
             this.OtroModeloButton.Name = "OtroModeloButton";
             this.OtroModeloButton.Size = new System.Drawing.Size(64, 24);
-            this.OtroModeloButton.TabIndex = 69;
+            this.OtroModeloButton.TabIndex = 7;
             this.OtroModeloButton.Text = "Otro";
             this.OtroModeloButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtroModeloButton.UseVisualStyleBackColor = true;
@@ -333,10 +333,10 @@
             // 
             this.OtroColorButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.otro;
             this.OtroColorButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OtroColorButton.Location = new System.Drawing.Point(238, 194);
+            this.OtroColorButton.Location = new System.Drawing.Point(200, 191);
             this.OtroColorButton.Name = "OtroColorButton";
             this.OtroColorButton.Size = new System.Drawing.Size(64, 24);
-            this.OtroColorButton.TabIndex = 66;
+            this.OtroColorButton.TabIndex = 9;
             this.OtroColorButton.Text = "  Otro";
             this.OtroColorButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.OtroColorButton.UseVisualStyleBackColor = true;
@@ -346,10 +346,10 @@
             // 
             this.BuscarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Search_icon__1_;
             this.BuscarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BuscarButton.Location = new System.Drawing.Point(213, 12);
+            this.BuscarButton.Location = new System.Drawing.Point(142, 15);
             this.BuscarButton.Name = "BuscarButton";
-            this.BuscarButton.Size = new System.Drawing.Size(89, 26);
-            this.BuscarButton.TabIndex = 65;
+            this.BuscarButton.Size = new System.Drawing.Size(89, 22);
+            this.BuscarButton.TabIndex = 19;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
@@ -359,10 +359,10 @@
             // 
             this.EliminarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.delete;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(227, 452);
+            this.EliminarButton.Location = new System.Drawing.Point(387, 280);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 71);
-            this.EliminarButton.TabIndex = 64;
+            this.EliminarButton.TabIndex = 18;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
@@ -372,10 +372,10 @@
             // 
             this.GuardarButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Save;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(121, 452);
+            this.GuardarButton.Location = new System.Drawing.Point(255, 280);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 71);
-            this.GuardarButton.TabIndex = 63;
+            this.GuardarButton.TabIndex = 17;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
@@ -385,10 +385,10 @@
             // 
             this.NuevoButton.Image = global::ProyectoFinal_YersonEscolastico.Properties.Resources.add;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(12, 452);
+            this.NuevoButton.Location = new System.Drawing.Point(119, 280);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 71);
-            this.NuevoButton.TabIndex = 62;
+            this.NuevoButton.TabIndex = 16;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -396,10 +396,10 @@
             // 
             // AnioTextBox
             // 
-            this.AnioTextBox.Location = new System.Drawing.Point(109, 231);
+            this.AnioTextBox.Location = new System.Drawing.Point(393, 17);
             this.AnioTextBox.Name = "AnioTextBox";
             this.AnioTextBox.Size = new System.Drawing.Size(122, 20);
-            this.AnioTextBox.TabIndex = 74;
+            this.AnioTextBox.TabIndex = 10;
             // 
             // rVehiculos
             // 
@@ -407,7 +407,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoFinal_YersonEscolastico.Properties.Resources.Toyota;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(313, 530);
+            this.ClientSize = new System.Drawing.Size(565, 359);
             this.Controls.Add(this.AnioTextBox);
             this.Controls.Add(this.OtraMarcaButton);
             this.Controls.Add(this.OtroModeloButton);

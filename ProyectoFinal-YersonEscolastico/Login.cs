@@ -79,7 +79,7 @@ namespace ProyectoFinal_YersonEscolastico
 
         private void SalirButton_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

@@ -92,7 +92,7 @@
             this.IdNumericUpDown.Location = new System.Drawing.Point(57, 23);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(46, 20);
-            this.IdNumericUpDown.TabIndex = 5;
+            this.IdNumericUpDown.TabIndex = 1;
             // 
             // label2
             // 
@@ -110,7 +110,7 @@
             this.ClienteComboBox.Location = new System.Drawing.Point(57, 62);
             this.ClienteComboBox.Name = "ClienteComboBox";
             this.ClienteComboBox.Size = new System.Drawing.Size(103, 21);
-            this.ClienteComboBox.TabIndex = 7;
+            this.ClienteComboBox.TabIndex = 2;
             // 
             // FechaVentaDateTimePicker
             // 
@@ -118,7 +118,7 @@
             this.FechaVentaDateTimePicker.Location = new System.Drawing.Point(57, 106);
             this.FechaVentaDateTimePicker.Name = "FechaVentaDateTimePicker";
             this.FechaVentaDateTimePicker.Size = new System.Drawing.Size(96, 20);
-            this.FechaVentaDateTimePicker.TabIndex = 10;
+            this.FechaVentaDateTimePicker.TabIndex = 3;
             // 
             // TotalTextBox
             // 
@@ -191,7 +191,7 @@
             this.Agregarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(32, 31);
-            this.Agregarbutton.TabIndex = 35;
+            this.Agregarbutton.TabIndex = 6;
             this.Agregarbutton.UseVisualStyleBackColor = true;
             this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
@@ -203,7 +203,7 @@
             this.VehiculoComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.VehiculoComboBox.Name = "VehiculoComboBox";
             this.VehiculoComboBox.Size = new System.Drawing.Size(117, 21);
-            this.VehiculoComboBox.TabIndex = 7;
+            this.VehiculoComboBox.TabIndex = 4;
             // 
             // detalleDataGridView
             // 
@@ -225,7 +225,7 @@
             0});
             this.PrecioNumericUpDown.Name = "PrecioNumericUpDown";
             this.PrecioNumericUpDown.Size = new System.Drawing.Size(103, 20);
-            this.PrecioNumericUpDown.TabIndex = 9;
+            this.PrecioNumericUpDown.TabIndex = 5;
             // 
             // MyErrorProvider
             // 
@@ -238,7 +238,7 @@
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.ReadOnly = true;
             this.UsuarioTextBox.Size = new System.Drawing.Size(79, 20);
-            this.UsuarioTextBox.TabIndex = 58;
+            this.UsuarioTextBox.TabIndex = 10;
             // 
             // label4
             // 
@@ -273,7 +273,7 @@
             this.Guardarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(78, 74);
-            this.Guardarbutton.TabIndex = 57;
+            this.Guardarbutton.TabIndex = 8;
             this.Guardarbutton.Text = "  Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(2);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(77, 74);
-            this.Eliminarbutton.TabIndex = 56;
+            this.Eliminarbutton.TabIndex = 9;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
@@ -303,7 +303,7 @@
             this.Nuevobutton.Margin = new System.Windows.Forms.Padding(2);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(73, 74);
-            this.Nuevobutton.TabIndex = 55;
+            this.Nuevobutton.TabIndex = 7;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Nuevobutton.UseVisualStyleBackColor = true;

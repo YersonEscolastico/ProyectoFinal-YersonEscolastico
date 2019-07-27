@@ -80,5 +80,12 @@ namespace ProyectoFinal_YersonEscolastico
             v.StartPosition = FormStartPosition.CenterScreen;
             v.Show();
         }
+
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            Dispose();
+            login.ShowDialog();
+        }
     }
 }
