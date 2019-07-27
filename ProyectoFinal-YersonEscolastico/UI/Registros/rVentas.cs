@@ -140,7 +140,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                     return;
                 }
                     MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    paso = RepositorioVentas.Modificar(ventas);          
+                    paso = RepositorioVentas.Modificar(ventas);
+                Limpiar();
+                return;
             }
 
             if (paso)

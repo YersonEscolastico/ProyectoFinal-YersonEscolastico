@@ -209,6 +209,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 }
                 MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 paso = db.Modificar(vehiculos);
+                Limpiar();
+                return;
             }
 
             if (paso)

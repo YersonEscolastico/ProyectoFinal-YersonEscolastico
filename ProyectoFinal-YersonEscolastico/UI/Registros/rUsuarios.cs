@@ -176,6 +176,8 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 }
                 MessageBox.Show("Modificado", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 paso = db.Modificar(usuarios);
+                Limpiar();
+                return;
             }
 
             if (paso)
