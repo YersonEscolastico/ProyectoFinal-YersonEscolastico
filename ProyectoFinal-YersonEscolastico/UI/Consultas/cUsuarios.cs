@@ -22,8 +22,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
             FiltrocomboBox.Text = "Todo";
         }
 
-
-        private void Consultarbutton_Click(object sender, EventArgs e)
+        private void Consultarbutton_Click_1(object sender, EventArgs e)
         {
             Consultar();
         }
@@ -59,10 +58,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
 
                             case 4:
                                 listado = db.GetList(p => p.Usuario.Contains(CriteriotextBox.Text));
-                                break;
-
-                            case 5:
-                                listado = db.GetList(p => p.Clave.Contains(CriteriotextBox.Text));
                                 break;
 
                             default:
@@ -110,10 +105,6 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
 
                             case 4:
                                 listado = db.GetList(p => p.Usuario.Contains(CriteriotextBox.Text));
-                                break;
-
-                            case 5:
-                                listado = db.GetList(p => p.Clave.Contains(CriteriotextBox.Text));
                                 break;
 
                             default:

@@ -143,6 +143,7 @@
             this.SalirButton.Text = "Salir";
             this.SalirButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SalirButton.UseVisualStyleBackColor = false;
+            this.SalirButton.Click += new System.EventHandler(this.SalirButton_Click);
             // 
             // Login
             // 

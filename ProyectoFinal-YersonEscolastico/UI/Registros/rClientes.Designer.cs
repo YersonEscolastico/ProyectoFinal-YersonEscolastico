@@ -65,7 +65,7 @@
             this.label1.Location = new System.Drawing.Point(12, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 10;
             this.label1.Text = "ID";
             // 
             // NombresTextBox
@@ -80,7 +80,7 @@
             this.IdNumericUpDown.Location = new System.Drawing.Point(127, 19);
             this.IdNumericUpDown.Name = "IdNumericUpDown";
             this.IdNumericUpDown.Size = new System.Drawing.Size(47, 20);
-            this.IdNumericUpDown.TabIndex = 3;
+            this.IdNumericUpDown.TabIndex = 1;
             // 
             // label2
             // 
@@ -128,7 +128,7 @@
             this.SexoComboBox.Location = new System.Drawing.Point(127, 98);
             this.SexoComboBox.Name = "SexoComboBox";
             this.SexoComboBox.Size = new System.Drawing.Size(130, 21);
-            this.SexoComboBox.TabIndex = 8;
+            this.SexoComboBox.TabIndex = 3;
             this.SexoComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SexoComboBox_KeyPress);
             // 
             // label7
@@ -172,14 +172,14 @@
             this.DireccionTextBox.Location = new System.Drawing.Point(127, 204);
             this.DireccionTextBox.Name = "DireccionTextBox";
             this.DireccionTextBox.Size = new System.Drawing.Size(188, 20);
-            this.DireccionTextBox.TabIndex = 15;
+            this.DireccionTextBox.TabIndex = 6;
             // 
             // EmailTextBox
             // 
             this.EmailTextBox.Location = new System.Drawing.Point(127, 134);
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.Size = new System.Drawing.Size(188, 20);
-            this.EmailTextBox.TabIndex = 16;
+            this.EmailTextBox.TabIndex = 4;
             // 
             // CedulaMaskedTextBox
             // 
@@ -187,7 +187,7 @@
             this.CedulaMaskedTextBox.Mask = "000-00000000-0";
             this.CedulaMaskedTextBox.Name = "CedulaMaskedTextBox";
             this.CedulaMaskedTextBox.Size = new System.Drawing.Size(130, 20);
-            this.CedulaMaskedTextBox.TabIndex = 17;
+            this.CedulaMaskedTextBox.TabIndex = 5;
             // 
             // label10
             // 
@@ -204,7 +204,7 @@
             this.TelefonoMaskedTextBox.Mask = "000-000-0000";
             this.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox";
             this.TelefonoMaskedTextBox.Size = new System.Drawing.Size(130, 20);
-            this.TelefonoMaskedTextBox.TabIndex = 19;
+            this.TelefonoMaskedTextBox.TabIndex = 7;
             // 
             // CelularMaskedTextBox
             // 
@@ -212,7 +212,7 @@
             this.CelularMaskedTextBox.Mask = "000-000-0000";
             this.CelularMaskedTextBox.Name = "CelularMaskedTextBox";
             this.CelularMaskedTextBox.Size = new System.Drawing.Size(130, 20);
-            this.CelularMaskedTextBox.TabIndex = 20;
+            this.CelularMaskedTextBox.TabIndex = 8;
             // 
             // FechaNacimientoDateTimePicker
             // 
@@ -220,7 +220,7 @@
             this.FechaNacimientoDateTimePicker.Location = new System.Drawing.Point(127, 314);
             this.FechaNacimientoDateTimePicker.Name = "FechaNacimientoDateTimePicker";
             this.FechaNacimientoDateTimePicker.Size = new System.Drawing.Size(130, 20);
-            this.FechaNacimientoDateTimePicker.TabIndex = 21;
+            this.FechaNacimientoDateTimePicker.TabIndex = 9;
             // 
             // FechaRegistroateTimePicker
             // 
@@ -228,7 +228,7 @@
             this.FechaRegistroateTimePicker.Location = new System.Drawing.Point(127, 350);
             this.FechaRegistroateTimePicker.Name = "FechaRegistroateTimePicker";
             this.FechaRegistroateTimePicker.Size = new System.Drawing.Size(130, 20);
-            this.FechaRegistroateTimePicker.TabIndex = 22;
+            this.FechaRegistroateTimePicker.TabIndex = 10;
             // 
             // MyErrorProvider
             // 
@@ -241,7 +241,7 @@
             this.BuscarButton.Location = new System.Drawing.Point(274, 12);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(87, 27);
-            this.BuscarButton.TabIndex = 25;
+            this.BuscarButton.TabIndex = 14;
             this.BuscarButton.Text = "Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
@@ -255,7 +255,7 @@
             this.EliminarButton.Location = new System.Drawing.Point(286, 397);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 73);
-            this.EliminarButton.TabIndex = 24;
+            this.EliminarButton.TabIndex = 13;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.GuardarButton.Location = new System.Drawing.Point(147, 397);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 73);
-            this.GuardarButton.TabIndex = 23;
+            this.GuardarButton.TabIndex = 12;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
@@ -283,7 +283,7 @@
             this.NuevoButton.Location = new System.Drawing.Point(12, 397);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 73);
-            this.NuevoButton.TabIndex = 1;
+            this.NuevoButton.TabIndex = 11;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -327,7 +327,6 @@
             this.MinimizeBox = false;
             this.Name = "rClientes";
             this.RightToLeftLayout = true;
-            this.Text = "Registro de clientes";
             ((System.ComponentModel.ISupportInitialize)(this.IdNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyErrorProvider)).EndInit();
             this.ResumeLayout(false);

@@ -1,6 +1,6 @@
 ﻿namespace ProyectoFinal_YersonEscolastico.UI.Reportes
 {
-    partial class UsuariosReport
+    partial class ClientesReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listadoUsuario1 = new ProyectoFinal_YersonEscolastico.UI.Reportes.ListadoUsuarios();
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.listadoClientes1 = new ProyectoFinal_YersonEscolastico.UI.Reportes.ListadoClientes();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,26 +40,26 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.listadoUsuario1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(616, 428);
+            this.crystalReportViewer1.ReportSource = this.listadoClientes1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // UsuariosReport
+            // ClientesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 428);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "UsuariosReport";
-            this.Text = "UsuariosReport";
-            this.Load += new System.EventHandler(this.UsuariosReport_Load);
+            this.Name = "ClientesReport";
+            this.Text = "ClientesReport";
+            this.Load += new System.EventHandler(this.ClientesReport_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private ListadoUsuarios listadoUsuario1;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private ListadoClientes listadoClientes1;
     }
 }

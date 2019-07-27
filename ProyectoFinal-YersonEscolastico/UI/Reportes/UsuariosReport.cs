@@ -22,7 +22,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Reportes
 
         private void UsuariosReport_Load(object sender, EventArgs e)
         {
-            ListadoUsuario listadoUsuarios = new ListadoUsuario();
+            ListadoUsuarios listadoUsuarios = new ListadoUsuarios();
             listadoUsuarios.SetDataSource(ListaUsuarios);
 
             crystalReportViewer1.ReportSource = listadoUsuarios;

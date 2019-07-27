@@ -22,7 +22,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Consultas
             FiltrocomboBox.Text = "Todo";
         }
 
-        private void Consultarbutton_Click(object sender, EventArgs e)
+        private void Consultarbutton_Click_1(object sender, EventArgs e)
         {
             Consultar();
         }

@@ -16,14 +16,14 @@ namespace ProyectoFinal_YersonEscolastico.UI.Reportes {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class ListadoUsuario : ReportClass {
+    public class ListadoUsuarios : ReportClass {
         
-        public ListadoUsuario() {
+        public ListadoUsuarios() {
         }
         
         public override string ResourceName {
             get {
-                return "ListadoUsuario.rpt";
+                return "ListadoUsuarios.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Reportes {
         
         public override string FullResourceName {
             get {
-                return "ProyectoFinal_YersonEscolastico.UI.Reportes.ListadoUsuario.rpt";
+                return "ProyectoFinal_YersonEscolastico.UI.Reportes.ListadoUsuarios.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Reportes {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedListadoUsuario : Component, ICachedReport {
+    public class CachedListadoUsuarios : Component, ICachedReport {
         
-        public CachedListadoUsuario() {
+        public CachedListadoUsuarios() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Reportes {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            ListadoUsuario rpt = new ListadoUsuario();
+            ListadoUsuarios rpt = new ListadoUsuarios();
             rpt.Site = this.Site;
             return rpt;
         }

@@ -40,16 +40,16 @@ namespace ProyectoFinal_YersonEscolastico
                 }
                 else
                 {
-                    MessageBox.Show("Clave incorrecta.", "Supermarket Software", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Nombre de usuarios o contraseñas incorrectos");
                     return;
                 }
             }
             else
             {
                 if (UsuarioTextBox.Text == string.Empty || ContrasenaTextBox.Text == string.Empty)
-                    MessageBox.Show("Ingrese en todos los campos");
+                    MessageBox.Show("LLene todos los campos");
                 else if (!usuario.Exists(x => x.Usuario.Equals(username)))
-                    MessageBox.Show("Usuario no existe");
+                    MessageBox.Show("Nombre de usuarios o contraseñas incorrectos");
             }
         }
 
@@ -75,6 +75,11 @@ namespace ProyectoFinal_YersonEscolastico
                 });
                 return;
             }
+        }
+
+        private void SalirButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
