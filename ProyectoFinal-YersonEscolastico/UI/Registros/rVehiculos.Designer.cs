@@ -155,6 +155,7 @@
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(161, 20);
             this.DescripcionTextBox.TabIndex = 11;
+            this.DescripcionTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DescripcionTextBox_KeyPress);
             // 
             // label6
             // 
@@ -180,6 +181,7 @@
             this.PlacaTextBox.Name = "PlacaTextBox";
             this.PlacaTextBox.Size = new System.Drawing.Size(119, 20);
             this.PlacaTextBox.TabIndex = 3;
+            this.PlacaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PlacaTextBox_KeyPress);
             // 
             // label4
             // 
@@ -223,6 +225,7 @@
             this.VinTextBox.Name = "VinTextBox";
             this.VinTextBox.Size = new System.Drawing.Size(122, 20);
             this.VinTextBox.TabIndex = 2;
+            this.VinTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.VinTextBox_KeyPress);
             // 
             // label11
             // 
@@ -400,6 +403,7 @@
             this.AnioTextBox.Name = "AnioTextBox";
             this.AnioTextBox.Size = new System.Drawing.Size(122, 20);
             this.AnioTextBox.TabIndex = 10;
+            this.AnioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AnioTextBox_KeyPress);
             // 
             // rVehiculos
             // 

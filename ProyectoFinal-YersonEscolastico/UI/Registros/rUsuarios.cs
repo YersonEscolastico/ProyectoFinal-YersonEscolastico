@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -138,6 +139,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 MyErrorProvider.SetError(EmailTextBox, "Ya se ha registrado este email, intente de nuevo");
                 EmailTextBox.Focus();
                 paso = false;
+
             }
             return paso;
         }
@@ -268,6 +270,52 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 throw;
             }
             return paso;
+        }
+
+        private void NombresTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private Boolean email_bien_escrito(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

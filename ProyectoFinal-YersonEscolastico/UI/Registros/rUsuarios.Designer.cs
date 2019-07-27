@@ -119,6 +119,7 @@
             // 
             resources.ApplyResources(this.NombresTextBox, "NombresTextBox");
             this.NombresTextBox.Name = "NombresTextBox";
+            this.NombresTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombresTextBox_KeyPress);
             // 
             // label2
             // 

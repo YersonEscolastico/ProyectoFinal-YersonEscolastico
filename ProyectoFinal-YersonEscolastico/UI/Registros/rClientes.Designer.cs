@@ -74,6 +74,7 @@
             this.NombresTextBox.Name = "NombresTextBox";
             this.NombresTextBox.Size = new System.Drawing.Size(188, 20);
             this.NombresTextBox.TabIndex = 2;
+            this.NombresTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NombresTextBox_KeyPress);
             // 
             // IdNumericUpDown
             // 
@@ -188,6 +189,7 @@
             this.CedulaMaskedTextBox.Name = "CedulaMaskedTextBox";
             this.CedulaMaskedTextBox.Size = new System.Drawing.Size(130, 20);
             this.CedulaMaskedTextBox.TabIndex = 5;
+          
             // 
             // label10
             // 

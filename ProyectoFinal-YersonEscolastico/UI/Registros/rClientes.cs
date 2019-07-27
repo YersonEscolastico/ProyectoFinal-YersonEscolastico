@@ -102,13 +102,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 DireccionTextBox.Focus();
                 paso = false;
             }
-            if (FechaNacimientoDateTimePicker.Value > DateTime.Now || FechaNacimientoDateTimePicker.Value == DateTime.Now)
+            if (FechaNacimientoDateTimePicker.Value >= DateTime.Now)
             {
                 MyErrorProvider.SetError(FechaNacimientoDateTimePicker, "Fecha de nacimiento debe ser menor que hoy");
                 FechaNacimientoDateTimePicker.Focus();
                 paso = false;
             }
-            if (FechaRegistroateTimePicker.Value > DateTime.Now)
+            if (FechaRegistroateTimePicker.Value >= DateTime.Now)
             {
                 MyErrorProvider.SetError(FechaRegistroateTimePicker, "Fecha de registro no puede ser mayor a hoy");
                 FechaRegistroateTimePicker.Focus();
@@ -303,5 +303,29 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             return paso;
         }
 
+        private void NombresTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 48 && e.KeyChar <= 57) || (e.KeyChar >= 97 && e.KeyChar <= 122) || (e.KeyChar >= 65 && e.KeyChar <= 90) || (e.KeyChar == 8))
+                e.Handled = false;
+            else
+                e.Handled = true;
+
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
