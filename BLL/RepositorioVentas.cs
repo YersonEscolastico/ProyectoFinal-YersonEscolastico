@@ -121,14 +121,12 @@ namespace BLL
 
             try
             {
-                if (ventas.VehiculoId == 0)
-                {
                     string estado = "Disponible";
                     foreach (var item in ventas.Detalle)
                     {
                         db.Vehiculos.Find(item.VehiculoId).Estado = estado;
                     }
-                }
+                
                     var Ventas = db.ventas.Find(id);
                     var clientes = cl.Buscar(Ventas.VentaId);
                     db.Usuarios.Find(Ventas.UsuarioId).TotalVentas -= Ventas.Total;

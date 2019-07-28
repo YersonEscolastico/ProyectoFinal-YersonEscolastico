@@ -71,6 +71,7 @@ namespace ProyectoFinal_YersonEscolastico
                     Clave = Eramake.eCryptography.Encrypt("admin"),
                     Nombre = "Yerson",
                     Email = "yerson@gmail.com",
+                    NivelAcceso ="Administrador",
                     Fecha = DateTime.Now
                 });
                 return;

@@ -119,12 +119,6 @@
     <Compile Include="UI\Registros\rOtrosModelos.Designer.cs">
       <DependentUpon>rOtrosModelos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\rProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Registros\rProveedores.Designer.cs">
-      <DependentUpon>rProveedores.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Registros\rOtrosColores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +167,12 @@
       <DependentUpon>ListadoVehiculos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Reportes\ListadoVentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListadoVentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Reportes\UsuariosReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +184,12 @@
     </Compile>
     <Compile Include="UI\Reportes\VehiculosReport.Designer.cs">
       <DependentUpon>VehiculosReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Reportes\VentasReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Reportes\VentasReport.Designer.cs">
+      <DependentUpon>VentasReport.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -222,9 +228,6 @@
     <EmbeddedResource Include="UI\Registros\rOtrosModelos.resx">
       <DependentUpon>rOtrosModelos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\rProveedores.resx">
-      <DependentUpon>rProveedores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\rOtrosColores.resx">
       <DependentUpon>rOtrosColores.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,11 +255,18 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ListadoVehiculos.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\ListadoVentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ListadoVentas.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\UsuariosReport.resx">
       <DependentUpon>UsuariosReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Reportes\VehiculosReport.resx">
       <DependentUpon>VehiculosReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Reportes\VentasReport.resx">
+      <DependentUpon>VentasReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

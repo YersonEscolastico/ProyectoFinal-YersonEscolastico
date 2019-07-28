@@ -210,10 +210,12 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 {
                     if (RepositorioVentas.Eliminar((int)IdNumericUpDown.Value))
                     {
-                       
-                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Limpiar();
                         
+                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.Detalle = new List<VentasDetalle>();
+                        Limpiar();
+
                     }
                     else
                     {
