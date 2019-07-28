@@ -68,7 +68,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             return vehiculos;
         }
 
-      
+
         private void LlenaCampos(Vehiculos vehiculos)
         {
             IdNumericUpDown.Value = vehiculos.VehiculoId;
@@ -85,7 +85,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             FechaRegistroDateTimePicker.Value = vehiculos.FechaRegistro;
         }
 
-        public  bool Repetidos()
+        public bool Repetidos()
         {
             bool paso = true;
             MyErrorProvider.Clear();
@@ -158,13 +158,13 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 CostoNumericUpDown.Focus();
                 paso = false;
             }
-            if (PrecioNumericUpDown.Value <=CostoNumericUpDown.Value)
+            if (PrecioNumericUpDown.Value <= CostoNumericUpDown.Value)
             {
                 MyErrorProvider.SetError(PrecioNumericUpDown, "Debe ser mayor que el costo");
                 PrecioNumericUpDown.Focus();
                 paso = false;
             }
-            if (EstadoComboBox.Text ==string.Empty)
+            if (EstadoComboBox.Text == string.Empty)
             {
                 MyErrorProvider.SetError(EstadoComboBox, "Este campo no puede estar vacio");
                 EstadoComboBox.Focus();
@@ -286,7 +286,7 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
             var listado = new List<OtrosColores>();
             listado = db.GetList(p => true);
             ColorComboBox.DataSource = listado;
-            ColorComboBox.DisplayMember = "Descripcion";       
+            ColorComboBox.DisplayMember = "Descripcion";
         }
 
         private void LlenarComboBox1()
@@ -310,23 +310,32 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
         private void OtroColorButton_Click(object sender, EventArgs e)
         {
             rOtrosColores ub = new rOtrosColores();
-            this.Close();
             ub.ShowDialog();
+            this.Hide();
+            var form2 = new rVehiculos(id);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
 
         private void OtraMarcaButton_Click(object sender, EventArgs e)
         {
             rOtrasMarcas ub = new rOtrasMarcas();
-            this.Close();
             ub.ShowDialog();
-           
+            this.Hide();
+            var form2 = new rVehiculos(id);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
+
         }
 
         private void OtroModeloButton_Click(object sender, EventArgs e)
         {
             rOtrosModelos ub = new rOtrosModelos();
-            this.Close();
             ub.ShowDialog();
+            this.Hide();
+            var form2 = new rVehiculos(id);
+            form2.Closed += (s, args) => this.Close();
+            form2.Show();
         }
 
         public static bool RepetidosNo(string vehiculo)
@@ -388,5 +397,9 @@ namespace ProyectoFinal_YersonEscolastico.UI.Registros
                 return;
             }
         }
+
     }
 }
+
+
+

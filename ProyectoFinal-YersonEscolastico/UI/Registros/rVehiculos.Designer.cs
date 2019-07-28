@@ -178,6 +178,7 @@
             // PlacaTextBox
             // 
             this.PlacaTextBox.Location = new System.Drawing.Point(72, 85);
+            this.PlacaTextBox.MaxLength = 6;
             this.PlacaTextBox.Name = "PlacaTextBox";
             this.PlacaTextBox.Size = new System.Drawing.Size(119, 20);
             this.PlacaTextBox.TabIndex = 3;
@@ -222,6 +223,7 @@
             // VinTextBox
             // 
             this.VinTextBox.Location = new System.Drawing.Point(72, 55);
+            this.VinTextBox.MaxLength = 8;
             this.VinTextBox.Name = "VinTextBox";
             this.VinTextBox.Size = new System.Drawing.Size(122, 20);
             this.VinTextBox.TabIndex = 2;
@@ -400,6 +402,7 @@
             // AnioTextBox
             // 
             this.AnioTextBox.Location = new System.Drawing.Point(393, 17);
+            this.AnioTextBox.MaxLength = 4;
             this.AnioTextBox.Name = "AnioTextBox";
             this.AnioTextBox.Size = new System.Drawing.Size(122, 20);
             this.AnioTextBox.TabIndex = 10;

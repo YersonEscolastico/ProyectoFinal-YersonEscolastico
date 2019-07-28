@@ -50,7 +50,7 @@
             this.BuscarButton.Location = new System.Drawing.Point(158, 18);
             this.BuscarButton.Name = "BuscarButton";
             this.BuscarButton.Size = new System.Drawing.Size(78, 25);
-            this.BuscarButton.TabIndex = 23;
+            this.BuscarButton.TabIndex = 5;
             this.BuscarButton.Text = "         Buscar";
             this.BuscarButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.BuscarButton.UseVisualStyleBackColor = true;
@@ -63,7 +63,7 @@
             this.EliminarButton.Location = new System.Drawing.Point(175, 123);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(61, 58);
-            this.EliminarButton.TabIndex = 22;
+            this.EliminarButton.TabIndex = 4;
             this.EliminarButton.Text = "Eliminar";
             this.EliminarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.EliminarButton.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             this.GuardarButton.Location = new System.Drawing.Point(96, 123);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(61, 58);
-            this.GuardarButton.TabIndex = 21;
+            this.GuardarButton.TabIndex = 3;
             this.GuardarButton.Text = "Guardar";
             this.GuardarButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.GuardarButton.UseVisualStyleBackColor = true;
@@ -89,7 +89,7 @@
             this.NuevoButton.Location = new System.Drawing.Point(14, 123);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(63, 58);
-            this.NuevoButton.TabIndex = 20;
+            this.NuevoButton.TabIndex = 2;
             this.NuevoButton.Text = "Nuevo";
             this.NuevoButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.NuevoButton.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             this.DescripcionTextBox.Location = new System.Drawing.Point(96, 61);
             this.DescripcionTextBox.Name = "DescripcionTextBox";
             this.DescripcionTextBox.Size = new System.Drawing.Size(141, 20);
-            this.DescripcionTextBox.TabIndex = 19;
+            this.DescripcionTextBox.TabIndex = 1;
             // 
             // label2
             // 
