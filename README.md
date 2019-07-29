@@ -16,6 +16,13 @@ Este sistema está diseñado para  ser utilizado por agencias que se dediquen a 
 
 En conclusión, este sistema contiene los módulos de inicio de sesión, registros de usuarios, clientes, vehículos, proveedores, ventas, reportes y consultas. 
 
+![MainForm](https://user-images.githubusercontent.com/50494642/62079954-4a169f80-b282-11e9-95f7-f9eced4e1836.PNG)
+
+![Registro](https://user-images.githubusercontent.com/50494642/62080047-73cfc680-b282-11e9-9e8c-83ff737be59a.PNG)
+
+
+![Consulta8](https://user-images.githubusercontent.com/50494642/62080127-9feb4780-b282-11e9-86c1-1cfe0efddda4.png)
+
 ## REQUISITOS DE INSTALACION
 ![graphictool_78408](https://user-images.githubusercontent.com/50494642/62062628-ef6a4d00-b25b-11e9-83c5-03cd3faae62a.png)
 
