@@ -25,7 +25,10 @@ En conclusión, este sistema contiene los módulos de inicio de sesión, registr
 4. Crystal Reports
 
 ## CONTRIBUIDOR
-1. Yerson Escolastico Martinez
+
+**1. Yerson Escolastico Martinez**
+
+![Sin título](https://user-images.githubusercontent.com/50494642/62064270-15452100-b25f-11e9-961f-86ba9a91eec2.png)
 
 ## LICENCIA 
 ![aboutKDE_11254](https://user-images.githubusercontent.com/50494642/62062967-9949d980-b25c-11e9-9d1e-ac767314f28e.png)
