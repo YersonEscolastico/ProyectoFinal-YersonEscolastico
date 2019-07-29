@@ -24,6 +24,8 @@ En conclusión, este sistema contiene los módulos de inicio de sesión, registr
 3. Entity Framework
 4. Crystal Reports
 
+## CONTRIBUIDOR
+1. Yerson Escolastico Martinez
 
 ## LICENCIA 
 ![aboutKDE_11254](https://user-images.githubusercontent.com/50494642/62062967-9949d980-b25c-11e9-9d1e-ac767314f28e.png)
